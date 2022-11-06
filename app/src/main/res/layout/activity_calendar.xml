@@ -38,7 +38,7 @@
             android:id="@+id/card_title"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:background="@color/card_orange2" />
+            android:background="@color/input_card_orange2" />
 
         <CalendarView
             android:id="@+id/calendarView"
