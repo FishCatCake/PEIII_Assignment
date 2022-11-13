@@ -1,7 +1,6 @@
 <resources>
     <string name="app_name">PE-Assignment</string>
     <string name="slogan">Your female health assistant.</string>
-    <string name="cycle_tracking">Cycle Tracking</string>
     <string name="had_flow">Had Flow</string>
     <string name="no_flow">No Flow</string>
     <string name="flow_level">FLOW LEVEL</string>
@@ -18,4 +17,26 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="next_dose">Next Dose:</string>
+
+    <string name="main_bg">
+        This is bg of home page.
+    </string>
+
+    <string name="cycle_tracking">⭕ Cycle Tracking</string>
+    <string name="menstruation">Menstruation Flow</string>
+    <string name="ds_date">To be display</string>
+    
+    <string name="cd_title_vaccine">HPV Vaccine</string>
+    <string name="cd_dose">🗓️ Dose Recording</string>
+    <string name="cd_vaccine_title">HPV Vaccine</string>
+    <string name="cd_cancer_tracking">🏥 Cancer Tracking</string>
+    <string name="cd_title_cancer">Breast/Cervical Cancer</string>
+    <string name="cd_cancer_desc1">🗒️ Medical Record</string>
+    <string name="cd_cancer_desc2">❤️‍🩹 Sympton Log</string>
+
+    <string name="cd_forum">🗞️ Health Forum</string>
+    <string name="cd_find_more">🔍 Click to find more</string>
+
+    <string name="copyright">COPYWRITE@2022 BY A TEAM</string>
+
 </resources>
