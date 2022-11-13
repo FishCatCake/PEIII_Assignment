@@ -27,12 +27,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:paddingStart="20dp"
-                    android:background="@color/card_orange"
+                    android:background="@color/input_card_orange"
                     android:gravity="center_vertical"
                     android:text="HPV RECORD"
                     android:textStyle="bold"
                     android:textSize="20sp"
                     android:textColor="@color/white"/>
+
 
             </LinearLayout>
 
