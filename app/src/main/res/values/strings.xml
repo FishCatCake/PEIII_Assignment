@@ -1,7 +1,6 @@
 <resources>
     <string name="app_name">PE-Assignment</string>
     <string name="slogan">Your female health assistant.</string>
-    <string name="cycle_tracking">Cycle Tracking</string>
     <string name="had_flow">Had Flow</string>
     <string name="no_flow">No Flow</string>
     <string name="flow_level">FLOW LEVEL</string>
@@ -10,4 +9,26 @@
         The sun is out, hemlines are rising, and bright, bold colors are dominating the streets. It can mean only one thing: Spring 2022 fashion trends are finally here. Time to pack up gray knits and tuck away those wool trousers—the clothing that will carry you through the spring 2022 season has an upbeat, offbeat quality to it.
         Seen at runway shows from New York to Tokyo, the trends of spring 2022 embrace vibrancy and joy. At Tory Burch, bold stripes in black and white—some cut with a flash of grassy green—signaled a new quirky order. Prada and Chanel put swimsuits and short-shorts on the catwalk
     </string>
+    <string name="main_bg">
+        This is bg of home page.
+    </string>
+
+    <string name="cycle_tracking">⭕ Cycle Tracking</string>
+    <string name="menstruation">Menstruation Flow</string>
+    <string name="ds_date">To be display</string>
+    
+    <string name="cd_title_vaccine">HPV Vaccine</string>
+    <string name="cd_dose">🗓️ Dose Recording</string>
+    <string name="cd_vaccine_title">HPV Vaccine</string>
+    <string name="cd_cancer_tracking">🏥 Cancer Tracking</string>
+    <string name="cd_title_cancer">Breast/Cervical Cancer</string>
+    <string name="cd_cancer_desc1">🗒️ Medical Record</string>
+    <string name="cd_cancer_desc2">❤️‍🩹 Sympton Log</string>
+
+    <string name="cd_forum">🗞️ Health Forum</string>
+    <string name="cd_find_more">🔍 Click to find more</string>
+
+    <string name="copyright">COPYWRITE@2022 BY A TEAM</string>
+
+
 </resources>
