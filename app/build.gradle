@@ -1,6 +1,9 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    //jetpack navigation
+    id 'kotlin-android-extensions'
+    id 'androidx.navigation.safeargs.kotlin'
 }
 
 android {
@@ -41,4 +44,7 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    //jetpack navigation dependencies
+    implementation "androidx.navigation:navigation-fragment-ktx:$rootProject.nav_version"
+    implementation "androidx.navigation:navigation-ui-ktx:2.5.3"
 }

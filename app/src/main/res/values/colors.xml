@@ -18,6 +18,7 @@
 
     <color name="background">#EEEEEE</color>
     <color name="login_btn">#869ADF</color>
+    <color name="register_btn">#E897AE</color>
 
     <color name="input_card_orange">#F08784</color>
     <color name="input_card_orange2">#ECA16A</color>
