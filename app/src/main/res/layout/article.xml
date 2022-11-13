@@ -58,22 +58,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:lineSpacingExtra="8sp"
-            android:padding="32dp"
+            android:paddingLeft="32dp"
+            android:paddingRight="32dp"
+            android:paddingTop="0dp"
             android:text="@string/article"
             android:textSize="20sp">
 
         </TextView>
     </androidx.core.widget.NestedScrollView>
-
-    <!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
-<!--        android:id="@+id/fab"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_gravity="end|bottom"-->
-<!--        android:layout_margin="20dp"-->
-<!--        android:src="@drawable/ic_add">-->
-
-<!--    </com.google.android.material.floatingactionbutton.FloatingActionButton>-->
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
