@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="10dp">
+
+    <TextView
+        android:id="@+id/timeline_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="Jan 22"
+        android:textColor="@color/timeline_info"
+        android:textSize="14sp"
+        app:layout_constraintBaseline_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/timeline_line"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/timeline_date"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/timeline_title"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toEndOf="@+id/timeline_line"
+        app:layout_constraintBaseline_toTopOf="parent"
+        android:textColor="@color/black"
+        android:text="First medical treatment"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:layout_width="270dp"
+        android:layout_height="match_parent"
+        android:id="@+id/timeline_information"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/roboto"
+        android:text="Bleeding profusely. Make an appointment for a biopsy."
+        android:textColor="@color/timeline_info"
+        android:textSize="14sp"
+        app:layout_constraintBaseline_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/timeline_line"
+        app:layout_constraintTop_toBottomOf="@+id/timeline_title" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/timeline_btn"
+        app:layout_constraintStart_toEndOf="@id/timeline_line"
+        app:layout_constraintTop_toBottomOf="@id/timeline_information"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/roboto"
+        android:background="#FFDA87"
+        android:drawableLeft="@drawable/ic_diagnostic_result"
+        android:drawablePadding="1dp"
+        android:text="Diagnostic result"
+        android:textAllCaps="false"
+        android:textColor="@color/purple_700"
+        android:textSize="12sp"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
