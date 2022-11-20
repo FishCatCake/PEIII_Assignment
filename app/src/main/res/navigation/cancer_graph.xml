@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cancer_graph"
+    app:startDestination="@id/cancerCalendarFragment">
+
+    <fragment
+        android:id="@+id/cancerCalendarFragment"
+        android:name="com.example.pe_assignment.CancerCalendarFragment"
+        android:label="fragment_cancer_canlendar"
+        tools:layout="@layout/fragment_cancer_canlendar" >
+        <action
+            android:id="@+id/action_cancerCalendarFragment_to_cancerTimelineFragment"
+            app:destination="@id/cancerTimelineFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cancerTimelineFragment"
+        android:name="com.example.pe_assignment.CancerTimelineFragment"
+        android:label="fragment_cancer_timeline"
+        tools:layout="@layout/fragment_cancer_timeline" >
+        <action
+            android:id="@+id/action_cancerTimelineFragment_to_cancerCalendarFragment"
+            app:destination="@id/cancerCalendarFragment" />
+    </fragment>
+</navigation>
