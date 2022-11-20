@@ -32,4 +32,16 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+
+    <string name="title_1">First medical treatment</string>
+    <string name="title_2">Biopsy for the first time</string>
+    <string name="title_3">Second review</string>
+
+    <string name="data_1">Jan 22</string>
+    <string name="data_2">Nov 12</string>
+    <string name="data_3">Nov 18</string>
+
+    <string name="info_1">Bleeding profusely. Make an appointment for a biopsy.</string>
+    <string name="info_2">Can\'t drink or eat. Keep a regular schedule.</string>
+    <string name="info_3">Review with results one week after biopsy.</string>
 </resources>

@@ -77,7 +77,11 @@
 
 
         </LinearLayout>
-
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_timeline"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/item_timeline"/>
 
         <Button
             android:layout_width="150dp"
@@ -91,6 +95,8 @@
             android:textAllCaps="false"
             android:textColor="@color/purple_700"
             android:textSize="12sp" />
+
+
     </LinearLayout>
 
 
