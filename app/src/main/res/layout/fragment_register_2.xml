@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Register2Fragment">
     <LinearLayout
         android:layout_width="match_parent"
@@ -18,9 +19,145 @@
             android:padding="10dp"
             android:textSize="30sp"
             android:text="Learn more about you"
-            android:textColor="#000000"
+            android:textColor="@color/black"
             android:textStyle="bold"/>
 
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginBottom="30dp"
+            app:cardBackgroundColor="#F2F0F1"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/card_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@color/input_purple"
+                        android:gravity="center_vertical"
+                        android:paddingStart="20dp"
+                        android:text="@string/personal_information"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+
+
+                    <TextView
+                        android:id="@+id/register_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:background="@color/white"
+                        android:gravity="center_vertical"
+                        android:paddingStart="20dp"
+                        android:text="@string/name"
+                        android:textColor="#CBCACA"
+                        android:textSize="20sp"
+                        android:padding="10dp"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="20dp"
+                        android:layout_marginTop="2dp"
+                        android:background="@color/white">
+
+                        <ImageView
+                            android:id="@+id/register_name_ic"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:scaleX="0.8"
+                            android:scaleY="0.8"
+                            android:src="@drawable/register_name_ic"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="20dp"
+                        android:padding="10dp"
+                        android:hint="@string/tell_us_your_name"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_toEndOf="@id/register_name_ic" />
+                    </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/register_age"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:paddingStart="20dp"
+                    android:text="@string/age"
+                    android:textColor="#CBCACA"
+                    android:textSize="20sp"
+                    android:padding="10dp"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="20dp"
+                        android:layout_marginTop="2dp"
+                        android:background="@color/white">
+
+                    <ImageView
+                        android:id="@+id/register_age_ic"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/register_age_ic"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8" />
+
+                        <ImageButton
+                            android:id="@+id/register_age_minus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:layout_toEndOf="@+id/register_age_ic"
+                            android:src="@drawable/register_age_minus"
+                            android:scaleX="0.8"
+                            android:scaleY="0.8"
+                            android:layout_marginLeft="20dp"/>
+
+                        <TextView
+                            android:id="@+id/register_age_num"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@id/register_age_minus"
+                            android:layout_marginTop="7dp"
+                            android:layout_marginLeft="10dp"
+                            android:text="1"
+                            android:textSize="24sp"
+                            android:fontFamily="@font/roboto"/>
+
+                        <ImageButton
+                            android:id="@+id/register_age_add"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:layout_toEndOf="@+id/register_age_num"
+                            android:src="@drawable/register_age_add"
+                            android:scaleX="0.8"
+                            android:scaleY="0.8"
+                            android:layout_marginLeft="10dp"/>
+                    </RelativeLayout>
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
 
         <Button
             android:layout_width="match_parent"

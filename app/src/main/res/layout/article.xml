@@ -61,6 +61,7 @@
             android:paddingLeft="32dp"
             android:paddingRight="32dp"
             android:paddingTop="0dp"
+
             android:text="@string/article"
             android:textSize="20sp">
 

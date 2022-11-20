@@ -25,7 +25,7 @@
     <string name="cycle_tracking">⭕ Cycle Tracking</string>
     <string name="menstruation">Menstruation Flow</string>
     <string name="ds_date">To be display</string>
-    
+
     <string name="cd_title_vaccine">HPV Vaccine</string>
     <string name="cd_dose">🗓️ Dose Recording</string>
     <string name="cd_vaccine_title">HPV Vaccine</string>
@@ -38,5 +38,22 @@
     <string name="cd_find_more">🔍 Click to find more</string>
 
     <string name="copyright">COPYWRITE@2022 BY A TEAM</string>
+    <string name="personal_information">PERSONAL INFORMATION</string>
+    <string name="name">NAME</string>
+    <string name="tell_us_your_name">tell us your name</string>
+    <string name="age">AGE</string>
+    <string name="settings">SETTINGS</string>
+    <string name="period_prediction_reminder">Period prediction reminder</string>
+    <string name="system_settings">SYSTEM SETTINGS</string>
+    <string name="syc_with_huawei_health">Syc with \'Huawei Health\'</string>
+    <string name="personal_customization">PERSONAL CUSTOMIZATION</string>
+    <string name="selected_item">Selected item:</string>
+    <string-array name="Languages">
+        <item>English</item>
+        <item>Chinese</item>
+        <item>Malay</item>
+        <item>Spanish</item>
+        <item>Japanese</item>
+    </string-array>
 
 </resources>
