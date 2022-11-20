@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".CycleFragment">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="60dp"
+            android:layout_height="100dp"
+            app:cardBackgroundColor="@color/btn_date1"
+            app:cardCornerRadius="25dp"
+            >
+               <TextView
+                   android:id="@+id/tv_date_today"
+                   android:layout_width="wrap_content"
+                   android:layout_height="match_parent">
+
+               </TextView>
+        </androidx.cardview.widget.CardView>
+
+    <ImageButton
+        android:layout_width="350dp"
+        android:layout_height="60dp"
+        android:src="@drawable/btn_add_period"
+        android:layout_centerHorizontal="true">
+
+    </ImageButton>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

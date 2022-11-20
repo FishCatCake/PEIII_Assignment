@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".HomeFragment">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/cd_home">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="122dp"
+            android:layout_height="95dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="30dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/logo_she_log" />
+    </androidx.cardview.widget.CardView>
+
+    <RelativeLayout
+        android:id="@+id/cd_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/card_logo"
+        android:layout_alignParentBottom="true"
+        app:layout_constraintTop_toBottomOf="@id/card_logo"
+        >
+
+        <ImageView
+            android:id="@+id/main_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:contentDescription="@string/main_bg"
+            android:src="@drawable/main_bg">
+        </ImageView>
+
+
+        <TextView
+            android:id="@+id/tv_home_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="17dp"
+
+            android:text="@string/slogan"
+            android:textSize="15sp"
+            android:textAlignment="center"
+            android:fontFamily="@font/robotomono"
+            android:textStyle="bold"
+            android:textColor="@color/purple_text"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cd_cycle"
+            android:layout_width="350dp"
+            android:layout_height="120dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            app:contentPaddingTop="10dp"
+            app:contentPaddingLeft="10dp"
+            app:contentPaddingBottom="10dp"
+            app:contentPaddingRight="10dp"
+            app:cardCornerRadius="15dp"
+            app:cardBackgroundColor="@color/purple_theme"
+            android:hapticFeedbackEnabled="true"
+            >
+
+            <TextView
+                android:id="@+id/tv_cycle_tracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cycle_tracking"
+                android:textColor="@color/white"
+                android:layout_marginStart="15dp"
+                android:fontFamily="@font/robotomono"
+                android:textStyle="bold"
+                android:textSize="15sp">
+            </TextView>
+
+            <TextView
+                android:id="@+id/tv_flow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/menstruation"
+                android:fontFamily="@font/robotomono"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="40dp"
+                >
+            </TextView>
+
+            <ImageView
+                android:id="@+id/img_flow"
+                android:layout_width="41dp"
+                android:layout_height="63dp"
+                android:layout_marginStart="280dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/ic_period">
+
+            </ImageView>
+
+            <!--            display date here-->
+            <TextView
+                android:id="@+id/tv_ds_date"
+                android:contentDescription="@string/ds_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ds_date"
+                android:textColor="@color/grey_text"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="80dp"
+                android:fontFamily="@font/robotomono"
+                android:textStyle="bold"
+                >
+            </TextView>
+        </androidx.cardview.widget.CardView>
+        <!--        car2-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cd_vaccine"
+            android:layout_width="350dp"
+            android:layout_height="120dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/cd_cycle"
+            android:layout_marginTop="20dp"
+            app:contentPaddingTop="10dp"
+            app:contentPaddingLeft="10dp"
+            app:contentPaddingBottom="10dp"
+            app:contentPaddingRight="10dp"
+            app:cardCornerRadius="15dp"
+            app:cardBackgroundColor="@color/purple_theme"
+            android:hapticFeedbackEnabled="true"
+            >
+
+            <TextView
+                android:id="@+id/tv_vaccine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cd_dose"
+                android:textColor="@color/white"
+                android:layout_marginStart="15dp"
+                android:fontFamily="@font/robotomono"
+                android:textStyle="bold"
+                android:textSize="15sp">
+            </TextView>
+
+            <TextView
+                android:id="@+id/tv_vaccine_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cd_title_vaccine"
+                android:fontFamily="@font/robotomono"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="40dp"
+                >
+            </TextView>
+
+            <ImageView
+                android:id="@+id/img_needle"
+                android:layout_width="41dp"
+                android:layout_height="63dp"
+                android:layout_marginStart="280dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/ic_needle">
+
+            </ImageView>
+
+            <!--            display date here-->
+            <TextView
+                android:id="@+id/tv_vaccine_date"
+                android:contentDescription="@string/ds_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ds_date"
+                android:textColor="@color/grey_text"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="80dp"
+                android:fontFamily="@font/robotomono"
+                android:textStyle="bold"
+                >
+            </TextView>
+        </androidx.cardview.widget.CardView>
+
+        <!--        card3-->
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cd_cancer"
+            android:layout_width="350dp"
+            android:layout_height="120dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/cd_vaccine"
+            android:layout_marginTop="20dp"
+            app:contentPaddingTop="10dp"
+            app:contentPaddingLeft="10dp"
+            app:contentPaddingBottom="10dp"
+            app:contentPaddingRight="10dp"
+            app:cardCornerRadius="15dp"
+            app:cardBackgroundColor="@color/purple_theme"
+            android:hapticFeedbackEnabled="true"
+            >
+
+            <TextView
+                android:id="@+id/tv_title_cancer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cd_cancer_tracking"
+                android:textColor="@color/white"
+                android:layout_marginStart="15dp"
+                android:fontFamily="@font/robotomono"
+                android:textStyle="bold"
+                android:textSize="15sp">
+            </TextView>
+
+            <TextView
+                android:id="@+id/tv_cancer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cd_title_cancer"
+                android:fontFamily="@font/robotomono"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="35dp"
+                >
+            </TextView>
+
+
+            <!--            display date here-->
+            <TextView
+                android:id="@+id/tv_cancer_desc1"
+                android:contentDescription="@string/cd_cancer_desc1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cd_cancer_desc1"
+                android:textColor="@color/grey_text"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="63dp"
+                android:fontFamily="@font/robotomono"
+                android:textStyle="bold"
+                >
+            </TextView>
+
+            <TextView
+                android:id="@+id/tv_cancer_desc2"
+                android:contentDescription="@string/cd_cancer_desc2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cd_cancer_desc2"
+                android:textColor="@color/grey_text"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="80dp"
+                android:fontFamily="@font/robotomono"
+                android:textStyle="bold"
+                >
+            </TextView>
+        </androidx.cardview.widget.CardView>
+        <!--card4-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cd_forum"
+            android:layout_width="350dp"
+            android:layout_height="90dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/cd_cancer"
+            android:layout_marginTop="20dp"
+            app:contentPaddingTop="10dp"
+            app:contentPaddingLeft="10dp"
+            app:contentPaddingBottom="10dp"
+            app:contentPaddingRight="10dp"
+            app:cardCornerRadius="15dp"
+            app:cardBackgroundColor="@color/purple_theme"
+            android:hapticFeedbackEnabled="true"
+            >
+
+            <TextView
+                android:id="@+id/tv_forum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cd_forum"
+                android:textColor="@color/white"
+                android:layout_marginStart="15dp"
+                android:fontFamily="@font/robotomono"
+                android:textStyle="bold"
+                android:textSize="15sp">
+            </TextView>
+
+            <TextView
+                android:id="@+id/tv_flow_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cd_find_more"
+                android:fontFamily="@font/robotomono"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="35dp"
+                >
+            </TextView>
+            <!--            display date here-->
+
+        </androidx.cardview.widget.CardView>
+
+
+        <TextView
+            android:id="@+id/tv_copyright"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cd_forum"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:text="@string/copyright"
+            android:textSize="15sp"
+            android:textStyle="bold">
+        </TextView>
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

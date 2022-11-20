@@ -16,7 +16,7 @@
     <string name="cycle_tracking">⭕ Cycle Tracking</string>
     <string name="menstruation">Menstruation Flow</string>
     <string name="ds_date">To be display</string>
-    
+
     <string name="cd_title_vaccine">HPV Vaccine</string>
     <string name="cd_dose">🗓️ Dose Recording</string>
     <string name="cd_vaccine_title">HPV Vaccine</string>
@@ -29,5 +29,7 @@
     <string name="cd_find_more">🔍 Click to find more</string>
 
     <string name="copyright">COPYWRITE@2022 BY A TEAM</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

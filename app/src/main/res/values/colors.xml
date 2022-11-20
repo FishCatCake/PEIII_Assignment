@@ -23,6 +23,11 @@
 
     <color name="input_card_orange">#F08784</color>
     <color name="input_card_orange2">#ECA16A</color>
+
+        <!--    period tracking-->
+    <color name="btn_date1">#EF958E</color>
+    <color name="btn_date2">#F4D1CF</color>
+
     <!--    origin color set -->
     <color name="purple_700">#FF3700B3</color>
     <color name="teal_200">#FF03DAC5</color>
