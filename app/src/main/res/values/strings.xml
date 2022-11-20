@@ -9,6 +9,15 @@
         The sun is out, hemlines are rising, and bright, bold colors are dominating the streets. It can mean only one thing: Spring 2022 fashion trends are finally here. Time to pack up gray knits and tuck away those wool trousers—the clothing that will carry you through the spring 2022 season has an upbeat, offbeat quality to it.
         Seen at runway shows from New York to Tokyo, the trends of spring 2022 embrace vibrancy and joy. At Tory Burch, bold stripes in black and white—some cut with a flash of grassy green—signaled a new quirky order. Prada and Chanel put swimsuits and short-shorts on the catwalk
     </string>
+    <string name="article_category">Article Category</string>
+    <string name="hot_article">Hot Article</string>
+    <string name="recent_article">Recent Article</string>
+    <string name="handpick">Handpick</string>
+    <string name="articles">Articles</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="next_dose">Next Dose:</string>
+
     <string name="main_bg">
         This is bg of home page.
     </string>
@@ -29,8 +38,24 @@
     <string name="cd_find_more">🔍 Click to find more</string>
 
     <string name="copyright">COPYWRITE@2022 BY A TEAM</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="personal_information">PERSONAL INFORMATION</string>
+    <string name="name">NAME</string>
+    <string name="tell_us_your_name">tell us your name</string>
+    <string name="age">AGE</string>
+    <string name="settings">SETTINGS</string>
+    <string name="period_prediction_reminder">Period prediction reminder</string>
+    <string name="system_settings">SYSTEM SETTINGS</string>
+    <string name="syc_with_huawei_health">Syc with \'Huawei Health\'</string>
+    <string name="personal_customization">PERSONAL CUSTOMIZATION</string>
+    <string name="selected_item">Selected item:</string>
+    <string-array name="Languages">
+        <item>English</item>
+        <item>Chinese</item>
+        <item>Malay</item>
+        <item>Spanish</item>
+        <item>Japanese</item>
+    </string-array>
 
 
     <string name="title_1">First medical treatment</string>

@@ -52,7 +52,7 @@
                         android:id="@+id/card_attr1"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
-
+                        android:buttonTint="#EAE8EA"
                         android:background="#EAE8EA"
 
                         android:drawablePadding="20dp"
@@ -67,7 +67,7 @@
                         android:id="@+id/card_attr2"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
-
+                        android:buttonTint="#EAE8EA"
                         android:background="#EAE8EA"
 
                         android:drawablePadding="20dp"
@@ -96,7 +96,7 @@
                         android:id="@+id/card_attr3"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
-
+                        android:buttonTint="#EAE8EA"
                         android:background="#EAE8EA"
 
                         android:drawablePadding="20dp"
@@ -111,7 +111,7 @@
                         android:id="@+id/card_attr4"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
-
+                        android:buttonTint="#EAE8EA"
                         android:background="#EAE8EA"
                         android:drawablePadding="20dp"
                         android:drawableEnd="@android:drawable/btn_radio"
@@ -125,7 +125,7 @@
                         android:id="@+id/card_attr5"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
-
+                        android:buttonTint="#EAE8EA"
                         android:background="#EAE8EA"
                         android:drawablePadding="20dp"
                         android:drawableEnd="@android:drawable/btn_radio"
