@@ -19,7 +19,8 @@ class HpvCalendarAdapter(private val calendarList : ArrayList<HpvCalendarModel>)
     override fun onBindViewHolder(holder: HpvViewHolder, position: Int) {
         val currentItem = calendarList[position]
         holder.page.text = currentItem.page.toString()
-        holder.calendar.setBackgroundColor(calendarList[position].calendar)
+        holder.dose.text = currentItem.dose.toString()
+//        holder.calendar.setBackgroundColor(calendarList[position].calendar)
     }
 
     override fun getItemCount(): Int {
@@ -27,6 +28,7 @@ class HpvCalendarAdapter(private val calendarList : ArrayList<HpvCalendarModel>)
     }
     class HpvViewHolder(itemView : View):RecyclerView.ViewHolder(itemView){
         val page = itemView.findViewById<TextView>(R.id.hpv_page)
-        val calendar = itemView.findViewById<CalendarView>(R.id.hpv_calendarView)
+        val dose = itemView.findViewById<TextView>(R.id.hpv_dose)
+//        val calendar = itemView.findViewById<CalendarView>(R.id.hpv_calendarView)
     }
 }

@@ -4,6 +4,17 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
+    <TextView
+        android:id="@+id/hpv_dose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"
+        android:fontFamily="@font/roboto"
+        android:textColor="@color/black"
+        android:text="@string/date_of_first_n_dose_onset"
+        android:textSize="20sp"/>
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -22,9 +33,8 @@
 
         <CalendarView
             android:id="@+id/hpv_calendarView"
-            android:layout_width="match_parent"
+            android:layout_width="310dp"
             android:layout_height="wrap_content"
-            android:layout_below="@id/idTVDate"
             android:layout_marginTop="40dp">
 
         </CalendarView>

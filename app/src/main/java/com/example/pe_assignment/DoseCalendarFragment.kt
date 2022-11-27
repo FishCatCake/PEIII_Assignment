@@ -17,7 +17,8 @@ class DoseCalendarFragment : Fragment() {
     private lateinit var recyclerView: RecyclerView
     private lateinit var calendarArrayList: ArrayList<HpvCalendarModel>
     lateinit var page : Array<String>
-    lateinit var calendar : Array<Int>
+    lateinit var dose : Array<String>
+//    lateinit var calendar : Array<Int>
 
 
     override fun onCreateView(
@@ -52,13 +53,22 @@ class DoseCalendarFragment : Fragment() {
             "3/3"
         )
 
-        calendar = arrayOf(
-            1,
-            2,
-            3
+        dose = arrayOf(
+            "Date of First\n" +
+                    "HPV Test Onset",
+            "Date of Second\n" +
+                    "HPV Test Onset",
+            "Date of Third\n" +
+                    "HPV Test Onset"
         )
+
+//        calendar = arrayOf(
+//            1,
+//            2,
+//            3
+//        )
         for(i in page.indices){
-            val calendar = HpvCalendarModel(page[i],calendar[i])
+            val calendar = HpvCalendarModel(page[i],dose[i])
             calendarArrayList.add(calendar)
         }
     }

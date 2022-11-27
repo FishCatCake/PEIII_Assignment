@@ -70,7 +70,7 @@
     <string name="info_2">Can\'t drink or eat. Keep a regular schedule.</string>
     <string name="info_3">Review with results one week after biopsy.</string>
 
-<!--<           Cycle log-->
+    <!--<           Cycle log-->
     <string name="cycle_log">Cycle Log</string>
     <string name="men">MENSTRUATION</string>
     <string name="data">OTHER DATA</string>
@@ -83,7 +83,7 @@
     <string name="redirect"> > </string>
 
 
-<!--    Cycle detail-->
+    <!--    Cycle detail-->
     <string name="cycle_detail">Cycle Details</string>
     <string name="cycle_len">CYCLE LENGTH</string>
     <string name="cycle_status1">Normal</string>
@@ -106,7 +106,7 @@
     <string name="_1_3">1/3</string>
     <string name="date_of_first_n_dose_onset">Date of first \n dose onset：</string>
     <string name="reminder">Reminder</string>
-<!--    <string name="days">Days</string>-->
+    <!--    <string name="days">Days</string>-->
     <string name="date_of_first_nhpv_test_onset">Date of First\nHPV Test Onset</string>
     <string name="next">Next</string>
     <string name="hpv_vaccine_track">HPV Vaccine Track</string>
@@ -120,5 +120,21 @@
     <string name="vaccine_reminder">Vaccine Reminder</string>
     <string name="_0">0</string>
     <string name="_7">7</string>
+    <string name="type">TYPE</string>
+    <string name="cervical_cancer">Cervical Cancer</string>
+    <string name="choose_which_cancer_to_track">Choose which cancer to track:</string>
+    <string name="time">TIME</string>
+    <string name="choose_an_uncomfortable_time">Choose an uncomfortable Time</string>
+    <string name="evening">Evening</string>
+    <string name="afternoon">Afternoon</string>
+    <string name="morning">Morning</string>
+    <string name="other_time">OTHER TIME</string>
+    <string name="exercising">Exercising</string>
+    <string name="sleeping">Sleeping</string>
+    <string name="detailed_medical_information">Detailed medical information</string>
+    <string name="title">TITLE</string>
+    <string name="new_record_title">New record title</string>
+    <string name="description">DESCRIPTION</string>
+    <string name="short_description_of_the_record">Short description of the record.</string>
 
 </resources>
