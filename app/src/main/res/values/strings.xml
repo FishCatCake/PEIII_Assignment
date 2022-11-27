@@ -69,4 +69,15 @@
     <string name="info_1">Bleeding profusely. Make an appointment for a biopsy.</string>
     <string name="info_2">Can\'t drink or eat. Keep a regular schedule.</string>
     <string name="info_3">Review with results one week after biopsy.</string>
+
+    <string name="cycle_log">Cycle Log</string>
+    <string name="men">MENSTRUATION</string>
+    <string name="data">OTHER DATA</string>
+    <string name="cycle_history">CYCLE HISTORY</string>
+    <string name="add1">Period</string>
+    <string name="add2">Symptoms</string>
+    <string name="add3">Basal Body Temperature</string>
+    <string name="add4">Your Cycle</string>
+    <string name="add">+</string>
+    <string name="redirect"> > </string>
 </resources>

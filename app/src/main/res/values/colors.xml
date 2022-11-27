@@ -30,6 +30,9 @@
         <!--    period tracking-->
     <color name="btn_date1">#EF958E</color>
     <color name="btn_date2">#F4D1CF</color>
+    <color name="text_red">#DA574D</color>
+    <color name="text_purple">#8E008B</color>
+    <color name="text_blue">#75BEF6</color>
 
     <!--    origin color set -->
     <color name="purple_700">#FF3700B3</color>
