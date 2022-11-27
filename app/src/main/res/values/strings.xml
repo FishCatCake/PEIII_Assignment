@@ -136,5 +136,14 @@
     <string name="new_record_title">New record title</string>
     <string name="description">DESCRIPTION</string>
     <string name="short_description_of_the_record">Short description of the record.</string>
+    <string name="symptoms">SYMPTOMS</string>
+    <string name="select_all_that_apply">Select all that apply.</string>
+    <string name="recent_symptoms">RECENT SYMPTOMS</string>
+    <string name="abdominal_cramps">Abdominal Cramps</string>
+    <string name="acne">Acne</string>
+    <string name="chills">Chills</string>
+    <string name="additional_symptoms">ADDITIONAL SYMPTOMS</string>
+    <string name="appetite_changes">Appetite Changes</string>
+    <string name="baldder_incontinence">Baldder Incontinence</string>
 
 </resources>
