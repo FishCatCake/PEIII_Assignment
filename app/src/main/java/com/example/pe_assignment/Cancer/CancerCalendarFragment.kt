@@ -1,4 +1,4 @@
-package com.example.pe_assignment
+package com.example.pe_assignment.Cancer
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,8 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.CalendarView
-import android.widget.Toast
 import androidx.navigation.findNavController
+import com.example.pe_assignment.R
 import kotlinx.android.synthetic.main.activity_calendar.*
 
 class CancerCalendarFragment : Fragment() {

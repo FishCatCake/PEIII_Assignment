@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/newtimeline_graph"
+    app:startDestination="@id/timelineUploadFragment">
+
+    <fragment
+        android:id="@+id/timelineUploadFragment"
+        android:name="com.example.pe_assignment.Cancer.TimelineUploadFragment"
+        android:label="fragment_timeline_upload"
+        tools:layout="@layout/fragment_timeline_upload" >
+        <action
+            android:id="@+id/action_timelineUploadFragment_to_timelineinfoboardFragment"
+            app:destination="@id/timelineinfoboardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/timelineinfoboardFragment"
+        android:name="com.example.pe_assignment.Cancer.TimelineinfoboardFragment"
+        android:label="fragment_timelineinfoboard"
+        tools:layout="@layout/fragment_timelineinfoboard" />
+</navigation>

@@ -69,4 +69,7 @@
     <string name="info_1">Bleeding profusely. Make an appointment for a biopsy.</string>
     <string name="info_2">Can\'t drink or eat. Keep a regular schedule.</string>
     <string name="info_3">Review with results one week after biopsy.</string>
+    <string name="diagnostic_result">Diagnostic Result</string>
+    <string name="detailed_inspection">Detailed inspection</string>
+    <string name="timeline_info">Develop a good recording habit, it will be easier for the doctor to understand you :).</string>
 </resources>
