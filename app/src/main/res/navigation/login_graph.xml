@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.example.pe_assignment.LoginFragment"
+        android:name="com.example.pe_assignment.Login.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/register1Fragment"
-        android:name="com.example.pe_assignment.Register1Fragment"
+        android:name="com.example.pe_assignment.Login.Register1Fragment"
         android:label="Register1Fragment" >
         <action
             android:id="@+id/action_register1Fragment_to_register2Fragment"
@@ -24,7 +24,7 @@
     </fragment>
     <fragment
         android:id="@+id/register2Fragment"
-        android:name="com.example.pe_assignment.Register2Fragment"
+        android:name="com.example.pe_assignment.Login.Register2Fragment"
         android:label="Register2Fragment" >
         <action
             android:id="@+id/action_register2Fragment_to_register3Fragment"
@@ -32,6 +32,6 @@
     </fragment>
     <fragment
         android:id="@+id/register3Fragment"
-        android:name="com.example.pe_assignment.Register3Fragment"
+        android:name="com.example.pe_assignment.Login.Register3Fragment"
         android:label="Register3Fragment" />
 </navigation>

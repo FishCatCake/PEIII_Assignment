@@ -1,4 +1,4 @@
-package com.example.pe_assignment
+package com.example.pe_assignment.Login
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
-import androidx.navigation.findNavController
+import com.example.pe_assignment.R
 
 class Register3Fragment : Fragment() {
         override fun onCreateView(
