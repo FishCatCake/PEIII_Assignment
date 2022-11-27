@@ -34,6 +34,10 @@
     <color name="text_purple">#8E008B</color>
     <color name="text_blue">#75BEF6</color>
 
+
+        <!--    Period detail-->
+    <color name="pdf">#0073CC</color>
+
     <!--    origin color set -->
     <color name="purple_700">#FF3700B3</color>
     <color name="teal_200">#FF03DAC5</color>

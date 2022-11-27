@@ -69,7 +69,7 @@
     <string name="info_1">Bleeding profusely. Make an appointment for a biopsy.</string>
     <string name="info_2">Can\'t drink or eat. Keep a regular schedule.</string>
     <string name="info_3">Review with results one week after biopsy.</string>
-
+<!--<           Cycle log-->
     <string name="cycle_log">Cycle Log</string>
     <string name="men">MENSTRUATION</string>
     <string name="data">OTHER DATA</string>
@@ -80,4 +80,14 @@
     <string name="add4">Your Cycle</string>
     <string name="add">+</string>
     <string name="redirect"> > </string>
+
+
+<!--    Cycle detail-->
+    <string name="cycle_detail">Cycle Details</string>
+    <string name="cycle_len">CYCLE LENGTH</string>
+    <string name="cycle_status1">Normal</string>
+    <string name="len_days">4</string>
+    <string name="days">days</string>
+    <string name="pdf">Export PDF</string>
+
 </resources>
