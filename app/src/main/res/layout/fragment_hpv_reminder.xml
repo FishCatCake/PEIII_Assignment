@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HpvReminderFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <include
+        layout="@layout/hpv_input_header"/>
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/hpv_3_2"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:fontFamily="@font/roboto"
+            android:textStyle="bold"
+            android:text="@string/do_you_need_to_set_reminders" />
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:id="@+id/reminder_on"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="30dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/roboto"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:text="Yes"/>
+
+            <RadioButton
+                android:id="@+id/reminder_off"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="31dp"
+                android:layout_marginStart="40dp"
+                android:fontFamily="@font/roboto"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:text="@string/no"/>
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/done_btn"
+            android:layout_width="312dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="300dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@android:drawable/dialog_holo_light_frame"
+            android:textColor="@color/btn_text"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:text="@string/done" />
+    </LinearLayout>
+
+</FrameLayout>
