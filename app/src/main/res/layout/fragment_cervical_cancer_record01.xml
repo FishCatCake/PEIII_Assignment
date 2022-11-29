@@ -70,7 +70,8 @@
                         android:textSize="15sp" />
                     <ImageView
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="2dp"
+
                         android:src="@drawable/line_horizontal_card"/>
 
                     <RadioButton
@@ -84,7 +85,7 @@
                         android:paddingEnd="20sp"
                         android:layout_marginStart="20sp"
                         android:textColor="@color/black"
-                        android:textSize="15sp" />
+                        android:textSize="13sp" />
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"

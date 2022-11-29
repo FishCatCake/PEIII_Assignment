@@ -6,7 +6,7 @@
     app:startDestination="@id/reviewCalendarFragment">
     <fragment
         android:id="@+id/reviewCalendarFragment"
-        android:name="com.example.pe_assignment.ReviewCalendarFragment"
+        android:name="com.example.pe_assignment.hpv.ReviewCalendarFragment"
         android:label="fragment_review_calendar"
         tools:layout="@layout/fragment_review_calendar" >
         <action
@@ -15,7 +15,7 @@
     </fragment>
     <fragment
         android:id="@+id/doseCalendarFragment"
-        android:name="com.example.pe_assignment.DoseCalendarFragment"
+        android:name="com.example.pe_assignment.hpv.DoseCalendarFragment"
         android:label="fragment_dose_calendar"
         tools:layout="@layout/fragment_dose_calendar" >
         <action
@@ -24,7 +24,7 @@
     </fragment>
     <fragment
         android:id="@+id/hpvReminderFragment"
-        android:name="com.example.pe_assignment.HpvReminderFragment"
+        android:name="com.example.pe_assignment.hpv.HpvReminderFragment"
         android:label="fragment_hpv_reminder"
         tools:layout="@layout/fragment_hpv_reminder" >
         <action
@@ -33,7 +33,7 @@
     </fragment>
     <fragment
         android:id="@+id/vaccineCountdownFragment"
-        android:name="com.example.pe_assignment.VaccineCountdownFragment"
+        android:name="com.example.pe_assignment.hpv.VaccineCountdownFragment"
         android:label="fragment_vaccine_countdown"
         tools:layout="@layout/fragment_vaccine_countdown" >
         <action
@@ -42,7 +42,7 @@
     </fragment>
     <fragment
         android:id="@+id/testCountdownFragment"
-        android:name="com.example.pe_assignment.TestCountdownFragment"
+        android:name="com.example.pe_assignment.hpv.TestCountdownFragment"
         android:label="fragment_test_countdown"
         tools:layout="@layout/fragment_test_countdown" >
         <action
@@ -54,7 +54,7 @@
     </fragment>
     <fragment
         android:id="@+id/hpvRecordFragment"
-        android:name="com.example.pe_assignment.HpvRecordFragment"
+        android:name="com.example.pe_assignment.hpv.HpvRecordFragment"
         android:label="fragment_hpv_record"
         tools:layout="@layout/fragment_hpv_record" >
         <action
@@ -63,7 +63,7 @@
     </fragment>
     <fragment
         android:id="@+id/testRecordFragment"
-        android:name="com.example.pe_assignment.TestRecordFragment"
+        android:name="com.example.pe_assignment.hpv.TestRecordFragment"
         android:label="fragment_test_record"
         tools:layout="@layout/fragment_test_record" >
         <action

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/create_record_graph"
+    app:startDestination="@id/cervicalCancerRecord01Fragment">
+    <fragment
+        android:id="@+id/cervicalCancerRecord01Fragment"
+        android:name="com.example.pe_assignment.CervicalCancerRecord01Fragment"
+        android:label="fragment_cervical_cancer_record01"
+        tools:layout="@layout/fragment_cervical_cancer_record01" >
+        <action
+            android:id="@+id/action_cervicalCancerRecord01Fragment_to_cervicalCancerRecord02Fragment"
+            app:destination="@id/cervicalCancerRecord02Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cervicalCancerRecord02Fragment"
+        android:name="com.example.pe_assignment.CervicalCancerRecord02Fragment"
+        android:label="fragment_cervical_cancer_record02"
+        tools:layout="@layout/fragment_cervical_cancer_record02" >
+        <action
+            android:id="@+id/action_cervicalCancerRecord02Fragment_to_cervicalCancerRecord03Fragment"
+            app:destination="@id/cervicalCancerRecord03Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cervicalCancerRecord03Fragment"
+        android:name="com.example.pe_assignment.CervicalCancerRecord03Fragment"
+        android:label="fragment_cervical_cancer_record03"
+        tools:layout="@layout/fragment_cervical_cancer_record03" />
+</navigation>

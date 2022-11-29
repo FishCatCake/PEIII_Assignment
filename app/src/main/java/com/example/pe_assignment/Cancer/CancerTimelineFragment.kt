@@ -45,6 +45,10 @@ class CancerTimelineFragment : Fragment() {
         btn_cal.setOnClickListener {
             view.findNavController().navigate(R.id.cancerCalendarFragment)
         }
+        val btn_newrecord = view.findViewById<Button>(R.id.btn_cancer_record_new)
+        btn_newrecord.setOnClickListener {
+            view.findNavController().navigate(R.id.newTimelineActivity)
+        }
 
     }
 
