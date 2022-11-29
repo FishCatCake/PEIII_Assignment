@@ -13,10 +13,16 @@
         android:theme="@style/Theme.PEAssignment"
         tools:targetApi="31">
         <activity
-            android:name=".NewTimelineActivity"
-            android:theme="@style/Theme.LoginPage"
+            android:name=".MenstruationActivity"
             android:exported="false">
-
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".NewTimelineActivity"
+            android:exported="false"
+            android:theme="@style/Theme.LoginPage">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -29,10 +35,10 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
-
         </activity>
         <activity
             android:name=".LoadingActivity"
@@ -80,19 +86,15 @@
             android:name=".Cancer.CancerCalendar"
             android:exported="false"
             android:theme="@style/Theme.LoginPage">
-
-
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-
             android:name=".Login.LoginActivity"
             android:exported="false"
             android:theme="@style/Theme.LoginPage"
             android:windowSoftInputMode="adjustResize">
-
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />

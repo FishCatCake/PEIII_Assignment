@@ -127,8 +127,8 @@
     <string name="vaccine_reminder">Vaccine Reminder</string>
     <string name="_0">0</string>
     <string name="_7">7</string>
-    
-    <string name="symptom_bladder_incomtinence">Bladder Incomtinence</string>
+
+    <string name="symptom_bladder_incontinence">Bladder Incontinence</string>
 
     <string name="type">TYPE</string>
     <string name="cervical_cancer">Cervical Cancer</string>
@@ -156,6 +156,15 @@
     <string name="appetite_changes">Appetite Changes</string>
     <string name="baldder_incontinence">Baldder Incontinence</string>
     <string name="account_and_security">Account and Security</string>
+    <string name="time_zone_setting">Time Zone Setting</string>
+    <string name="region_setting">Region Setting</string>
+    <string name="privacy_setting">Privacy Setting</string>
+    <string name="language_setting">Language Setting</string>
+    <string name="notification_setting">Notification Setting</string>
+    <string name="log_out">Log out</string>
+    <string name="my_account">My Account</string>
+    <string name="tv_cycle_history">Cycle History</string>
+    <string name="tv_current_cycle">Current Cycle:</string>
     >>>>>>> origin/zhixuanjj
 
 </resources>

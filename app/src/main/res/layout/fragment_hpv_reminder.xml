@@ -24,7 +24,6 @@
             android:layout_marginTop="30dp"
             android:textColor="@color/black"
             android:textSize="20sp"
-            android:fontFamily="@font/roboto"
             android:textStyle="bold"
             android:text="@string/do_you_need_to_set_reminders" />
         <RadioGroup
@@ -37,7 +36,6 @@
                 android:paddingLeft="30dp"
                 android:layout_marginLeft="40dp"
                 android:layout_marginTop="30dp"
-                android:fontFamily="@font/roboto"
                 android:textStyle="bold"
                 android:textSize="20sp"
                 android:text="Yes"/>
@@ -48,7 +46,6 @@
                 android:layout_height="wrap_content"
                 android:paddingStart="31dp"
                 android:layout_marginStart="40dp"
-                android:fontFamily="@font/roboto"
                 android:textStyle="bold"
                 android:textSize="20sp"
                 android:text="@string/no"/>
