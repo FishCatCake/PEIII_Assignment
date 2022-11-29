@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
-    tools:context=".MainActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".SelectionPeriodFragment">
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -20,10 +19,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:cardBackgroundColor="#CBCACA"
-            android:layout_marginTop="200dp"
+            android:layout_marginTop="150dp"
             android:layout_marginLeft="50dp"
             android:layout_marginRight="50dp"
-            android:layout_marginBottom="200dp"
             app:cardCornerRadius="10dp"
             app:cardElevation="10dp">
 
@@ -33,7 +31,7 @@
                 android:orientation="vertical">
                 <RadioGroup
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:background="#EAE8EA">
                     <TextView
                         android:id="@+id/card_title"
@@ -135,7 +133,7 @@
 
                     <RadioButton
                         android:id="@+id/card_attr5"
-                        android:layout_width="fill_parent"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:buttonTint="@color/grey_text"
                         android:layoutDirection="rtl"
@@ -157,8 +155,19 @@
 
         </androidx.cardview.widget.CardView>
 
+        <Button
+            android:id="@+id/next_btn"
+            android:layout_width="312dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="130dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@android:drawable/dialog_holo_light_frame"
+            android:textColor="@color/btn_text"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:text="@string/done" />
 
     </LinearLayout>
 
-
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+</FrameLayout>

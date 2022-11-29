@@ -15,6 +15,14 @@
         <activity
             android:name=".NewTimelineActivity"
             android:theme="@style/Theme.LoginPage"
+            android:exported="false">
+
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".HPVActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,8 +32,8 @@
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
-        </activity>
 
+        </activity>
         <activity
             android:name=".LoadingActivity"
             android:exported="false">
@@ -79,15 +87,11 @@
                 android:value="" />
         </activity>
         <activity
+
             android:name=".Login.LoginActivity"
-            android:exported="true"
+            android:exported="false"
             android:theme="@style/Theme.LoginPage"
             android:windowSoftInputMode="adjustResize">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
 
             <meta-data
                 android:name="android.app.lib_name"

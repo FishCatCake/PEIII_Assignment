@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
-    tools:context=".MainActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".CervicalCancerRecord01Fragment">
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -15,12 +14,21 @@
         app:layout_anchor="@+id/linearLayout"
         app:layout_anchorGravity="center">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_marginTop="100dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/choose_an_uncomfortable_time"/>
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:cardBackgroundColor="#CBCACA"
-            android:layout_marginTop="200dp"
+            android:layout_marginTop="20dp"
             android:layout_marginLeft="50dp"
             android:layout_marginRight="50dp"
             android:layout_marginBottom="200dp"
@@ -33,19 +41,20 @@
                 android:orientation="vertical">
                 <RadioGroup
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:background="#EAE8EA">
+
                     <TextView
                         android:id="@+id/card_title"
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
-                        android:paddingStart="20dp"
-                        android:background="@color/input_card_orange"
+                        android:background="@color/input_card_red"
                         android:gravity="center_vertical"
-                        android:text="@string/period"
-                        android:textStyle="bold"
+                        android:paddingStart="20dp"
+                        android:text="@string/time"
+                        android:textColor="@color/white"
                         android:textSize="20sp"
-                        android:textColor="@color/white"/>
+                        android:textStyle="bold" />
 
                     <RadioButton
                         android:id="@+id/card_attr1"
@@ -54,7 +63,7 @@
                         android:buttonTint="@color/grey_text"
                         android:layoutDirection="rtl"
                         android:layout_gravity="start"
-                        android:text="@string/had_flow"
+                        android:text="@string/morning"
                         android:textColor="@color/black"
                         android:paddingEnd="20sp"
                         android:layout_marginStart="20sp"
@@ -71,7 +80,24 @@
                         android:buttonTint="@color/grey_text"
                         android:layoutDirection="rtl"
                         android:layout_gravity="start"
-                        android:text="@string/no_flow"
+                        android:text="@string/afternoon"
+                        android:paddingEnd="20sp"
+                        android:layout_marginStart="20sp"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/line_horizontal_card"/>
+
+                    <RadioButton
+                        android:id="@+id/card_attr3"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/grey_text"
+                        android:layoutDirection="rtl"
+                        android:layout_gravity="start"
+                        android:text="@string/evening"
                         android:paddingEnd="20sp"
                         android:layout_marginStart="20sp"
                         android:textColor="@color/black"
@@ -87,30 +113,11 @@
                         android:layout_height="35dp"
                         android:background="@color/white"
                         android:layout_marginTop="2dp"
-                        android:text="@string/flow_level"
+                        android:text="@string/other_time"
                         android:paddingStart="20dp"
                         android:gravity="center_vertical"
                         android:textColor="#CBCACA"
-                        android:textSize="20sp">
-
-                    </TextView>
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/line_horizontal_card"/>
-
-                    <RadioButton
-                        android:id="@+id/card_attr3"
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:buttonTint="@color/grey_text"
-                        android:layoutDirection="rtl"
-                        android:layout_gravity="start"
-                        android:text="@string/light"
-                        android:paddingEnd="20sp"
-                        android:layout_marginStart="20sp"
-                        android:textColor="@color/black"
-                        android:textSize="15sp" />
+                        android:textSize="20sp"/>
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -123,7 +130,7 @@
                         android:buttonTint="@color/grey_text"
                         android:layoutDirection="rtl"
                         android:layout_gravity="start"
-                        android:text="@string/medium"
+                        android:text="@string/exercising"
                         android:paddingEnd="20sp"
                         android:layout_marginStart="20sp"
                         android:textColor="@color/black"
@@ -140,7 +147,7 @@
                         android:buttonTint="@color/grey_text"
                         android:layoutDirection="rtl"
                         android:layout_gravity="start"
-                        android:text="@string/heavy"
+                        android:text="@string/sleeping"
                         android:paddingEnd="20sp"
                         android:layout_marginStart="20sp"
                         android:textColor="@color/black"
@@ -150,15 +157,26 @@
                         android:layout_height="wrap_content"
                         android:src="@drawable/line_horizontal_card"/>
 
-
                 </RadioGroup>
             </RelativeLayout>
 
 
         </androidx.cardview.widget.CardView>
 
+        <Button
+            android:id="@+id/next_btn"
+            android:layout_width="312dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="-80dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@android:drawable/dialog_holo_light_frame"
+            android:textColor="@color/btn_text"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:text="@string/next" />
+
 
     </LinearLayout>
 
-
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+</FrameLayout>
