@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".CervicalCancerTimeline02ragment">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_anchor="@+id/linearLayout"
+        app:layout_anchorGravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_marginTop="100dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/detailed_medical_information"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/white"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginBottom="200dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/card_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@color/input_card_purple"
+                        android:gravity="center_vertical"
+                        android:paddingStart="20dp"
+                        android:text="@string/diagnostic_result"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/card_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:background="@color/white"
+                        android:layout_marginTop="2dp"
+                        android:text="@string/title"
+                        android:paddingStart="20dp"
+                        android:gravity="center_vertical"
+                        android:textColor="#CBCACA"
+                        android:textSize="20sp"/>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/line_horizontal_card"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:padding="10dp"
+                        android:hint="@string/new_record_title"
+                        android:paddingStart="40dp"/>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/line_horizontal_card"/>
+
+                    <TextView
+                        android:id="@+id/card_name2"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:background="@color/white"
+                        android:text="@string/description"
+                        android:paddingStart="20dp"
+                        android:gravity="center_vertical"
+                        android:textColor="#CBCACA"
+                        android:textSize="20sp"/>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/line_horizontal_card"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:padding="10dp"
+                        android:hint="@string/short_description_of_the_record"
+                        android:paddingStart="40dp"/>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/line_horizontal_card"/>
+
+                    <TextView
+                        android:id="@+id/card_name3"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:background="@color/white"
+                        android:text="FILE"
+                        android:paddingStart="20dp"
+                        android:gravity="center_vertical"
+                        android:textColor="#CBCACA"
+                        android:textSize="20sp"/>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/line_horizontal_card"/>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/line_horizontal_card"/>
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/upload_btn"
+                        android:src="@drawable/upload_btn"
+                        android:scaleX="0.7"
+                        android:scaleY="0.7"/>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/next_btn"
+            android:layout_width="312dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="-80dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@android:drawable/dialog_holo_light_frame"
+            android:textColor="@color/btn_text"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:text="@string/next" />
+
+
+    </LinearLayout>
+
+</FrameLayout>
