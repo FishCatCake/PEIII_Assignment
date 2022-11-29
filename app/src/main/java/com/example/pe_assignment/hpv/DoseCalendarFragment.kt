@@ -1,4 +1,4 @@
-package com.example.pe_assignment
+package com.example.pe_assignment.hpv
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,9 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageButton
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.pe_assignment.R
 
 
 class DoseCalendarFragment : Fragment() {
@@ -39,10 +41,11 @@ class DoseCalendarFragment : Fragment() {
         adapter = HpvCalendarAdapter(calendarArrayList)
         recyclerView.adapter = adapter
 
-        val btnSend = view.findViewById<Button>(R.id.next_btn1)
+        var btnSend = view.findViewById<Button>(R.id.next_btn1)
         btnSend.setOnClickListener {
             view.findNavController().navigate(R.id.hpvReminderFragment)
         }
+
     }
 
     private fun dataInitialize(){

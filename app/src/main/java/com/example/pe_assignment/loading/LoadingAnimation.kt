@@ -1,4 +1,4 @@
-package com.example.pe_assignment
+package com.example.pe_assignment.loading
 
 import android.app.Activity
 import android.widget.RelativeLayout

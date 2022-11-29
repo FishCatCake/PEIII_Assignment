@@ -1,4 +1,4 @@
-package com.example.pe_assignment
+package com.example.pe_assignment.hpv
 
 class HpvCalendarModel(
     val page: String,

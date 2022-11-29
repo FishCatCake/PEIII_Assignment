@@ -1,16 +1,15 @@
-package com.example.pe_assignment
+package com.example.pe_assignment.hpv
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.CalendarView
 import android.widget.ImageButton
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.pe_assignment.R
 
 
 class TestRecordFragment : Fragment() {
@@ -42,6 +41,10 @@ class TestRecordFragment : Fragment() {
         recyclerView.adapter = adapter
 
         var btnSend = view.findViewById<ImageButton>(R.id.left_arrow)
+        btnSend.setOnClickListener {
+            view.findNavController().navigate(R.id.hpvRecordFragment)
+        }
+        btnSend = view.findViewById<ImageButton>(R.id.back)
         btnSend.setOnClickListener {
             view.findNavController().navigate(R.id.hpvRecordFragment)
         }

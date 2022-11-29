@@ -1,8 +1,9 @@
-package com.example.pe_assignment
+package com.example.pe_assignment.loading
 
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.example.pe_assignment.R
 
 class LoadingActivity : AppCompatActivity(), LoadingImplementation {
     override fun onFinishedLoading() {

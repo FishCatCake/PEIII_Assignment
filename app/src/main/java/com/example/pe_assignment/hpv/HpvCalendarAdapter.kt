@@ -1,17 +1,16 @@
-package com.example.pe_assignment
+package com.example.pe_assignment.hpv
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.CalendarView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import kotlinx.android.synthetic.main.calendar_item.view.*
+import com.example.pe_assignment.R
 
 class HpvCalendarAdapter(private val calendarList : ArrayList<HpvCalendarModel>):RecyclerView.Adapter<HpvCalendarAdapter.HpvViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HpvViewHolder {
-        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.calendar_item,
+        val itemView = LayoutInflater.from(parent.context).inflate(
+            R.layout.calendar_item,
             parent,false)
         return HpvViewHolder(itemView)
     }

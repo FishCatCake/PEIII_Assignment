@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusable="true"
+    tools:context=".article.ArticleHomeFragment">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageButton
+            android:id="@+id/back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/btn_back"
+            android:background="@drawable/btn_back"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/back_btn"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="100dp"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:text="@string/articles"/>
+    </RelativeLayout>
+    <!--    article category-->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:textColor="@color/black"
+            android:text="@string/article_category"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/category_recyclerview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="25dp"
+                        android:layout_marginRight="20dp"
+                        tools:listitem="@layout/activity_article_category_item"/>
+    </androidx.cardview.widget.CardView>
+
+    <!--    hot article  -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_marginTop="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/hot_article"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:textColor="@color/black"
+            android:text="@string/hot_article"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+            <ImageButton
+                android:id="@+id/read_btn1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/hot_article"
+                android:layout_marginStart="15dp"
+                android:background="@drawable/right_arrow"
+                android:src="@drawable/right_arrow"/>
+        </RelativeLayout>
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/hot_recyclerview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="25dp"
+                        android:layout_marginRight="20dp"
+                        tools:listitem="@layout/activity_article_hot_item"/>
+    </androidx.cardview.widget.CardView>
+
+    <!--    recent article  -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/recent_article"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:textColor="@color/black"
+            android:text="@string/recent_article"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+        <ImageButton
+            android:id="@+id/read_btn2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/recent_article"
+            android:layout_marginStart="15dp"
+            android:background="@drawable/right_arrow"
+            android:src="@drawable/right_arrow"/>
+        </RelativeLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recent_recyclerview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="25dp"
+                        android:layout_marginRight="20dp"
+                        tools:listitem="@layout/activity_article_hot_item"/>
+    </androidx.cardview.widget.CardView>
+
+    <!--    handpick   -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/handpick_article"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:textColor="@color/black"
+            android:text="@string/handpick"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+        <ImageButton
+            android:id="@+id/read_btn3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/handpick_article"
+            android:layout_marginStart="15dp"
+            android:background="@drawable/right_arrow"
+            android:src="@drawable/right_arrow"/>
+        </RelativeLayout>
+<!--        <androidx.core.widget.NestedScrollView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content">-->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/handpick_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginRight="20dp"
+                tools:listitem="@layout/activity_article_hot_item"/>
+<!--        </androidx.core.widget.NestedScrollView>-->
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
+</FrameLayout>
