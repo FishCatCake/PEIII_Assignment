@@ -148,5 +148,19 @@
     <string name="additional_symptoms">ADDITIONAL SYMPTOMS</string>
     <string name="appetite_changes">Appetite Changes</string>
     <string name="baldder_incontinence">Baldder Incontinence</string>
+    <string name="cancer_card_text02">Choose symptoms or customize</string>
+    <string name="cancer_symptoms">SYMPTOMS</string>
+    <string name="breast_lumps">Breast lumps</string>
+    <string name="breast_pain">Breast pain</string>
+    <string name="change_in_breast_shape">Change in breast shape</string>
+    <string name="sunken_skin">Sunken skin</string>
+    <string name="fluid_in_nipples">Fluid in nipples</string>
+    <string name="other">Other</string>
+    <string name="stage">What stage are you at now?</string>
+    <string name="vaginal_bleeding">Vaginal bleeding</string>
+    <string name="pelvic_pain">Pelvic pain</string>
+    <string name="pain_during_intercourse">Pain during intercourse</string>
+    <string name="watery_bloody_vaginal_discharge">Watery, bloody vaginal discharge</string>
+    <string name="abnormal_secretion">Abnormal secretion</string>
 
 </resources>

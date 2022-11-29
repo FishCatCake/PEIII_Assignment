@@ -74,8 +74,6 @@
                 android:textAllCaps="false"
                 android:textColor="@color/purple_700"
                 android:textSize="12sp" />
-
-
         </LinearLayout>
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_timeline"
@@ -83,8 +81,19 @@
             android:layout_height="match_parent"
             tools:listitem="@layout/item_timeline"/>
 
-
-
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:id="@+id/btn_cancer_record_new"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/tablayout"
+            android:drawableStart="@drawable/icon_write"
+            android:text="Create"
+            android:textAllCaps="false"
+            android:textColor="@color/purple_700"
+            android:textSize="12sp" />
     </LinearLayout>
 
 

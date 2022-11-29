@@ -1,4 +1,4 @@
-package com.example.pe_assignment.Cancer
+package com.example.pe_assignment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,9 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.navigation.findNavController
-import com.example.pe_assignment.R
 
-class TimelineinfoboardFragment : Fragment() {
+class CervicalCancerRecord02Fragment : Fragment() {
 
 
     override fun onCreateView(
@@ -17,14 +16,14 @@ class TimelineinfoboardFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_timelineinfoboard, container, false)
+        return inflater.inflate(R.layout.fragment_cervical_cancer_record02, container, false)
     }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         val btnSend = view.findViewById<Button>(R.id.next_btn)
         btnSend.setOnClickListener {
-            view.findNavController().navigate(R.id.cancerTimelineFragment)
+            view.findNavController().navigate(R.id.cervicalCancerRecord03Fragment)
         }
     }
 }
