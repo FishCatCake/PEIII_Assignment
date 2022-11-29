@@ -70,7 +70,9 @@
     <string name="info_2">Can\'t drink or eat. Keep a regular schedule.</string>
     <string name="info_3">Review with results one week after biopsy.</string>
 
+
     <!--<           Cycle log-->
+
     <string name="cycle_log">Cycle Log</string>
     <string name="men">MENSTRUATION</string>
     <string name="data">OTHER DATA</string>
@@ -90,6 +92,7 @@
     <string name="len_days">4</string>
     <string name="days">days</string>
     <string name="pdf">Export PDF</string>
+
 
     <string name="diagnostic_result">Diagnostic Result</string>
     <string name="detailed_inspection">Detailed inspection</string>
@@ -145,5 +148,19 @@
     <string name="additional_symptoms">ADDITIONAL SYMPTOMS</string>
     <string name="appetite_changes">Appetite Changes</string>
     <string name="baldder_incontinence">Baldder Incontinence</string>
+    <string name="cancer_card_text02">Choose symptoms or customize</string>
+    <string name="cancer_symptoms">SYMPTOMS</string>
+    <string name="breast_lumps">Breast lumps</string>
+    <string name="breast_pain">Breast pain</string>
+    <string name="change_in_breast_shape">Change in breast shape</string>
+    <string name="sunken_skin">Sunken skin</string>
+    <string name="fluid_in_nipples">Fluid in nipples</string>
+    <string name="other">Other</string>
+    <string name="stage">What stage are you at now?</string>
+    <string name="vaginal_bleeding">Vaginal bleeding</string>
+    <string name="pelvic_pain">Pelvic pain</string>
+    <string name="pain_during_intercourse">Pain during intercourse</string>
+    <string name="watery_bloody_vaginal_discharge">Watery, bloody vaginal discharge</string>
+    <string name="abnormal_secretion">Abnormal secretion</string>
 
 </resources>

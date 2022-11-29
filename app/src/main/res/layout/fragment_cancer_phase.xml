@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".CervicalCancerRecord01Fragment">
+    tools:context=".CancerPhaseFragment">
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -13,16 +13,27 @@
         android:orientation="vertical"
         app:layout_anchor="@+id/linearLayout"
         app:layout_anchorGravity="center">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Cervical Cancer Track"
+            android:textColor="#000000"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="10dp"
+            tools:ignore="MissingConstraints" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="20dp"
             android:textSize="20sp"
             android:textStyle="bold"
             android:layout_gravity="center_horizontal"
-            android:text="@string/choose_an_uncomfortable_time"/>
+            android:text="@string/stage"/>
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
@@ -43,18 +54,17 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="#EAE8EA">
-
                     <TextView
                         android:id="@+id/card_title"
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
-                        android:background="@color/input_card_red"
-                        android:gravity="center_vertical"
                         android:paddingStart="20dp"
-                        android:text="@string/time"
-                        android:textColor="@color/white"
+                        android:background="@color/input_card_blue2"
+                        android:gravity="center_vertical"
+                        android:text="STAGE"
+                        android:textStyle="bold"
                         android:textSize="20sp"
-                        android:textStyle="bold" />
+                        android:textColor="@color/white"/>
 
                     <RadioButton
                         android:id="@+id/card_attr1"
@@ -63,15 +73,14 @@
                         android:buttonTint="@color/grey_text"
                         android:layoutDirection="rtl"
                         android:layout_gravity="start"
-                        android:text="@string/morning"
+                        android:text="Phase 1"
                         android:textColor="@color/black"
                         android:paddingEnd="20sp"
                         android:layout_marginStart="20sp"
                         android:textSize="15sp" />
                     <ImageView
                         android:layout_width="match_parent"
-                        android:layout_height="2dp"
-
+                        android:layout_height="wrap_content"
                         android:src="@drawable/line_horizontal_card"/>
 
                     <RadioButton
@@ -81,15 +90,16 @@
                         android:buttonTint="@color/grey_text"
                         android:layoutDirection="rtl"
                         android:layout_gravity="start"
-                        android:text="@string/afternoon"
+                        android:text="Phase 2"
                         android:paddingEnd="20sp"
                         android:layout_marginStart="20sp"
                         android:textColor="@color/black"
-                        android:textSize="13sp" />
+                        android:textSize="15sp" />
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:src="@drawable/line_horizontal_card"/>
+
 
                     <RadioButton
                         android:id="@+id/card_attr3"
@@ -98,7 +108,7 @@
                         android:buttonTint="@color/grey_text"
                         android:layoutDirection="rtl"
                         android:layout_gravity="start"
-                        android:text="@string/evening"
+                        android:text="Phase 3"
                         android:paddingEnd="20sp"
                         android:layout_marginStart="20sp"
                         android:textColor="@color/black"
@@ -108,21 +118,6 @@
                         android:layout_height="wrap_content"
                         android:src="@drawable/line_horizontal_card"/>
 
-                    <TextView
-                        android:id="@+id/card_name"
-                        android:layout_width="match_parent"
-                        android:layout_height="35dp"
-                        android:background="@color/white"
-                        android:layout_marginTop="2dp"
-                        android:text="@string/other_time"
-                        android:paddingStart="20dp"
-                        android:gravity="center_vertical"
-                        android:textColor="#CBCACA"
-                        android:textSize="20sp"/>
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/line_horizontal_card"/>
 
                     <RadioButton
                         android:id="@+id/card_attr4"
@@ -131,24 +126,7 @@
                         android:buttonTint="@color/grey_text"
                         android:layoutDirection="rtl"
                         android:layout_gravity="start"
-                        android:text="@string/exercising"
-                        android:paddingEnd="20sp"
-                        android:layout_marginStart="20sp"
-                        android:textColor="@color/black"
-                        android:textSize="15sp" />
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/line_horizontal_card"/>
-
-                    <RadioButton
-                        android:id="@+id/card_attr5"
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:buttonTint="@color/grey_text"
-                        android:layoutDirection="rtl"
-                        android:layout_gravity="start"
-                        android:text="@string/sleeping"
+                        android:text="Phase 4"
                         android:paddingEnd="20sp"
                         android:layout_marginStart="20sp"
                         android:textColor="@color/black"
@@ -168,16 +146,15 @@
             android:id="@+id/next_btn"
             android:layout_width="312dp"
             android:layout_height="55dp"
-            android:layout_marginTop="-80dp"
             android:layout_gravity="center_horizontal"
             android:background="@android:drawable/dialog_holo_light_frame"
             android:textColor="@color/btn_text"
             android:textAllCaps="false"
             android:textStyle="bold"
             android:textSize="20sp"
-            android:text="@string/next" />
-
+            android:text="@string/done" />
 
     </LinearLayout>
+
 
 </FrameLayout>

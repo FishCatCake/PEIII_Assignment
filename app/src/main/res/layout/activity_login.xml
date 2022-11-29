@@ -22,6 +22,4 @@
         app:defaultNavHost="true"
         android:layout_weight="1"
         app:navGraph="@navigation/login_graph"/>
-
-
 </LinearLayout>

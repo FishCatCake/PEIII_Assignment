@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_cancerCalendarFragment_to_cancerTimelineFragment"
             app:destination="@id/cancerTimelineFragment" />
+        <action
+            android:id="@+id/action_cancerCalendarFragment_to_cancerCreateRecordActivity"
+            app:destination="@id/cancerCreateRecordActivity" />
     </fragment>
     <fragment
         android:id="@+id/cancerTimelineFragment"
@@ -31,4 +34,9 @@
         android:name="com.example.pe_assignment.NewTimelineActivity"
         android:label="activity_new_timeline"
         tools:layout="@layout/activity_new_timeline" />
+    <activity
+        android:id="@+id/cancerCreateRecordActivity"
+        android:name="com.example.pe_assignment.CancerCreateRecordActivity"
+        android:label="activity_cancer_create_record"
+        tools:layout="@layout/activity_cancer_create_record" />
 </navigation>
