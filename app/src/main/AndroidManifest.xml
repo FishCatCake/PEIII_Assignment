@@ -10,17 +10,30 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.PEAssignment"
+        android:theme="@style/AppTheme.NoActionBar"
         tools:targetApi="31">
 
         <activity
+            android:name=".home.HomeActivity"
+            android:exported="true">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
             android:name=".cycle.MenstruationActivity"
-            android:exported="false">
+            android:exported="true">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-        
+
         <activity
             android:name=".CancerNewUserActivity"
             android:exported="true"
@@ -79,13 +92,7 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-        <activity
-            android:name=".home.HomeActivity"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
+
         <activity
             android:name=".CardRecyclerActivity"
             android:exported="false">

@@ -8,5 +8,51 @@
         android:id="@+id/homeFragment"
         android:name="com.example.pe_assignment.home.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_cancerTypeFragment"
+            app:destination="@id/cancerTypeFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_HPVActivity"
+            app:destination="@id/HPVActivity" />
+        <action
+            android:id="@+id/action_homeFragment_to_articleActivity"
+            app:destination="@id/articleActivity" />
+        <action
+            android:id="@+id/action_homeFragment_to_articleActivity2"
+            app:destination="@id/articleActivity" />
+        <action
+            android:id="@+id/action_homeFragment_to_articleActivity3"
+            app:destination="@id/articleActivity" />
+        <action
+            android:id="@+id/action_homeFragment_to_articleActivity4"
+            app:destination="@id/articleActivity" />
+        <action
+            android:id="@+id/action_homeFragment_to_menstruationActivity2"
+            app:destination="@id/menstruationActivity" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/cancerTypeFragment"
+        android:name="com.example.pe_assignment.CancerTypeFragment"
+        android:label="fragment_cancer_type"
+        tools:layout="@layout/fragment_cancer_type" >
+    </fragment>
+
+    <activity
+        android:id="@+id/HPVActivity"
+        android:name="com.example.pe_assignment.hpv.HPVActivity"
+        android:label="activity_hpvactivity"
+        tools:layout="@layout/activity_hpvactivity" />
+    <activity
+        android:id="@+id/articleActivity"
+        android:name="com.example.pe_assignment.article.ArticleActivity"
+        android:label="activity_article"
+        tools:layout="@layout/activity_article" />
+    <activity
+        android:id="@+id/menstruationActivity"
+        android:name="com.example.pe_assignment.cycle.MenstruationActivity"
+        android:label="activity_menstruation"
+        tools:layout="@layout/activity_menstruation" />
+
 </navigation>

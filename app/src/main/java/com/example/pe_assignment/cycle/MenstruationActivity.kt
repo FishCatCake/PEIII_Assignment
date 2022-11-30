@@ -7,6 +7,6 @@ import com.example.pe_assignment.R
 class MenstruationActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.fragment_cycle)
+        setContentView(R.layout.activity_menstruation)
     }
 }
