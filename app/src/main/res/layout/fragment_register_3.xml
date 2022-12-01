@@ -8,8 +8,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_centerVertical="true">
+        android:orientation="vertical">
 
         <TextView
             android:layout_width="wrap_content"
@@ -18,7 +17,7 @@
             android:layout_marginTop="5dp"
             android:padding="10dp"
             android:textSize="30sp"
-            android:text="Set now or modify later"
+            android:text="@string/set_now_or_modify_later"
             android:textColor="#000000"
             android:textStyle="bold"/>
 
@@ -26,10 +25,7 @@
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="50dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginRight="50dp"
-            android:layout_marginBottom="30dp"
+            style="@style/Card_View"
             app:cardBackgroundColor="#F2F0F1"
             app:cardCornerRadius="10dp"
             app:cardElevation="10dp">
@@ -43,52 +39,33 @@
                     <TextView
                         android:id="@+id/card_title"
                         android:layout_width="match_parent"
-                        android:layout_height="50dp"
-                        android:paddingStart="22.2dp"
-                        android:background="#3C4874"
-                        android:gravity="center_vertical"
-                        android:text="@string/settings"
-                        android:textStyle="bold"
-                        android:textSize="18sp"
-                        android:textColor="@color/white"/>
+                        android:layout_height="wrap_content"
+                        style="@style/Card_Title"
+                        android:background="@color/input_card_blue3"
+                        android:text="@string/settings"/>
 
                     <TextView
                         android:id="@+id/register_title1"
                         android:layout_width="match_parent"
-                        android:layout_height="35dp"
-                        android:background="@color/white"
-                        android:layout_marginTop="2dp"
-                        android:text="@string/personal_customization"
-                        android:paddingStart="22.2dp"
-                        android:gravity="center_vertical"
-                        android:textColor="#CBCACA"
-                        android:textSize="18sp"/>
+                        android:layout_height="wrap_content"
+                        style="@style/Card_Title02"
+                        android:text="@string/personal_customization"/>
 
                     <RadioButton
                         android:id="@+id/register_ratio_btn1"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="2dp"
-                        android:buttonTint="@color/grey_text"
-                        android:layoutDirection="rtl"
-                        android:layout_gravity="start"
+                        style="@style/Card_RadioButton"
                         android:text="@string/period_prediction_reminder"
-                        android:paddingEnd="20sp"
-                        android:layout_marginStart="20sp"
-                        android:textColor="#9C999A"
-                        android:textSize="15sp" />
+                        android:textColor="@color/card_content2"/>
 
                     <TextView
                         android:id="@+id/register_title2"
                         android:layout_width="match_parent"
-                        android:layout_height="35dp"
+                        android:layout_height="wrap_content"
+                        style="@style/Card_Title02"
                         android:background="@color/white"
-                        android:layout_marginTop="2dp"
-                        android:text="@string/system_settings"
-                        android:paddingStart="22.2dp"
-                        android:gravity="center_vertical"
-                        android:textColor="#CBCACA"
-                        android:textSize="18sp"/>
+                        android:text="@string/system_settings"/>
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -100,11 +77,13 @@
                         android:layout_width="wrap_content"
                         android:layout_height="35dp"
                         android:layout_marginTop="2dp"
-                        android:text="Language"
-                        android:paddingStart="22.2dp"
+                        android:text="@string/language"
+                        android:paddingStart="@dimen/card_content_padding"
+                        android:paddingEnd="@dimen/card_content_padding"
+                        android:layout_marginStart="@dimen/card_content_margin"
                         android:gravity="center_vertical"
-                        android:textColor="#9C999A"
-                        android:textSize="15sp"/>
+                        android:textColor="@color/card_content2"
+                        android:textSize="16sp"/>
 
                     <Spinner
                         android:id="@+id/spinner"
@@ -120,15 +99,10 @@
                         android:id="@+id/register_ratio_btn2"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="2dp"
-                        android:buttonTint="@color/grey_text"
-                        android:layoutDirection="rtl"
-                        android:layout_gravity="start"
+                        style="@style/Card_RadioButton"
                         android:text="@string/syc_with_huawei_health"
-                        android:paddingEnd="20sp"
-                        android:layout_marginStart="20sp"
-                        android:textColor="#9C999A"
-                        android:textSize="15sp" />
+                        android:textColor="@color/card_content2"
+                        android:textSize="17sp" />
 
 
             </LinearLayout>
@@ -145,7 +119,7 @@
             android:textAllCaps="false"
             android:textSize="21sp"
             android:textColor="@color/white"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="40dp"
             android:layout_marginStart="30dp"
             android:layout_marginEnd="30dp"/>
 

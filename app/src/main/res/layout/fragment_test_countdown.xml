@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    tools:context=".TestCountdownFragment">
+    tools:context=".hpv.TestCountdownFragment">
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -14,39 +14,8 @@
         android:orientation="vertical"
         app:layout_anchor="@+id/linearLayout"
         app:layout_anchorGravity="center">
-        <RelativeLayout android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            xmlns:android="http://schemas.android.com/apk/res/android">
-            <ImageButton
-                android:id="@+id/back"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@color/white"
-                android:layout_marginTop="20dp"
-                android:src="@drawable/btn_back"/>
-            <TextView
-                android:id="@+id/title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_toEndOf="@+id/back"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="25dp"
-                android:fontFamily="@font/roboto"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:textColor="@color/black"
-                android:text="@string/hpv_vaccine_track"/>
-            <ImageButton
-                android:id="@+id/other"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@color/white"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="20dp"
-                android:layout_toEndOf="@+id/title"
-                android:src="@drawable/btn_other"/>
-        </RelativeLayout>
+        <include
+            layout="@layout/hpv_content_header"/>
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -65,11 +34,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_toEndOf="@+id/left_arrow"
-                android:paddingLeft="80dp"
-                android:paddingRight="80dp"
+                android:paddingLeft="70dp"
+                android:paddingRight="70dp"
                 android:textColor="@color/black"
-                android:fontFamily="@font/roboto"
                 android:textStyle="bold"
+                android:textSize="20sp"
                 android:text="Review Reminder"/>
             <ImageButton
                 android:id="@+id/right_arrow"
@@ -86,9 +55,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:cardBackgroundColor="@color/white"
+            style="@style/Card_View"
             android:layout_marginTop="30dp"
-            android:layout_marginLeft="50dp"
-            android:layout_marginRight="50dp"
             app:cardCornerRadius="10dp"
             app:cardElevation="10dp">
 
@@ -101,15 +69,10 @@
                 <TextView
                     android:id="@+id/countdown"
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:paddingStart="20dp"
+                    android:layout_height="wrap_content"
+                    style="@style/Card_Title"
                     android:background="@color/input_card_blue"
-                    android:gravity="center_vertical"
-                    android:text="@string/next_review"
-                    android:fontFamily="@font/roboto"
-                    android:textStyle="bold"
-                    android:textSize="20sp"
-                    android:textColor="@color/white"/>
+                    android:text="@string/next_review"/>
 
                 <ImageView
                     android:id="@+id/countdown_1"
@@ -139,48 +102,44 @@
                 <TextView
                     android:layout_width="50dp"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto"
                     android:layout_marginTop="120dp"
                     android:layout_marginStart="45dp"
-                    android:text="0"
+                    android:text="@string/_0"
                     android:textStyle="bold"
-                    android:textColor="#696565"
+                    android:textColor="@color/countdown_text"
                     android:textSize="50sp" />
 
                 <TextView
                     android:layout_width="50dp"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto"
                     android:layout_toEndOf="@id/countdown_1"
                     android:layout_marginTop="120dp"
                     android:layout_marginStart="40dp"
-                    android:text="0"
+                    android:text="@string/_0"
                     android:textStyle="bold"
-                    android:textColor="#696565"
+                    android:textColor="@color/countdown_text"
                     android:textSize="50sp" />
 
                 <TextView
                     android:layout_width="50dp"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto"
                     android:layout_toEndOf="@id/countdown_2"
                     android:layout_marginTop="120dp"
                     android:layout_marginStart="40dp"
-                    android:text="7"
+                    android:text="@string/_7"
                     android:textStyle="bold"
-                    android:textColor="#696565"
+                    android:textColor="@color/countdown_text"
                     android:textSize="50sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto"
                     android:layout_below="@id/countdown_2"
                     android:layout_marginTop="20dp"
                     android:layout_marginStart="120dp"
                     android:layout_marginBottom="20dp"
                     android:text="@string/days"
-                    android:textColor="#696565"
+                    android:textColor="@color/countdown_text"
                     android:textSize="30sp" />
 
 
@@ -193,8 +152,8 @@
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:text="@string/reminder"
+            android:textStyle="bold"
             android:textSize="20sp"
-            android:fontFamily="@font/roboto"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="20dp"
             />

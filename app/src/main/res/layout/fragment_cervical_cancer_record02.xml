@@ -41,11 +41,7 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardBackgroundColor="#CBCACA"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginRight="50dp"
-        android:layout_marginBottom="200dp"
+        style="@style/Card_View"
         app:cardCornerRadius="10dp"
         app:cardElevation="10dp">
 
@@ -56,32 +52,22 @@
             <RadioGroup
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#EAE8EA">
+                android:background="@color/card_content_bg">
 
                 <TextView
                     android:id="@+id/card_title"
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
+                    android:layout_height="wrap_content"
+                    style="@style/Card_Title"
                     android:background="@color/input_card_red"
-                    android:gravity="center_vertical"
-                    android:paddingStart="20dp"
-                    android:text="@string/cancer_symptoms"
-                    android:textColor="@color/white"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+                    android:text="@string/cancer_symptoms"/>
 
                 <RadioButton
                     android:id="@+id/card_attr1"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:buttonTint="@color/grey_text"
-                    android:layoutDirection="rtl"
-                    android:layout_gravity="start"
-                    android:text="@string/vaginal_bleeding"
-                    android:textColor="@color/black"
-                    android:paddingEnd="20sp"
-                    android:layout_marginStart="20sp"
-                    android:textSize="15sp" />
+                    style="@style/Card_RadioButton"
+                    android:text="@string/vaginal_bleeding"/>
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -91,70 +77,42 @@
                     android:id="@+id/card_attr2"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:buttonTint="@color/grey_text"
-                    android:layoutDirection="rtl"
-                    android:layout_gravity="start"
-                    android:text="@string/pelvic_pain"
-                    android:paddingEnd="20sp"
-                    android:layout_marginStart="20sp"
-                    android:textColor="@color/black"
-                    android:textSize="15sp" />
+                    style="@style/Card_RadioButton"
+                    android:text="@string/pelvic_pain"/>
                 <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="6dp"
                     android:src="@drawable/line_horizontal_card"/>
 
                 <RadioButton
                     android:id="@+id/card_attr3"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:buttonTint="@color/grey_text"
-                    android:layoutDirection="rtl"
-                    android:layout_gravity="start"
-                    android:text="@string/pain_during_intercourse"
-                    android:paddingEnd="20sp"
-                    android:layout_marginStart="20sp"
-                    android:textColor="@color/black"
-                    android:textSize="15sp" />
+                    style="@style/Card_RadioButton"
+                    android:text="@string/pain_during_intercourse"/>
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:src="@drawable/line_horizontal_card"/>
 
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/line_horizontal_card"/>
 
                 <RadioButton
                     android:id="@+id/card_attr4"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:buttonTint="@color/grey_text"
-                    android:layoutDirection="rtl"
-                    android:layout_gravity="start"
-                    android:text="@string/watery_bloody_vaginal_discharge"
-                    android:paddingEnd="20sp"
-                    android:layout_marginStart="20sp"
-                    android:textColor="@color/black"
-                    android:textSize="15sp" />
+                    style="@style/Card_RadioButton"
+                    android:text="@string/watery_bloody_vaginal_discharge"/>
                 <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="5dp"
                     android:src="@drawable/line_horizontal_card"/>
 
                 <RadioButton
                     android:id="@+id/card_attr5"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:buttonTint="@color/grey_text"
-                    android:layoutDirection="rtl"
-                    android:layout_gravity="start"
-                    android:text="@string/abnormal_secretion"
-                    android:paddingEnd="20sp"
-                    android:layout_marginStart="20sp"
-                    android:textColor="@color/black"
-                    android:textSize="15sp" />
+                    style="@style/Card_RadioButton"
+                    android:text="@string/abnormal_secretion"/>
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -163,14 +121,8 @@
                     android:id="@+id/card_attr6"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:buttonTint="@color/grey_text"
-                    android:layoutDirection="rtl"
-                    android:layout_gravity="start"
-                    android:text="@string/other"
-                    android:paddingEnd="20sp"
-                    android:layout_marginStart="20sp"
-                    android:textColor="@color/black"
-                    android:textSize="15sp" />
+                    style="@style/Card_RadioButton"
+                    android:text="@string/other"/>
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -180,18 +132,17 @@
 
 
     </androidx.cardview.widget.CardView>
-
+    </LinearLayout>
     <Button
         android:id="@+id/next_btn"
-        android:layout_width="312dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="-80dp"
+        android:layout_width="@dimen/btn_grey_width"
+        android:layout_height="@dimen/btn_grey_height"
+        android:layout_marginTop="600dp"
         android:layout_gravity="center_horizontal"
-        android:background="@android:drawable/dialog_holo_light_frame"
+        android:background="@drawable/btn_selector"
         android:textColor="@color/btn_text"
         android:textAllCaps="false"
         android:textStyle="bold"
-        android:textSize="20sp"
+        android:textSize="@dimen/btn_text"
         android:text="@string/next" />
-    </LinearLayout>
 </FrameLayout>

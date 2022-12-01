@@ -89,27 +89,33 @@
     <string name="cycle_detail">Cycle Details</string>
     <string name="cycle_len">CYCLE LENGTH</string>
     <string name="cycle_status1">Normal</string>
-    <string name="len_days">4</string>
+    <string name="len_days">6</string>
     <string name="days">days</string>
     <string name="pdf">Export PDF</string>
+    <string name="cycle_date">25 Nov - 1 Dec, 2022</string>
+    <string name="temp_38">38°C</string>
+    <string name="temp_38_high">38°C ↑</string>
+    <string name="temp_37">37°C</string>
+    <string name="temp_36">36°C</string>
+    <string name="temp_36_low">36°C ↓</string>
+    <string name="light">Light</string>
+    <string name="medium">Medium</string>
+    <string name="heavy">Heavy</string>
+    <string name="date">DATE</string>
 
 
     <string name="diagnostic_result">Diagnostic Result</string>
     <string name="detailed_inspection">Detailed inspection</string>
     <string name="timeline_info">Develop a good recording habit, it will be easier for the doctor to understand you :).</string>
 
-
-    <string name="light">Light</string>
-    <string name="medium">Medium</string>
-    <string name="heavy">Heavy</string>
-    <string name="date">DATE</string>
     <string name="manufactuerer">MANUFACTUERER</string>
     <string name="dose">DOSE</string>
-    <string name="hpv_record">HPV RECORD</string>
+    <string name="hpv_record">HPV Record</string>
     <string name="_1_3">1/3</string>
     <string name="date_of_first_n_dose_onset">Date of first \n dose onset：</string>
     <string name="reminder">Reminder</string>
-    <!--    <string name="days">Days</string>-->
+
+
     <string name="date_of_first_nhpv_test_onset">Date of First\nHPV Test Onset</string>
     <string name="next">Next</string>
     <string name="hpv_vaccine_track">HPV Vaccine Track</string>
@@ -123,6 +129,9 @@
     <string name="vaccine_reminder">Vaccine Reminder</string>
     <string name="_0">0</string>
     <string name="_7">7</string>
+
+    <string name="symptom_bladder_incontinence">Bladder Incontinence</string>
+
     <string name="type">TYPE</string>
     <string name="cervical_cancer">Cervical Cancer</string>
     <string name="choose_which_cancer_to_track">Choose which cancer to track:</string>
@@ -148,6 +157,18 @@
     <string name="additional_symptoms">ADDITIONAL SYMPTOMS</string>
     <string name="appetite_changes">Appetite Changes</string>
     <string name="baldder_incontinence">Baldder Incontinence</string>
+
+    <string name="account_and_security">Account and Security</string>
+    <string name="time_zone_setting">Time Zone Setting</string>
+    <string name="region_setting">Region Setting</string>
+    <string name="privacy_setting">Privacy Setting</string>
+    <string name="language_setting">Language Setting</string>
+    <string name="notification_setting">Notification Setting</string>
+    <string name="log_out">Log out</string>
+    <string name="my_account">My Account</string>
+    <string name="tv_cycle_history">Cycle History</string>
+    <string name="tv_current_cycle">Current Cycle:</string>
+
     <string name="cancer_card_text02">Choose symptoms or customize</string>
     <string name="cancer_symptoms">SYMPTOMS</string>
     <string name="breast_lumps">Breast lumps</string>
@@ -162,5 +183,13 @@
     <string name="pain_during_intercourse">Pain during intercourse</string>
     <string name="watery_bloody_vaginal_discharge">Watery, bloody vaginal discharge</string>
     <string name="abnormal_secretion">Abnormal secretion</string>
+    <string name="symptom_description">Symptom Description:</string>
+    <string name="tap_here_to_enter">Tap here to enter.</string>
+    <string name="only_fot_this_record">ONLY FOT THIS RECORD</string>
+    <string name="yes">Yes</string>
+    <string name="file">FILE</string>
+    <string name="learn_more_about_you">Learn more about you</string>
+    <string name="set_now_or_modify_later">Set now or modify later</string>
+    <string name="language">Language</string>
 
 </resources>
