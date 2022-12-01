@@ -26,7 +26,7 @@ class HomeFragment : Fragment() {
         val cdCancer = view.findViewById<CardView>(R.id.cd_cancer)
         val cdArticle = view.findViewById<CardView>(R.id.cd_forum)
         cdCycle.setOnClickListener{
-            view.findNavController().navigate(R.id.cycleFragment)
+            view.findNavController().navigate(R.id.menstruationActivity)
         }
 
         cdVaccine.setOnClickListener {
@@ -34,12 +34,12 @@ class HomeFragment : Fragment() {
         }
 
         cdCancer.setOnClickListener {
-            view.findNavController().navigate(R.id.cancerTypeFragment)
+            view.findNavController().navigate(R.id.cancerNewUserActivity)
         }
 
         cdArticle.setOnClickListener {
             view.findNavController().navigate(R.id.articleActivity)
         }
-    }
+   }
 
 }
