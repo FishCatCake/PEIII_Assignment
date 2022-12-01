@@ -43,7 +43,7 @@
             android:id="@+id/btn_profile"
             android:layout_width="wrap_content"
             android:layout_height="80dp"
-            android:layout_marginStart="270dp"
+            android:layout_marginStart="250dp"
             android:layout_marginTop="10dp"
             android:background="@color/white"
             android:scaleX="0.5"
