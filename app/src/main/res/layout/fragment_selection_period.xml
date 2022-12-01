@@ -4,13 +4,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
     tools:context=".SelectionPeriodFragment">
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical"
+        android:layout_marginVertical="150dp"
         app:layout_anchor="@+id/linearLayout"
         app:layout_anchorGravity="center">
 
@@ -19,7 +21,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             style="@style/Card_View"
-            android:layout_marginTop="150dp"
+            app:cardBackgroundColor="#CBCACA"
             app:cardCornerRadius="10dp"
             app:cardElevation="10dp">
 
@@ -110,23 +112,22 @@
 
                 </RadioGroup>
             </RelativeLayout>
-
-
         </androidx.cardview.widget.CardView>
-
-        <Button
-            android:id="@+id/next_btn"
-            android:layout_width="@dimen/btn_grey_width"
-            android:layout_height="@dimen/btn_grey_height"
-            android:layout_marginTop="100dp"
-            android:layout_gravity="center_horizontal"
-            android:background="@drawable/btn_selector"
-            android:textColor="@color/btn_text"
-            android:textAllCaps="false"
-            android:textStyle="bold"
-            android:textSize="@dimen/btn_text"
-            android:text="@string/done" />
-
     </LinearLayout>
+
+
+    <Button
+        android:id="@+id/next_btn"
+        android:layout_marginTop="600dp"
+        android:layout_width="@dimen/btn_grey_width"
+        android:layout_height="@dimen/btn_grey_height"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/btn_selector"
+        android:textColor="@color/btn_text"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:textSize="@dimen/btn_text"
+        android:text="@string/done" />
+
 
 </FrameLayout>

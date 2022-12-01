@@ -39,6 +39,7 @@
         <item name="android:textSize">20sp</item>
         <item name="android:background">@color/white</item>
     </style>
+
     <style name="CalenderViewCustom" parent="Theme.AppCompat">
         <item name="colorAccent">@color/btn_date1</item>
         <item name="colorPrimary">@android:color/darker_gray</item>
@@ -53,4 +54,9 @@
         <item name="android:textColor">@color/btn_date1</item>
     </style>
 
+    <style name="AppTheme.NoActionBar" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
 </resources>

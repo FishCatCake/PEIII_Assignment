@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".setting.SettingFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/setting_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <ImageButton
+            android:id="@+id/btn_back_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="20dp"
+            android:src="@drawable/btn_back"/>
+
+        <TextView
+            android:id="@+id/tv_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="90dp"
+            android:layout_marginTop="30dp"
+            android:contentDescription="@string/app_name"
+            android:textColor="@color/purple_text"
+            android:textStyle="bold"
+            android:fontFamily="@font/roboto"
+            android:textSize="25sp"
+            android:text="Account Setting"/>
+
+
+        <ImageButton
+            android:id="@+id/profile"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@color/white"
+            android:layout_marginStart="320dp"
+            android:layout_marginTop="10dp"
+            android:scaleX="0.5"
+            android:scaleY="0.5"
+            android:src="@drawable/btn_profile"/>
+    </androidx.cardview.widget.CardView>
+
+    <RelativeLayout
+        android:id="@+id/cd_setting"
+        android:background="@drawable/bg_main"
+        android:layout_width="match_parent"
+        android:layout_height="650dp"
+        android:layout_below="@id/setting_head"
+        android:layout_alignParentBottom="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/setting_head"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/tv_my_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/grey_text"
+            android:text="@string/my_account"
+            android:textSize="14sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="30dp"
+            >
+
+        </TextView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cd_setting1"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="40dp"
+            android:layout_centerHorizontal="true"
+            android:clickable="true"
+            android:focusable="true"
+            android:hapticFeedbackEnabled="true"
+            app:cardBackgroundColor="@color/purple_theme"
+            app:cardCornerRadius="15dp"
+            >
+
+            <TextView
+                android:id="@+id/tv_setting1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginVertical="12dp"
+                android:text="@string/account_and_security"
+                android:textSize="18sp"
+                android:textStyle="bold">
+            </TextView>
+
+            <TextView
+                android:id="@+id/tv_direct"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="12dp"
+                android:layout_marginStart="300dp"
+                android:text="@string/redirect"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                >
+            </TextView>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tv_title_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cd_setting1"
+            android:textColor="@color/grey_text"
+            android:text="Settings"
+            android:textSize="14sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="30dp"
+            >
+
+        </TextView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cd_setting2"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/cd_setting1"
+            android:layout_marginTop="40dp"
+            android:layout_centerHorizontal="true"
+            android:clickable="true"
+            android:focusable="true"
+            android:hapticFeedbackEnabled="true"
+            app:cardBackgroundColor="@color/purple_theme"
+            app:cardCornerRadius="15dp"
+            >
+
+            <TextView
+                android:id="@+id/tv_setting2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginVertical="12dp"
+                android:text="@string/time_zone_setting"
+                android:textSize="18sp"
+                android:textStyle="bold">
+            </TextView>
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="12dp"
+                android:layout_marginStart="300dp"
+                android:text="@string/redirect"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                >
+            </TextView>
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cd_setting3"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/cd_setting2"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:clickable="true"
+            android:focusable="true"
+            android:hapticFeedbackEnabled="true"
+            app:cardBackgroundColor="@color/purple_theme"
+            app:cardCornerRadius="15dp"
+            >
+
+            <TextView
+                android:id="@+id/tv_setting3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginVertical="12dp"
+                android:text="@string/region_setting"
+                android:textSize="18sp"
+                android:textStyle="bold">
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="12dp"
+                android:layout_marginStart="300dp"
+                android:text="@string/redirect"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                >
+            </TextView>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cd_setting4"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/cd_setting3"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:clickable="true"
+            android:focusable="true"
+            android:hapticFeedbackEnabled="true"
+            app:cardBackgroundColor="@color/purple_theme"
+            app:cardCornerRadius="15dp"
+            >
+
+            <TextView
+                android:id="@+id/tv_setting4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginVertical="12dp"
+                android:text="@string/notification_setting"
+                android:textSize="18sp"
+                android:textStyle="bold">
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="12dp"
+                android:layout_marginStart="300dp"
+                android:text="@string/redirect"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                >
+            </TextView>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cd_setting5"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/cd_setting4"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:clickable="true"
+            android:focusable="true"
+            android:hapticFeedbackEnabled="true"
+            app:cardBackgroundColor="@color/purple_theme"
+            app:cardCornerRadius="15dp"
+            >
+
+            <TextView
+                android:id="@+id/tv_setting5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginVertical="12dp"
+                android:text="@string/privacy_setting"
+                android:textSize="18sp"
+                android:textStyle="bold">
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="12dp"
+                android:layout_marginStart="300dp"
+                android:text="@string/redirect"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                >
+            </TextView>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cd_setting6"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/cd_setting5"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:clickable="true"
+            android:focusable="true"
+            android:hapticFeedbackEnabled="true"
+            app:cardBackgroundColor="@color/purple_theme"
+            app:cardCornerRadius="15dp"
+            >
+
+            <TextView
+                android:id="@+id/tv_setting6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginVertical="12dp"
+                android:text="@string/language_setting"
+                android:textSize="18sp"
+                android:textStyle="bold">
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="12dp"
+                android:layout_marginStart="300dp"
+                android:text="@string/redirect"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                >
+            </TextView>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cd_setting7"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/cd_setting6"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:clickable="true"
+            android:focusable="true"
+            android:hapticFeedbackEnabled="true"
+            app:cardBackgroundColor="@color/purple_theme"
+            app:cardCornerRadius="15dp"
+            >
+
+            <TextView
+                android:id="@+id/tv_setting7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginVertical="12dp"
+                android:text="@string/language_setting"
+                android:textSize="18sp"
+                android:textStyle="bold">
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="12dp"
+                android:layout_marginStart="300dp"
+                android:text="@string/redirect"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                >
+            </TextView>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cd_log_out"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/cd_setting7"
+            android:layout_marginTop="30dp"
+            android:layout_centerHorizontal="true"
+            android:clickable="true"
+            android:focusable="true"
+            android:hapticFeedbackEnabled="true"
+            app:cardBackgroundColor="@color/purple_theme"
+            app:cardCornerRadius="15dp">
+
+            <TextView
+                android:id="@+id/tv_log_out"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:hapticFeedbackEnabled="true"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginHorizontal="25dp"
+                android:layout_marginVertical="10dp"
+                android:text="@string/log_out"
+                android:textColor="@color/text_red">
+
+            </TextView>
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

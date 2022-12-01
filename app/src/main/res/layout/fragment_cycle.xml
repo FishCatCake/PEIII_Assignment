@@ -6,8 +6,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:background="@color/white"
-    tools:context=".CycleFragment">
+    tools:context="cycle.CycleFragment">
 
+
+    <ImageButton
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/btn_back"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="30dp"
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <TextView
         android:id="@+id/tv_cycle_log"

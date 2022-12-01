@@ -9,7 +9,7 @@
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical"
         app:layout_anchor="@+id/linearLayout"
         app:layout_anchorGravity="center">
@@ -114,21 +114,18 @@
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
-
-        <Button
-            android:id="@+id/next_btn"
-            android:layout_width="@dimen/btn_grey_width"
-            android:layout_height="@dimen/btn_grey_height"
-            android:layout_marginTop="100dp"
-            android:layout_gravity="center_horizontal"
-            android:background="@drawable/btn_selector"
-            android:textColor="@color/btn_text"
-            android:textAllCaps="false"
-            android:textStyle="bold"
-            android:textSize="@dimen/btn_text"
-            android:text="@string/next" />
-
-
     </LinearLayout>
 
+    <Button
+        android:id="@+id/next_btn"
+        android:layout_marginTop="600dp"
+        android:layout_width="@dimen/btn_grey_width"
+        android:layout_height="@dimen/btn_grey_height"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/btn_selector"
+        android:textColor="@color/btn_text"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:textSize="@dimen/btn_text"
+        android:text="@string/next" />
 </FrameLayout>
