@@ -3,11 +3,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/setting_graph"
-    app:startDestination="@id/settingActivity">
+    app:startDestination="@id/settingFragment">
 
     <activity
         android:id="@+id/settingActivity"
         android:name="com.example.pe_assignment.setting.SettingActivity"
+        android:label="fragment_setting"
+        tools:layout="@layout/fragment_setting" />
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.example.pe_assignment.setting.SettingFragment"
         android:label="fragment_setting"
         tools:layout="@layout/fragment_setting" />
 </navigation>
