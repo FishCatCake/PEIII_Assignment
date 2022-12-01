@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.ImageButton
 import androidx.cardview.widget.CardView
 import androidx.navigation.findNavController
 import com.example.pe_assignment.R
@@ -25,6 +27,9 @@ class HomeFragment : Fragment() {
         val cdVaccine = view.findViewById<CardView>(R.id.cd_vaccine)
         val cdCancer = view.findViewById<CardView>(R.id.cd_cancer)
         val cdArticle = view.findViewById<CardView>(R.id.cd_forum)
+        val btnSetting = view.findViewById<ImageButton>(R.id.btn_setting)
+//        val btnProfile = view.findViewById<ImageButton>(R.id.btn_profile)
+
         cdCycle.setOnClickListener{
             view.findNavController().navigate(R.id.menstruationActivity)
         }
@@ -40,6 +45,14 @@ class HomeFragment : Fragment() {
         cdArticle.setOnClickListener {
             view.findNavController().navigate(R.id.articleActivity)
         }
+
+        btnSetting.setOnClickListener{
+            view.findNavController().navigate(R.id.settingActivity)
+        }
+//
+//        btnProfile.setOnClickListener{
+//            view.findNavController().navigate(R.id.menstruationActivity)
+//        }
    }
 
 }
