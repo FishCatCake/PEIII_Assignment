@@ -41,9 +41,17 @@ class DoseCalendarFragment : Fragment() {
         adapter = HpvCalendarAdapter(calendarArrayList)
         recyclerView.adapter = adapter
 
-        var btnSend = view.findViewById<Button>(R.id.next_btn1)
+        val btnSend = view.findViewById<Button>(R.id.next_btn1)
         btnSend.setOnClickListener {
             view.findNavController().navigate(R.id.hpvReminderFragment)
+        }
+        var btnSend2 = view.findViewById<ImageButton>(R.id.skip)
+        btnSend2.setOnClickListener {
+            view.findNavController().navigate(R.id.hpvReminderFragment)
+        }
+        btnSend2 = view.findViewById<ImageButton>(R.id.back)
+        btnSend2.setOnClickListener {
+            view.findNavController().navigate(R.id.reviewCalendarFragment)
         }
 
     }
@@ -58,11 +66,11 @@ class DoseCalendarFragment : Fragment() {
 
         dose = arrayOf(
             "Date of First\n" +
-                    "HPV Test Onset",
+                    "Dose Onset",
             "Date of Second\n" +
-                    "HPV Test Onset",
+                    "Dose Onset",
             "Date of Third\n" +
-                    "HPV Test Onset"
+                    "Dose Onset"
         )
 
 //        calendar = arrayOf(

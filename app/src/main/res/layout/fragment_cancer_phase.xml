@@ -38,10 +38,7 @@
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:cardBackgroundColor="#CBCACA"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="50dp"
-            android:layout_marginRight="50dp"
+            style="@style/Card_View"
             android:layout_marginBottom="200dp"
             app:cardCornerRadius="10dp"
             app:cardElevation="10dp">
@@ -57,27 +54,17 @@
                     <TextView
                         android:id="@+id/card_title"
                         android:layout_width="match_parent"
-                        android:layout_height="50dp"
-                        android:paddingStart="20dp"
+                        android:layout_height="wrap_content"
+                        style="@style/Card_Title"
                         android:background="@color/input_card_blue2"
-                        android:gravity="center_vertical"
-                        android:text="STAGE"
-                        android:textStyle="bold"
-                        android:textSize="20sp"
-                        android:textColor="@color/white"/>
+                        android:text="STAGE"/>
 
                     <RadioButton
                         android:id="@+id/card_attr1"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
-                        android:buttonTint="@color/grey_text"
-                        android:layoutDirection="rtl"
-                        android:layout_gravity="start"
-                        android:text="Phase 1"
-                        android:textColor="@color/black"
-                        android:paddingEnd="20sp"
-                        android:layout_marginStart="20sp"
-                        android:textSize="15sp" />
+                        style="@style/Card_RadioButton"
+                        android:text="Phase 1"/>
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -88,13 +75,8 @@
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:buttonTint="@color/grey_text"
-                        android:layoutDirection="rtl"
-                        android:layout_gravity="start"
-                        android:text="Phase 2"
-                        android:paddingEnd="20sp"
-                        android:layout_marginStart="20sp"
-                        android:textColor="@color/black"
-                        android:textSize="15sp" />
+                        style="@style/Card_RadioButton"
+                        android:text="Phase 2"/>
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -106,13 +88,8 @@
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:buttonTint="@color/grey_text"
-                        android:layoutDirection="rtl"
-                        android:layout_gravity="start"
-                        android:text="Phase 3"
-                        android:paddingEnd="20sp"
-                        android:layout_marginStart="20sp"
-                        android:textColor="@color/black"
-                        android:textSize="15sp" />
+                        style="@style/Card_RadioButton"
+                        android:text="Phase 3"/>
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -123,14 +100,8 @@
                         android:id="@+id/card_attr4"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
-                        android:buttonTint="@color/grey_text"
-                        android:layoutDirection="rtl"
-                        android:layout_gravity="start"
-                        android:text="Phase 4"
-                        android:paddingEnd="20sp"
-                        android:layout_marginStart="20sp"
-                        android:textColor="@color/black"
-                        android:textSize="15sp" />
+                        style="@style/Card_RadioButton"
+                        android:text="Phase 4" />
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -144,14 +115,14 @@
 
         <Button
             android:id="@+id/next_btn"
-            android:layout_width="312dp"
-            android:layout_height="55dp"
+            android:layout_width="@dimen/btn_grey_width"
+            android:layout_height="@dimen/btn_grey_height"
             android:layout_gravity="center_horizontal"
-            android:background="@android:drawable/dialog_holo_light_frame"
+            android:background="@drawable/btn_selector"
             android:textColor="@color/btn_text"
             android:textAllCaps="false"
             android:textStyle="bold"
-            android:textSize="20sp"
+            android:textSize="@dimen/btn_text"
             android:text="@string/done" />
 
     </LinearLayout>

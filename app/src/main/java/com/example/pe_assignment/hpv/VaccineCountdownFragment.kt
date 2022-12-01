@@ -22,9 +22,14 @@ class VaccineCountdownFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val btnSend = view.findViewById<ImageButton>(R.id.right_arrow)
+        var btnSend = view.findViewById<ImageButton>(R.id.right_arrow)
         btnSend.setOnClickListener {
             view.findNavController().navigate(R.id.testCountdownFragment)
+        }
+
+        btnSend = view.findViewById<ImageButton>(R.id.other)
+        btnSend.setOnClickListener {
+            view.findNavController().navigate(R.id.hpvRecordFragment)
         }
     }
 }

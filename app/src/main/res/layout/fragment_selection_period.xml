@@ -18,10 +18,8 @@
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:cardBackgroundColor="#CBCACA"
+            style="@style/Card_View"
             android:layout_marginTop="150dp"
-            android:layout_marginLeft="50dp"
-            android:layout_marginRight="50dp"
             app:cardCornerRadius="10dp"
             app:cardElevation="10dp">
 
@@ -32,31 +30,21 @@
                 <RadioGroup
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#EAE8EA">
+                    android:background="@color/card_content_bg">
                     <TextView
                         android:id="@+id/card_title"
                         android:layout_width="match_parent"
-                        android:layout_height="50dp"
-                        android:paddingStart="20dp"
+                        android:layout_height="wrap_content"
+                        style="@style/Card_Title"
                         android:background="@color/input_card_orange"
-                        android:gravity="center_vertical"
-                        android:text="@string/period"
-                        android:textStyle="bold"
-                        android:textSize="20sp"
-                        android:textColor="@color/white"/>
+                        android:text="@string/period"/>
 
                     <RadioButton
                         android:id="@+id/card_attr1"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
-                        android:buttonTint="@color/grey_text"
-                        android:layoutDirection="rtl"
-                        android:layout_gravity="start"
-                        android:text="@string/had_flow"
-                        android:textColor="@color/black"
-                        android:paddingEnd="20sp"
-                        android:layout_marginStart="20sp"
-                        android:textSize="15sp" />
+                        style="@style/Card_RadioButton"
+                        android:text="@string/had_flow"/>
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -66,14 +54,8 @@
                         android:id="@+id/card_attr2"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
-                        android:buttonTint="@color/grey_text"
-                        android:layoutDirection="rtl"
-                        android:layout_gravity="start"
-                        android:text="@string/no_flow"
-                        android:paddingEnd="20sp"
-                        android:layout_marginStart="20sp"
-                        android:textColor="@color/black"
-                        android:textSize="15sp" />
+                        style="@style/Card_RadioButton"
+                        android:text="@string/no_flow"/>
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -82,14 +64,9 @@
                     <TextView
                         android:id="@+id/card_name"
                         android:layout_width="match_parent"
-                        android:layout_height="35dp"
-                        android:background="@color/white"
-                        android:layout_marginTop="2dp"
-                        android:text="@string/flow_level"
-                        android:paddingStart="20dp"
-                        android:gravity="center_vertical"
-                        android:textColor="#CBCACA"
-                        android:textSize="20sp">
+                        android:layout_height="wrap_content"
+                        style="@style/Card_Title02"
+                        android:text="@string/flow_level">
 
                     </TextView>
                     <ImageView
@@ -101,14 +78,8 @@
                         android:id="@+id/card_attr3"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
-                        android:buttonTint="@color/grey_text"
-                        android:layoutDirection="rtl"
-                        android:layout_gravity="start"
-                        android:text="@string/light"
-                        android:paddingEnd="20sp"
-                        android:layout_marginStart="20sp"
-                        android:textColor="@color/black"
-                        android:textSize="15sp" />
+                        style="@style/Card_RadioButton"
+                        android:text="@string/light"/>
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -118,14 +89,8 @@
                         android:id="@+id/card_attr4"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
-                        android:buttonTint="@color/grey_text"
-                        android:layoutDirection="rtl"
-                        android:layout_gravity="start"
-                        android:text="@string/medium"
-                        android:paddingEnd="20sp"
-                        android:layout_marginStart="20sp"
-                        android:textColor="@color/black"
-                        android:textSize="15sp" />
+                        style="@style/Card_RadioButton"
+                        android:text="@string/medium"/>
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -135,14 +100,8 @@
                         android:id="@+id/card_attr5"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:buttonTint="@color/grey_text"
-                        android:layoutDirection="rtl"
-                        android:layout_gravity="start"
-                        android:text="@string/heavy"
-                        android:paddingEnd="20sp"
-                        android:layout_marginStart="20sp"
-                        android:textColor="@color/black"
-                        android:textSize="15sp" />
+                        style="@style/Card_RadioButton"
+                        android:text="@string/heavy"/>
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -157,15 +116,15 @@
 
         <Button
             android:id="@+id/next_btn"
-            android:layout_width="312dp"
-            android:layout_height="55dp"
-            android:layout_marginTop="130dp"
+            android:layout_width="@dimen/btn_grey_width"
+            android:layout_height="@dimen/btn_grey_height"
+            android:layout_marginTop="100dp"
             android:layout_gravity="center_horizontal"
-            android:background="@android:drawable/dialog_holo_light_frame"
+            android:background="@drawable/btn_selector"
             android:textColor="@color/btn_text"
             android:textAllCaps="false"
             android:textStyle="bold"
-            android:textSize="20sp"
+            android:textSize="@dimen/btn_text"
             android:text="@string/done" />
 
     </LinearLayout>

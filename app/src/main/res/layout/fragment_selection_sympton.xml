@@ -9,7 +9,7 @@
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical"
         app:layout_anchor="@+id/linearLayout"
         app:layout_anchorGravity="center">
@@ -18,10 +18,8 @@
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:cardBackgroundColor="#CBCACA"
-            android:layout_marginTop="150dp"
-            android:layout_marginLeft="50dp"
-            android:layout_marginRight="50dp"
+            style="@style/Card_View"
+            android:layout_marginTop="100dp"
             app:cardCornerRadius="10dp"
             app:cardElevation="10dp">
 
@@ -32,37 +30,26 @@
                 <RadioGroup
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#EAE8EA">
+                    android:background="@color/card_content_bg">
                     <TextView
                         android:id="@+id/card_title"
                         android:layout_width="match_parent"
-                        android:layout_height="50dp"
-                        android:paddingStart="20dp"
+                        android:layout_height="wrap_content"
+                        style="@style/Card_Title"
                         android:background="@color/input_card_purple2"
-                        android:gravity="center_vertical"
-                        android:text="@string/symptoms"
-                        android:textStyle="bold"
-                        android:textSize="20sp"
-                        android:textColor="@color/white"/>
+                        android:text="@string/symptoms"/>
 
                     <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="35dp"
-                        android:background="@color/white"
+                        android:layout_height="wrap_content"
+                        style="@style/Card_Title02"
                         android:text="@string/select_all_that_apply"
-                        android:paddingStart="20dp"
-                        android:gravity="center_vertical"
-                        android:textColor="@color/black"
-                        android:textSize="20sp"/>
+                        android:textColor="@color/black"/>
                     <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="35dp"
-                        android:background="@color/white"
-                        android:text="@string/recent_symptoms"
-                        android:paddingStart="20dp"
-                        android:gravity="center_vertical"
-                        android:textColor="#CBCACA"
-                        android:textSize="20sp"/>
+                        android:layout_height="wrap_content"
+                        style="@style/Card_Title02"
+                        android:text="@string/recent_symptoms"/>
 
                     <ImageView
                         android:layout_width="match_parent"
@@ -73,14 +60,8 @@
                         android:id="@+id/card_attr1"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
-                        android:buttonTint="@color/grey_text"
-                        android:layoutDirection="rtl"
-                        android:layout_gravity="start"
-                        android:text="@string/abdominal_cramps"
-                        android:paddingEnd="20sp"
-                        android:layout_marginStart="20sp"
-                        android:textColor="@color/black"
-                        android:textSize="15sp" />
+                        style="@style/Card_RadioButton"
+                        android:text="@string/abdominal_cramps"/>
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -90,14 +71,8 @@
                         android:id="@+id/card_attr2"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
-                        android:buttonTint="@color/grey_text"
-                        android:layoutDirection="rtl"
-                        android:layout_gravity="start"
-                        android:text="@string/acne"
-                        android:paddingEnd="20sp"
-                        android:layout_marginStart="20sp"
-                        android:textColor="@color/black"
-                        android:textSize="15sp" />
+                        style="@style/Card_RadioButton"
+                        android:text="@string/acne"/>
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -107,14 +82,8 @@
                         android:id="@+id/card_attr3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:buttonTint="@color/grey_text"
-                        android:layoutDirection="rtl"
-                        android:layout_gravity="start"
-                        android:text="@string/chills"
-                        android:paddingEnd="20sp"
-                        android:layout_marginStart="20sp"
-                        android:textColor="@color/black"
-                        android:textSize="15sp" />
+                        style="@style/Card_RadioButton"
+                        android:text="@string/chills"/>
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -122,13 +91,9 @@
 
                     <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="35dp"
-                        android:background="@color/white"
-                        android:text="@string/additional_symptoms"
-                        android:paddingStart="20dp"
-                        android:gravity="center_vertical"
-                        android:textColor="#CBCACA"
-                        android:textSize="20sp"/>
+                        android:layout_height="wrap_content"
+                        style="@style/Card_RadioButton"
+                        android:text="@string/additional_symptoms"/>
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -138,14 +103,8 @@
                         android:id="@+id/card_attr4"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:buttonTint="@color/grey_text"
-                        android:layoutDirection="rtl"
-                        android:layout_gravity="start"
-                        android:text="@string/appetite_changes"
-                        android:paddingEnd="20sp"
-                        android:layout_marginStart="20sp"
-                        android:textColor="@color/black"
-                        android:textSize="15sp" />
+                        style="@style/Card_RadioButton"
+                        android:text="@string/appetite_changes"/>
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -155,14 +114,8 @@
                         android:id="@+id/card_attr5"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:buttonTint="@color/grey_text"
-                        android:layoutDirection="rtl"
-                        android:layout_gravity="start"
-                        android:text="@string/baldder_incontinence"
-                        android:paddingEnd="20sp"
-                        android:layout_marginStart="20sp"
-                        android:textColor="@color/black"
-                        android:textSize="15sp" />
+                        style="@style/Card_RadioButton"
+                        android:text="@string/baldder_incontinence"/>
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -177,15 +130,15 @@
 
         <Button
             android:id="@+id/next_btn"
-            android:layout_width="312dp"
-            android:layout_height="55dp"
-            android:layout_marginTop="70dp"
+            android:layout_width="@dimen/btn_grey_width"
+            android:layout_height="@dimen/btn_grey_height"
+            android:layout_marginTop="100dp"
             android:layout_gravity="center_horizontal"
-            android:background="@android:drawable/dialog_holo_light_frame"
+            android:background="@drawable/btn_selector"
             android:textColor="@color/btn_text"
             android:textAllCaps="false"
             android:textStyle="bold"
-            android:textSize="20sp"
+            android:textSize="@dimen/btn_text"
             android:text="@string/done" />
 
     </LinearLayout>

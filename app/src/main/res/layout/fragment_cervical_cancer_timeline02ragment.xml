@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".Cancer.CervicalCancerTimeline02ragment">
+    tools:context=".Cancer.CervicalCancerTimeline02fragment">
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -28,10 +28,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:cardBackgroundColor="@color/white"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="50dp"
-            android:layout_marginRight="50dp"
-            android:layout_marginBottom="200dp"
+            style="@style/Card_View"
             app:cardCornerRadius="10dp"
             app:cardElevation="10dp">
 
@@ -43,29 +40,21 @@
                     <TextView
                         android:id="@+id/card_title"
                         android:layout_width="match_parent"
-                        android:layout_height="50dp"
+                        android:layout_height="wrap_content"
+                        style="@style/Card_Title"
                         android:background="@color/input_card_purple"
-                        android:gravity="center_vertical"
-                        android:paddingStart="20dp"
                         android:text="@string/diagnostic_result"
-                        android:textColor="@color/white"
-                        android:textSize="20sp"
-                        android:textStyle="bold" />
+                        android:textColor="@color/white"/>
 
                     <TextView
                         android:id="@+id/card_name"
                         android:layout_width="match_parent"
-                        android:layout_height="35dp"
-                        android:background="@color/white"
-                        android:layout_marginTop="2dp"
-                        android:text="@string/title"
-                        android:paddingStart="20dp"
-                        android:gravity="center_vertical"
-                        android:textColor="#CBCACA"
-                        android:textSize="20sp"/>
+                        android:layout_height="wrap_content"
+                        style="@style/Card_Title02"
+                        android:text="@string/title"/>
                     <ImageView
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="10dp"
                         android:src="@drawable/line_horizontal_card"/>
 
                     <EditText
@@ -77,22 +66,18 @@
                         android:paddingStart="40dp"/>
                     <ImageView
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="10dp"
                         android:src="@drawable/line_horizontal_card"/>
 
                     <TextView
                         android:id="@+id/card_name2"
                         android:layout_width="match_parent"
-                        android:layout_height="35dp"
-                        android:background="@color/white"
-                        android:text="@string/description"
-                        android:paddingStart="20dp"
-                        android:gravity="center_vertical"
-                        android:textColor="#CBCACA"
-                        android:textSize="20sp"/>
+                        android:layout_height="wrap_content"
+                        style="@style/Card_Title02"
+                        android:text="@string/description"/>
                     <ImageView
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="10dp"
                         android:src="@drawable/line_horizontal_card"/>
 
                     <EditText
@@ -104,27 +89,20 @@
                         android:paddingStart="40dp"/>
                     <ImageView
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="8dp"
                         android:src="@drawable/line_horizontal_card"/>
 
                     <TextView
                         android:id="@+id/card_name3"
                         android:layout_width="match_parent"
-                        android:layout_height="35dp"
-                        android:background="@color/white"
-                        android:text="FILE"
-                        android:paddingStart="20dp"
-                        android:gravity="center_vertical"
-                        android:textColor="#CBCACA"
-                        android:textSize="20sp"/>
+                        android:layout_height="wrap_content"
+                        style="@style/Card_Title02"
+                        android:text="@string/file"/>
                     <ImageView
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="10dp"
                         android:src="@drawable/line_horizontal_card"/>
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/line_horizontal_card"/>
+
 
                     <ImageButton
                         android:layout_width="wrap_content"
@@ -139,15 +117,15 @@
 
         <Button
             android:id="@+id/next_btn"
-            android:layout_width="312dp"
-            android:layout_height="55dp"
-            android:layout_marginTop="-80dp"
+            android:layout_width="@dimen/btn_grey_width"
+            android:layout_height="@dimen/btn_grey_height"
+            android:layout_marginTop="100dp"
             android:layout_gravity="center_horizontal"
-            android:background="@android:drawable/dialog_holo_light_frame"
+            android:background="@drawable/btn_selector"
             android:textColor="@color/btn_text"
             android:textAllCaps="false"
             android:textStyle="bold"
-            android:textSize="20sp"
+            android:textSize="@dimen/btn_text"
             android:text="@string/next" />
 
 
