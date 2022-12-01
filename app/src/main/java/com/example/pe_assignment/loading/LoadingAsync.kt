@@ -9,7 +9,7 @@ interface LoadingImplementation {
 class LoadingAsync(private val listener: LoadingImplementation) : AsyncTask<Void, Void, Void>() {
     override fun doInBackground(vararg params: Void?): Void? {
         for (i in 0 until 10) {
-            Thread.sleep(1000)
+            Thread.sleep(300)
         }
     return null;
     }

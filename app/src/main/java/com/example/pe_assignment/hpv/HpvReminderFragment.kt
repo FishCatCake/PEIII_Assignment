@@ -22,9 +22,17 @@ class HpvReminderFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        var btnSend = view.findViewById<Button>(R.id.done_btn)
+        val btnSend = view.findViewById<Button>(R.id.done_btn)
         btnSend.setOnClickListener {
             view.findNavController().navigate(R.id.vaccineCountdownFragment)
+        }
+        var btnSend2 = view.findViewById<ImageButton>(R.id.skip)
+        btnSend2.setOnClickListener {
+            view.findNavController().navigate(R.id.vaccineCountdownFragment)
+        }
+        btnSend2 = view.findViewById<ImageButton>(R.id.back)
+        btnSend2.setOnClickListener {
+            view.findNavController().navigate(R.id.doseCalendarFragment)
         }
 
     }

@@ -13,6 +13,14 @@
         android:theme="@style/AppTheme.NoActionBar"
         tools:targetApi="31">
         <activity
+            android:name=".CancerNewUserActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+
+        <activity
             android:name=".setting.SettingActivity"
             android:exported="false">
             <meta-data
@@ -39,21 +47,15 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-        <activity
-            android:name=".CancerNewUserActivity"
-            android:exported="false"
-            android:theme="@style/Theme.LoginPage">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
+
         <activity
             android:name=".hpv.HPVActivity"
-            android:exported="true">
+            android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+
         <activity
             android:name=".CancerCreateRecordActivity"
             android:exported="false">
@@ -79,7 +81,7 @@
         <activity
             android:name=".article.ArticleActivity"
             android:exported="false">
-            <meta-data
+         <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
@@ -105,7 +107,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".Cancer.CancerCalendar"
+            android:name=".cancer.CancerCalendar"
             android:exported="false"
             android:theme="@style/Theme.LoginPage">
             <meta-data
@@ -113,7 +115,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".Login.LoginActivity"
+            android:name=".login.LoginActivity"
             android:exported="false"
             android:theme="@style/Theme.LoginPage"
             android:windowSoftInputMode="adjustResize">

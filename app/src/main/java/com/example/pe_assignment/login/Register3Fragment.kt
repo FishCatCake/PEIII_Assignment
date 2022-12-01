@@ -1,4 +1,4 @@
-package com.example.pe_assignment.Login
+package com.example.pe_assignment.login
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

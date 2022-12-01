@@ -1,4 +1,4 @@
-package com.example.pe_assignment.Cancer
+package com.example.pe_assignment.cancer
 
 import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity

@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageButton
 import androidx.navigation.findNavController
 class CervicalCancerRecord01Fragment : Fragment() {
    override fun onCreateView(
@@ -22,6 +23,10 @@ class CervicalCancerRecord01Fragment : Fragment() {
         val btnSend = view.findViewById<Button>(R.id.next_btn)
         btnSend.setOnClickListener {
             view.findNavController().navigate(R.id.cervicalCancerRecord02Fragment)
+        }
+        val btnback = view.findViewById<ImageButton>(R.id.back)
+        btnback.setOnClickListener {
+            view.findNavController().navigate(R.id.cancer_graph)
         }
     }
 }

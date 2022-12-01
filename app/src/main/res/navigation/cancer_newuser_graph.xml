@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_cancerTypeFragment_to_cancerPhaseFragment"
             app:destination="@id/cancerPhaseFragment" />
+        <action
+            android:id="@+id/action_cancerTypeFragment_to_homeActivity2"
+            app:destination="@id/homeActivity" />
     </fragment>
     <fragment
         android:id="@+id/cancerPhaseFragment"
@@ -22,6 +25,14 @@
         <action
             android:id="@+id/action_cancerPhaseFragment_to_cancer_graph"
             app:destination="@id/cancer_graph" />
+        <action
+            android:id="@+id/action_cancerPhaseFragment_to_cancerTypeFragment"
+            app:destination="@id/cancerTypeFragment" />
     </fragment>
     <include app:graph="@navigation/cancer_graph" />
+    <activity
+        android:id="@+id/homeActivity"
+        android:name="com.example.pe_assignment.HomeActivity"
+        android:label="activity_home"
+        tools:layout="@layout/activity_home" />
 </navigation>

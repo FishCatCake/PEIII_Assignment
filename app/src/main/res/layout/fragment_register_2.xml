@@ -4,12 +4,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".Login.Register2Fragment">
+    tools:context=".login.Register2Fragment">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_centerVertical="true">
+        android:orientation="vertical">
 
         <TextView
             android:layout_width="wrap_content"
@@ -18,17 +17,14 @@
             android:layout_marginTop="5dp"
             android:padding="10dp"
             android:textSize="30sp"
-            android:text="Learn more about you"
+            android:text="@string/learn_more_about_you"
             android:textColor="@color/black"
             android:textStyle="bold"/>
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="50dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginRight="50dp"
-            android:layout_marginBottom="30dp"
+            style="@style/Card_View"
             app:cardBackgroundColor="#F2F0F1"
             app:cardCornerRadius="10dp"
             app:cardElevation="10dp">
@@ -42,14 +38,10 @@
                     <TextView
                         android:id="@+id/card_title"
                         android:layout_width="match_parent"
-                        android:layout_height="50dp"
+                        android:layout_height="wrap_content"
+                        style="@style/Card_Title"
                         android:background="@color/input_purple"
-                        android:gravity="center_vertical"
-                        android:paddingStart="20dp"
-                        android:text="@string/personal_information"
-                        android:textColor="@color/white"
-                        android:textSize="20sp"
-                        android:textStyle="bold" />
+                        android:text="@string/personal_information"/>
 
 
 
@@ -57,19 +49,14 @@
                         android:id="@+id/register_name"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="2dp"
-                        android:background="@color/white"
-                        android:gravity="center_vertical"
-                        android:paddingStart="20dp"
-                        android:text="@string/name"
-                        android:textColor="#CBCACA"
-                        android:textSize="20sp"
-                        android:padding="10dp"/>
+                        style="@style/Card_Title02"
+                        android:text="@string/name"/>
 
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:paddingStart="20dp"
+                        android:paddingEnd="@dimen/card_title_padding_left_right"
+                        android:paddingStart="@dimen/card_title_padding_left_right"
                         android:layout_marginTop="2dp"
                         android:background="@color/white">
 
@@ -84,7 +71,8 @@
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:paddingStart="20dp"
+                        android:paddingEnd="@dimen/card_title_padding_left_right"
+                        android:paddingStart="@dimen/card_title_padding_left_right"
                         android:padding="10dp"
                         android:hint="@string/tell_us_your_name"
                         android:layout_marginLeft="20dp"
@@ -96,14 +84,8 @@
                     android:id="@+id/register_age"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="2dp"
-                    android:background="@color/white"
-                    android:gravity="center_vertical"
-                    android:paddingStart="20dp"
-                    android:text="@string/age"
-                    android:textColor="#CBCACA"
-                    android:textSize="20sp"
-                    android:padding="10dp"/>
+                    style="@style/Card_Title02"
+                    android:text="@string/age"/>
 
                     <RelativeLayout
                         android:layout_width="match_parent"

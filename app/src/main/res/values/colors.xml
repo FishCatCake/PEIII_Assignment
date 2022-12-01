@@ -31,8 +31,13 @@
     <color name="input_card_red">#E2869F</color>
     <color name="input_card_purple">#A06AC0</color>
     <color name="input_card_purple2"> #BC28B9</color>
+    <color name="input_card_blue3">#3C4874</color>
     <color name="btn_grey">#DFDFDF</color>
     <color name="btn_text">#0E7ACD</color>
+    <color name="countdown_text">#696565</color>
+    <color name="card_content">#CBCACA</color>
+    <color name="card_content2">#9C999A</color>
+    <color name="card_content_bg">#EAE8EA</color>
 
 
         <!--    period tracking-->

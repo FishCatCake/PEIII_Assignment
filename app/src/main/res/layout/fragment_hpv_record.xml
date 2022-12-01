@@ -29,11 +29,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toEndOf="@+id/left_arrow"
-            android:paddingLeft="100dp"
-            android:paddingRight="100dp"
+            android:paddingLeft="90dp"
+            android:paddingRight="90dp"
             android:textColor="@color/black"
-            android:fontFamily="@font/roboto"
             android:textStyle="bold"
+            android:textSize="20sp"
             android:text="@string/hpv_record"/>
         <ImageButton
             android:id="@+id/right_arrow"
@@ -48,11 +48,7 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardBackgroundColor="@color/white"
-        android:layout_marginTop="30dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginRight="50dp"
-        android:layout_marginBottom="200dp"
+        style="@style/Card_View"
         app:cardCornerRadius="10dp"
         app:cardElevation="10dp">
         <LinearLayout
@@ -62,14 +58,10 @@
         <TextView
             android:id="@+id/card_title"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:paddingStart="20dp"
-            android:background="@color/input_card_orange"
-            android:gravity="center_vertical"
-            android:text="@string/hpv_record"
-            android:textStyle="bold"
-            android:textSize="20sp"
-            android:textColor="@color/white"/>
+            android:layout_height="wrap_content"
+            style="@style/Card_Title"
+            android:background="@color/input_card_orange2"
+            android:text="@string/hpv_record"/>
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
