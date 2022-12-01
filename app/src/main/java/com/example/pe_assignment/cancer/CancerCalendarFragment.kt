@@ -1,4 +1,4 @@
-package com.example.pe_assignment.Cancer
+package com.example.pe_assignment.cancer
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -9,7 +9,6 @@ import android.widget.Button
 import android.widget.CalendarView
 import androidx.navigation.findNavController
 import com.example.pe_assignment.R
-import kotlinx.android.synthetic.main.activity_calendar.*
 
 class CancerCalendarFragment : Fragment() {
     override fun onCreateView(

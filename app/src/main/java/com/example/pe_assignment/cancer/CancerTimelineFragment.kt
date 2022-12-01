@@ -1,4 +1,4 @@
-package com.example.pe_assignment.Cancer
+package com.example.pe_assignment.cancer
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

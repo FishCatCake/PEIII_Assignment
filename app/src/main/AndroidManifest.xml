@@ -10,7 +10,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.PEAssignment"
+        android:theme="@style/Theme.LoginPage"
         tools:targetApi="31">
         <activity
             android:name=".CancerNewUserActivity"
@@ -21,7 +21,6 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -66,7 +65,7 @@
         <activity
             android:name=".HomeActivity"
             android:exported="false">
-            <meta-data
+         <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
@@ -92,7 +91,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".Cancer.CancerCalendar"
+            android:name=".cancer.CancerCalendar"
             android:exported="false"
             android:theme="@style/Theme.LoginPage">
             <meta-data
@@ -100,7 +99,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".Login.LoginActivity"
+            android:name=".login.LoginActivity"
             android:exported="false"
             android:theme="@style/Theme.LoginPage"
             android:windowSoftInputMode="adjustResize">

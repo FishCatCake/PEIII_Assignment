@@ -1,4 +1,4 @@
-package com.example.pe_assignment.Cancer
+package com.example.pe_assignment.cancer
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.CalendarView
+import android.widget.ImageButton
 import androidx.navigation.findNavController
 import com.example.pe_assignment.R
 
@@ -29,7 +29,12 @@ class TimelineUploadFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         val btnSend = view.findViewById<Button>(R.id.next_btn)
         btnSend.setOnClickListener {
-            view.findNavController().navigate(R.id.cervicalCancerTimeline02ragment)
+            view.findNavController().navigate(R.id.cervicalCancerTimeline02fragment3)
+        }
+
+        val btnback = view.findViewById<ImageButton>(R.id.back)
+        btnback.setOnClickListener {
+            view.findNavController().navigate(R.id.cancerTimelineCalendar)
         }
     }
 

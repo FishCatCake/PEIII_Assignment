@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/cancerCalendarFragment"
-        android:name="com.example.pe_assignment.Cancer.CancerCalendarFragment"
+        android:name="com.example.pe_assignment.cancer.CancerCalendarFragment"
         android:label="fragment_cancer_canlendar"
         tools:layout="@layout/fragment_cancer_canlendar" >
         <action
@@ -19,7 +19,7 @@
     </fragment>
     <fragment
         android:id="@+id/cancerTimelineFragment"
-        android:name="com.example.pe_assignment.Cancer.CancerTimelineFragment"
+        android:name="com.example.pe_assignment.cancer.CancerTimelineFragment"
         android:label="fragment_cancer_timeline"
         tools:layout="@layout/fragment_cancer_timeline" >
         <action
@@ -30,13 +30,13 @@
             app:destination="@id/newTimelineActivity" />
     </fragment>
     <activity
-        android:id="@+id/newTimelineActivity"
-        android:name="com.example.pe_assignment.NewTimelineActivity"
-        android:label="activity_new_timeline"
-        tools:layout="@layout/activity_new_timeline" />
-    <activity
         android:id="@+id/cancerCreateRecordActivity"
         android:name="com.example.pe_assignment.CancerCreateRecordActivity"
         android:label="activity_cancer_create_record"
         tools:layout="@layout/activity_cancer_create_record" />
+    <activity
+        android:id="@+id/newTimelineActivity"
+        android:name="com.example.pe_assignment.NewTimelineActivity"
+        android:label="activity_new_timeline"
+        tools:layout="@layout/activity_new_timeline" />
 </navigation>
