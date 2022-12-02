@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_loginFragment_to_register1Fragment"
             app:destination="@id/register1Fragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_homeActivity2"
+            app:destination="@id/homeActivity" />
     </fragment>
     <fragment
         android:id="@+id/register1Fragment"
@@ -34,4 +37,9 @@
         android:id="@+id/register3Fragment"
         android:name="com.example.pe_assignment.login.Register3Fragment"
         android:label="Register3Fragment" />
+    <activity
+        android:id="@+id/homeActivity"
+        android:name="com.example.pe_assignment.home.HomeActivity"
+        android:label="activity_home"
+        tools:layout="@layout/activity_home" />
 </navigation>
