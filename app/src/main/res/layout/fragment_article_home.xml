@@ -13,20 +13,21 @@
     android:orientation="vertical">
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp">
         <ImageButton
             android:id="@+id/back_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:src="@drawable/btn_back"
             android:background="@drawable/btn_back"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toEndOf="@+id/back_btn"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:layout_marginStart="100dp"
             android:textStyle="bold"
             android:textSize="20sp"
@@ -38,12 +39,13 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp">
+        android:layout_marginTop="10dp">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
             android:textColor="@color/black"
             android:text="@string/article_category"
             android:textSize="15sp"
@@ -54,8 +56,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="20dp"
-                        android:layout_marginTop="25dp"
+                        android:layout_marginTop="35dp"
                         android:layout_marginRight="20dp"
+                        android:layout_marginBottom="10dp"
                         tools:listitem="@layout/activity_article_category_item"/>
     </androidx.cardview.widget.CardView>
 
@@ -66,7 +69,7 @@
         android:layout_height="wrap_content"
         android:clickable="true"
         android:focusable="true"
-        android:layout_marginTop="20dp">
+        android:layout_marginTop="10dp">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -86,7 +89,10 @@
                 android:layout_height="wrap_content"
                 android:layout_toEndOf="@+id/hot_article"
                 android:layout_marginStart="15dp"
+                android:layout_marginTop="-1dp"
                 android:background="@drawable/ic_right_arrow"
+                android:scaleX="0.6"
+                android:scaleY="0.6"
                 android:src="@drawable/right_arrow"/>
         </RelativeLayout>
                     <androidx.recyclerview.widget.RecyclerView
@@ -94,8 +100,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="20dp"
-                        android:layout_marginTop="25dp"
+                        android:layout_marginTop="35dp"
                         android:layout_marginRight="20dp"
+                        android:layout_marginBottom="10dp"
                         tools:listitem="@layout/activity_article_hot_item"/>
     </androidx.cardview.widget.CardView>
 
@@ -103,7 +110,7 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp">
+        android:layout_marginTop="10dp">
 
         <RelativeLayout
             android:layout_width="wrap_content"
@@ -123,7 +130,10 @@
             android:layout_height="wrap_content"
             android:layout_toEndOf="@+id/recent_article"
             android:layout_marginStart="15dp"
+            android:layout_marginTop="-1dp"
             android:background="@drawable/ic_right_arrow"
+            android:scaleX="0.6"
+            android:scaleY="0.6"
             android:src="@drawable/right_arrow"/>
         </RelativeLayout>
 
@@ -132,8 +142,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="20dp"
-                        android:layout_marginTop="25dp"
+                        android:layout_marginTop="35dp"
                         android:layout_marginRight="20dp"
+                        android:layout_marginBottom="10dp"
                         tools:listitem="@layout/activity_article_hot_item"/>
     </androidx.cardview.widget.CardView>
 
@@ -141,7 +152,7 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp">
+        android:layout_marginTop="10dp">
 
         <RelativeLayout
             android:layout_width="wrap_content"
@@ -161,7 +172,10 @@
             android:layout_height="wrap_content"
             android:layout_toEndOf="@+id/handpick_article"
             android:layout_marginStart="15dp"
+            android:layout_marginTop="-1dp"
             android:background="@drawable/ic_right_arrow"
+            android:scaleX="0.6"
+            android:scaleY="0.6"
             android:src="@drawable/right_arrow"/>
         </RelativeLayout>
 <!--        <androidx.core.widget.NestedScrollView-->
