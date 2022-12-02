@@ -1,4 +1,4 @@
-package com.example.pe_assignment
+package com.example.pe_assignment.cancer
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,27 +8,33 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageButton
 import androidx.navigation.findNavController
+import com.example.pe_assignment.R
 
-class CervicalCancerRecord02Fragment : Fragment() {
 
-
-    override fun onCreateView(
+class CancerPhaseFragment : Fragment() {
+        override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_cervical_cancer_record02, container, false)
+        return inflater.inflate(R.layout.fragment_cancer_phase, container, false)
     }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         val btnSend = view.findViewById<Button>(R.id.next_btn)
         btnSend.setOnClickListener {
-            view.findNavController().navigate(R.id.cervicalCancerRecord03Fragment)
+            view.findNavController().navigate(R.id.cancer_graph)
         }
         val btnback = view.findViewById<ImageButton>(R.id.back)
         btnback.setOnClickListener {
-            view.findNavController().navigate(R.id.cervicalCancerRecord01Fragment)
+            view.findNavController().navigate(R.id.cancerTypeFragment)
         }
+        val btnskip = view.findViewById<ImageButton>(R.id.skip)
+        btnskip.setOnClickListener {
+            view.findNavController().navigate(R.id.cancer_graph)
+        }
+
     }
 }

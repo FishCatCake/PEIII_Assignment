@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+< xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/cycle_graph"
@@ -23,11 +23,9 @@
             android:id="@+id/action_cycleFragment_to_cycleDetailFragment"
             app:destination="@id/cycleDetailFragment" />
         <action
-            android:id="@+id/action_cycleFragment_to_homeFragment2"
-            app:destination="@id/homeFragment" />
-        <action
-            android:id="@+id/action_cycleFragment_to_homeActivity2"
+            android:id="@+id/action_cycleFragment_to_homeActivity"
             app:destination="@id/homeActivity" />
+
     </fragment>
     <fragment
         android:id="@+id/cycleDetailFragment"
@@ -66,11 +64,7 @@
             android:id="@+id/action_selectionSymptonFragment_to_cycleFragment"
             app:destination="@id/cycleFragment" />
     </fragment>
-    <fragment
-        android:id="@+id/homeFragment"
-        android:name="com.example.pe_assignment.home.HomeFragment"
-        android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+
     <activity
         android:id="@+id/homeActivity"
         android:name="com.example.pe_assignment.home.HomeActivity"

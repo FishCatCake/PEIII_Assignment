@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".CancerPhaseFragment">
+    tools:context=".cancer.CancerPhaseFragment">
 
     <include
         layout="@layout/header_skip"
@@ -34,7 +34,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="30dp"
             android:textSize="20sp"
             android:textStyle="bold"
             android:layout_gravity="center_horizontal"
@@ -44,6 +44,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             style="@style/Card_View"
+            android:layout_marginTop="50dp"
             android:layout_marginBottom="200dp"
             app:cardCornerRadius="10dp"
             app:cardElevation="10dp">

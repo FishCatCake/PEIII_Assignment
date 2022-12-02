@@ -44,7 +44,7 @@
         tools:layout="@layout/activity_article" />
     <activity
         android:id="@+id/cancerNewUserActivity"
-        android:name="com.example.pe_assignment.CancerNewUserActivity"
+        android:name="com.example.pe_assignment.cancer.CancerNewUserActivity"
         android:label="activity_cancer_new_user"
         tools:layout="@layout/activity_cancer_new_user" />
     <fragment

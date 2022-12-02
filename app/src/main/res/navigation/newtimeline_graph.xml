@@ -34,7 +34,7 @@
     </fragment>
     <fragment
         android:id="@+id/cancerTimelineCalendar"
-        android:name="com.example.pe_assignment.CancerTimelineCalendar"
+        android:name="com.example.pe_assignment.cancer.CancerTimelineCalendar"
         android:label="fragment_cancer_timeline_calendar"
         tools:layout="@layout/fragment_cancer_timeline_calendar" >
         <action
@@ -44,7 +44,7 @@
 
     <fragment
         android:id="@+id/cervicalCancerTimeline02fragment3"
-        android:name="com.example.pe_assignment.CervicalCancerTimeline02fragment"
+        android:name="com.example.pe_assignment.cancer.CervicalCancerTimeline02fragment"
         android:label="fragment_cervical_cancer_timeline02fragment"
         tools:layout="@layout/fragment_cervical_cancer_timeline02" >
         <action

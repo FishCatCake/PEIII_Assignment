@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/cancerTypeFragment"
-        android:name="com.example.pe_assignment.CancerTypeFragment"
+        android:name="com.example.pe_assignment.cancer.CancerTypeFragment"
         android:label="fragment_cancer_type"
         tools:layout="@layout/fragment_cancer_type" >
         <action
@@ -19,7 +19,7 @@
     </fragment>
     <fragment
         android:id="@+id/cancerPhaseFragment"
-        android:name="com.example.pe_assignment.CancerPhaseFragment"
+        android:name="com.example.pe_assignment.cancer.CancerPhaseFragment"
         android:label="fragment_cancer_phase"
         tools:layout="@layout/fragment_cancer_phase" >
         <action
@@ -32,7 +32,7 @@
     <include app:graph="@navigation/cancer_graph" />
     <activity
         android:id="@+id/homeActivity"
-        android:name="com.example.pe_assignment.HomeActivity"
+        android:name="com.example.pe_assignment.home.HomeActivity"
         android:label="activity_home"
         tools:layout="@layout/activity_home" />
 </navigation>

@@ -6,7 +6,7 @@
     app:startDestination="@id/cervicalCancerRecord01Fragment">
     <fragment
         android:id="@+id/cervicalCancerRecord01Fragment"
-        android:name="com.example.pe_assignment.CervicalCancerRecord01Fragment"
+        android:name="com.example.pe_assignment.cancer.CervicalCancerRecord01Fragment"
         android:label="fragment_cervical_cancer_record01"
         tools:layout="@layout/fragment_cervical_cancer_record01" >
         <action
@@ -18,7 +18,7 @@
     </fragment>
     <fragment
         android:id="@+id/cervicalCancerRecord02Fragment"
-        android:name="com.example.pe_assignment.CervicalCancerRecord02Fragment"
+        android:name="com.example.pe_assignment.cancer.CervicalCancerRecord02Fragment"
         android:label="fragment_cervical_cancer_record02"
         tools:layout="@layout/fragment_cervical_cancer_record02" >
         <action
@@ -30,7 +30,7 @@
     </fragment>
     <fragment
         android:id="@+id/cervicalCancerRecord03Fragment"
-        android:name="com.example.pe_assignment.CervicalCancerRecord03Fragment"
+        android:name="com.example.pe_assignment.cancer.CervicalCancerRecord03Fragment"
         android:label="fragment_cervical_cancer_record03"
         tools:layout="@layout/fragment_cervical_cancer_record03" >
         <action
