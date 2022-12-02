@@ -22,12 +22,12 @@
     </fragment>
     <activity
         android:id="@+id/cancerCreateRecordActivity"
-        android:name="com.example.pe_assignment.CancerCreateRecordActivity"
+        android:name="com.example.pe_assignment.cancer.CancerCreateRecordActivity"
         android:label="activity_cancer_create_record"
         tools:layout="@layout/activity_cancer_create_record" />
     <activity
         android:id="@+id/newTimelineActivity"
-        android:name="com.example.pe_assignment.NewTimelineActivity"
+        android:name="com.example.pe_assignment.cancer.NewTimelineActivity"
         android:label="activity_new_timeline"
         tools:layout="@layout/activity_new_timeline" />
     <activity

@@ -13,7 +13,7 @@
         android:theme="@style/AppTheme.NoActionBar"
         tools:targetApi="31">
         <activity
-            android:name=".CancerNewUserActivity"
+            android:name=".cancer.CancerNewUserActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -28,7 +28,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".home.HomeActivity"
+            android:name="com.example.pe_assignment.home.HomeActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -53,14 +53,14 @@
         </activity>
 
         <activity
-            android:name=".CancerCreateRecordActivity"
+            android:name=".cancer.CancerCreateRecordActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".NewTimelineActivity"
+            android:name=".cancer.NewTimelineActivity"
             android:exported="false"
             android:theme="@style/Theme.LoginPage">
             <meta-data
@@ -84,13 +84,6 @@
             android:exported="false">
 
          <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".CardRecyclerActivity"
-            android:exported="false">
-            <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>

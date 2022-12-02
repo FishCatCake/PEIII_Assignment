@@ -25,12 +25,6 @@
         <action
             android:id="@+id/action_homeFragment_to_menstruationActivity"
             app:destination="@id/menstruationActivity" />
-        <action
-            android:id="@+id/action_homeFragment_to_cycleFragment3"
-            app:destination="@id/cycleFragment" />
-        <action
-            android:id="@+id/action_homeFragment_to_cycleFragment2"
-            app:destination="@id/cycleFragment" />
     </fragment>
 
     <activity
@@ -50,7 +44,7 @@
         tools:layout="@layout/activity_article" />
     <activity
         android:id="@+id/cancerNewUserActivity"
-        android:name="com.example.pe_assignment.CancerNewUserActivity"
+        android:name="com.example.pe_assignment.cancer.CancerNewUserActivity"
         android:label="activity_cancer_new_user"
         tools:layout="@layout/activity_cancer_new_user" />
     <fragment
@@ -58,10 +52,5 @@
         android:name="com.example.pe_assignment.setting.SettingFragment"
         android:label="fragment_setting"
         tools:layout="@layout/fragment_setting" />
-    <fragment
-        android:id="@+id/cycleFragment"
-        android:name="com.example.pe_assignment.cycle.CycleFragment"
-        android:label="CycleFragment"
-        tools:layout="@layout/fragment_cycle"/>
 
 </navigation>

@@ -23,11 +23,8 @@
             android:id="@+id/action_cycleFragment_to_cycleDetailFragment"
             app:destination="@id/cycleDetailFragment" />
         <action
-            android:id="@+id/action_cycleFragment_to_homeFragment2"
-            app:destination="@id/homeFragment" />
-        <action
-            android:id="@+id/action_cycleFragment_to_menstruationActivity"
-            app:destination="@id/menstruationActivity" />
+            android:id="@+id/action_cycleFragment_to_homeActivity2"
+            app:destination="@id/homeActivity" />
     </fragment>
     <fragment
         android:id="@+id/cycleDetailFragment"
@@ -66,18 +63,10 @@
             android:id="@+id/action_selectionSymptonFragment_to_cycleFragment"
             app:destination="@id/cycleFragment" />
     </fragment>
-    <fragment
-        android:id="@+id/homeFragment"
-        android:name="com.example.pe_assignment.home.HomeFragment"
-        android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
-
     <activity
-        android:id="@+id/menstruationActivity"
-        android:name="com.example.pe_assignment.cycle.MenstruationActivity"
-        android:label="activity_menstruation"
-        tools:layout="@layout/activity_menstruation">
-
-    </activity>
+        android:id="@+id/homeActivity"
+        android:name="com.example.pe_assignment.home.HomeActivity"
+        android:label="activity_home"
+        tools:layout="@layout/activity_home" />
 
 </navigation>

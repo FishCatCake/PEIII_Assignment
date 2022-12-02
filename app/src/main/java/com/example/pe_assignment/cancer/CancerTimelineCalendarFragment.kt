@@ -1,4 +1,4 @@
-package com.example.pe_assignment
+package com.example.pe_assignment.cancer
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -10,6 +10,7 @@ import android.widget.CalendarView
 import android.widget.ImageButton
 import android.widget.TextView
 import androidx.navigation.findNavController
+import com.example.pe_assignment.R
 
 class CancerTimelineCalendar : Fragment() {
     lateinit var dateTV: TextView
