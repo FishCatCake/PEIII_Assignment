@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
+import androidx.navigation.findNavController
 import com.example.pe_assignment.R
 
 class Register3Fragment : Fragment() {
@@ -21,6 +22,12 @@ class Register3Fragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         // access the items of the list
         val languages = resources.getStringArray(R.array.Languages)
+
+        // btn to home
+        val btnRegister3 = view.findViewById<Button>(R.id.btn_register3)
+        btnRegister3.setOnClickListener {
+            view.findNavController().navigate(R.id.homeActivity)
+        }
 
         // access the spinner
         val spinner = getView()?.findViewById<Spinner>(R.id.spinner)

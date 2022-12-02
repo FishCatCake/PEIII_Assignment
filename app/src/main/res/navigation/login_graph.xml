@@ -20,7 +20,8 @@
     <fragment
         android:id="@+id/register1Fragment"
         android:name="com.example.pe_assignment.login.Register1Fragment"
-        android:label="Register1Fragment" >
+        android:label="Register1Fragment"
+        tools:layout="@layout/fragment_register_1">
         <action
             android:id="@+id/action_register1Fragment_to_register2Fragment"
             app:destination="@id/register2Fragment" />
@@ -28,7 +29,8 @@
     <fragment
         android:id="@+id/register2Fragment"
         android:name="com.example.pe_assignment.login.Register2Fragment"
-        android:label="Register2Fragment" >
+        android:label="Register2Fragment"
+        tools:layout="@layout/fragment_register_2">
         <action
             android:id="@+id/action_register2Fragment_to_register3Fragment"
             app:destination="@id/register3Fragment" />
@@ -36,10 +38,16 @@
     <fragment
         android:id="@+id/register3Fragment"
         android:name="com.example.pe_assignment.login.Register3Fragment"
-        android:label="Register3Fragment" />
+        android:label="Register3Fragment"
+        tools:layout="@layout/fragment_register_3">
+        <action
+            android:id="@+id/action_register3Fragment_to_homeActivity"
+            app:destination="@id/homeActivity" />
+    </fragment>
     <activity
         android:id="@+id/homeActivity"
         android:name="com.example.pe_assignment.home.HomeActivity"
         android:label="activity_home"
         tools:layout="@layout/activity_home" />
+
 </navigation>

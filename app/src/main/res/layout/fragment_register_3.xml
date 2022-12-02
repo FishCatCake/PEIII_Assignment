@@ -111,11 +111,11 @@
         </androidx.cardview.widget.CardView>
 
         <Button
+            android:id="@+id/btn_register3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/register_btn_bcg"
             android:text="Start record journey!"
-            android:id="@+id/register_btn3"
             android:textAllCaps="false"
             android:textSize="21sp"
             android:textColor="@color/white"
