@@ -46,7 +46,7 @@
     <string name="settings">SETTINGS</string>
     <string name="period_prediction_reminder">Period prediction reminder</string>
     <string name="system_settings">SYSTEM SETTINGS</string>
-    <string name="syc_with_huawei_health">Syc with \'Huawei Health\'</string>
+    <string name="syc_with_huawei_health">Sync with \'Huawei Health\'</string>
     <string name="personal_customization">PERSONAL CUSTOMIZATION</string>
     <string name="selected_item">Selected item:</string>
     <string-array name="Languages">

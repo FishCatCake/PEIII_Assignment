@@ -57,7 +57,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:paddingEnd="@dimen/card_title_padding_left_right"
-                        android:paddingStart="@dimen/card_title_padding_left_right"
+                        android:paddingStart="10dp"
                         android:layout_marginTop="2dp"
                         android:background="@color/white">
 
@@ -92,7 +92,7 @@
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:paddingStart="20dp"
+                        android:paddingStart="9dp"
                         android:layout_marginTop="2dp"
                         android:background="@color/white">
 

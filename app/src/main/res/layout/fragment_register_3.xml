@@ -81,7 +81,6 @@
                         android:layout_height="35dp"
                         android:layout_marginTop="2dp"
                         android:text="@string/language"
-                        android:paddingStart="@dimen/card_content_padding"
                         android:paddingEnd="@dimen/card_content_padding"
                         android:layout_marginStart="@dimen/card_content_margin"
                         android:gravity="center_vertical"
@@ -93,7 +92,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_toEndOf="@+id/register_title2.2"
-                        android:layout_marginLeft="57dp"
+                        android:layout_marginLeft="140dp"
                         android:layout_marginTop="9dp"/>
                     </RelativeLayout>
 

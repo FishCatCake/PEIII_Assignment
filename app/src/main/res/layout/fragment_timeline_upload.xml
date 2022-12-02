@@ -16,7 +16,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:padding="10dp"
-        android:text="Today, 29/05/2022"
+        android:text="29 May, 2022"
         android:textColor="#000000"
         android:textSize="23sp"
         android:textStyle="bold"
