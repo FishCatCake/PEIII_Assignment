@@ -7,42 +7,17 @@
     android:orientation="vertical"
     tools:context=".hpv.VaccineCountdownFragment">
 
+    <include
+        layout="@layout/hpv_content_header"/>
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
         android:orientation="vertical"
         app:layout_anchor="@+id/linearLayout"
         app:layout_anchorGravity="center">
-        <RelativeLayout android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            xmlns:android="http://schemas.android.com/apk/res/android">
-<!--            <ImageButton-->
-<!--                android:id="@+id/back"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:background="@color/white"-->
-<!--                android:layout_marginTop="20dp"-->
-<!--                android:src="@drawable/btn_back"/>-->
-            <TextView
-                android:id="@+id/title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="100dp"
-                android:layout_marginTop="25dp"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:textColor="@color/black"
-                android:text="@string/hpv_vaccine_track"/>
-            <ImageButton
-                android:id="@+id/other"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@color/white"
-                android:layout_marginStart="40dp"
-                android:layout_marginTop="20dp"
-                android:layout_toEndOf="@+id/title"
-                android:src="@drawable/btn_other"/>
-        </RelativeLayout>
+
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -105,7 +80,7 @@
                     android:layout_width="80dp"
                     android:layout_height="110dp"
                     android:layout_marginTop="100dp"
-                    android:layout_marginStart="20dp"
+                    android:layout_marginStart="11dp"
                     android:layout_marginBottom="20dp"
                     android:src="@drawable/vaccine_countdown_card"/>
 

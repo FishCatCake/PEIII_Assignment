@@ -7,15 +7,17 @@
     android:orientation="vertical"
     tools:context=".hpv.TestCountdownFragment">
 
+    <include
+        layout="@layout/hpv_content_header"/>
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
         android:orientation="vertical"
         app:layout_anchor="@+id/linearLayout"
         app:layout_anchorGravity="center">
-        <include
-            layout="@layout/hpv_content_header"/>
+
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -79,7 +81,7 @@
                     android:layout_width="80dp"
                     android:layout_height="110dp"
                     android:layout_marginTop="100dp"
-                    android:layout_marginStart="20dp"
+                    android:layout_marginStart="11dp"
                     android:layout_marginBottom="20dp"
                     android:src="@drawable/review_countdown_card"/>
 

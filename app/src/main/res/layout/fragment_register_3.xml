@@ -27,6 +27,7 @@
             android:layout_height="wrap_content"
             style="@style/Card_View"
             app:cardBackgroundColor="#F2F0F1"
+            android:layout_marginBottom="5dp"
             app:cardCornerRadius="10dp"
             app:cardElevation="10dp">
 
@@ -49,6 +50,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         style="@style/Card_Title02"
+                        android:textSize="18sp"
                         android:text="@string/personal_customization"/>
 
                     <RadioButton
@@ -65,6 +67,7 @@
                         android:layout_height="wrap_content"
                         style="@style/Card_Title02"
                         android:background="@color/white"
+                        android:textSize="18sp"
                         android:text="@string/system_settings"/>
 
                     <RelativeLayout
@@ -110,20 +113,19 @@
 
         </androidx.cardview.widget.CardView>
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/register_btn_bcg"
-            android:text="Start record journey!"
-            android:id="@+id/register_btn3"
-            android:textAllCaps="false"
-            android:textSize="21sp"
-            android:textColor="@color/white"
-            android:layout_marginTop="40dp"
-            android:layout_marginStart="30dp"
-            android:layout_marginEnd="30dp"/>
-
-
     </LinearLayout>
+
+    <Button
+        android:id="@+id/register_btn3"
+        android:layout_width="@dimen/btn_grey_width"
+        android:layout_height="@dimen/btn_grey_height"
+        android:layout_marginTop="450dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/btn_selector"
+        android:textColor="@color/btn_text"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:textSize="@dimen/btn_text"
+        android:text="Start record journey!"/>
 
 </FrameLayout>

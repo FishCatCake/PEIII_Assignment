@@ -31,5 +31,10 @@ class VaccineCountdownFragment : Fragment() {
         btnSend.setOnClickListener {
             view.findNavController().navigate(R.id.hpvRecordFragment)
         }
+
+        btnSend = view.findViewById<ImageButton>(R.id.back)
+        btnSend.setOnClickListener {
+            view.findNavController().navigate(R.id.homeActivity)
+        }
     }
 }
