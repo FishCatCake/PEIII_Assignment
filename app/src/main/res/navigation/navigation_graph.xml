@@ -20,11 +20,11 @@
             android:id="@+id/action_homeFragment_to_cancerNewUserActivity"
             app:destination="@id/cancerNewUserActivity" />
         <action
-            android:id="@+id/action_homeFragment_to_settingFragment2"
-            app:destination="@id/settingFragment" />
-        <action
             android:id="@+id/action_homeFragment_to_menstruationActivity"
             app:destination="@id/menstruationActivity" />
+        <action
+            android:id="@+id/action_homeFragment_to_settingActivity"
+            app:destination="@id/settingActivity" />
     </fragment>
 
     <activity
@@ -47,10 +47,10 @@
         android:name="com.example.pe_assignment.cancer.CancerNewUserActivity"
         android:label="activity_cancer_new_user"
         tools:layout="@layout/activity_cancer_new_user" />
-    <fragment
-        android:id="@+id/settingFragment"
-        android:name="com.example.pe_assignment.setting.SettingFragment"
-        android:label="fragment_setting"
-        tools:layout="@layout/fragment_setting" />
+    <activity
+        android:id="@+id/settingActivity"
+        android:name="com.example.pe_assignment.setting.SettingActivity"
+        android:label="activity_setting"
+        tools:layout="@layout/activity_setting" />
 
 </navigation>

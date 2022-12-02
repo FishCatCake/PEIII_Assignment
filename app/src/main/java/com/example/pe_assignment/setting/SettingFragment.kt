@@ -25,11 +25,11 @@ class SettingFragment : Fragment() {
         val btnProfile = view.findViewById<ImageButton>(R.id.btn_profile)
         val cdLogOut = view.findViewById<CardView>(R.id.cd_log_out)
         btnBack.setOnClickListener{
-            view.findNavController().navigate(R.id.homeFragment)
+            view.findNavController().navigate(R.id.homeActivity)
         }
 
         btnProfile.setOnClickListener{
-            view.findNavController().navigate(R.id.cycleFragment)
+            view.findNavController().navigate(R.id.menstruationActivity)
         }
 
         cdLogOut.setOnClickListener{

@@ -46,7 +46,7 @@ class HomeFragment : Fragment() {
         }
 
         btnSetting.setOnClickListener{
-            view.findNavController().navigate(R.id.settingFragment)
+            view.findNavController().navigate(R.id.settingActivity)
         }
 
         btnProfile.setOnClickListener{

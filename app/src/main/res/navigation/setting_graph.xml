@@ -11,32 +11,32 @@
         android:label="fragment_setting"
         tools:layout="@layout/fragment_setting" >
         <action
-            android:id="@+id/action_settingFragment_to_homeFragment2"
-            app:destination="@id/homeFragment" />
-        <action
-            android:id="@+id/action_settingFragment_to_cycleFragment2"
-            app:destination="@id/cycleFragment" />
-        <action
             android:id="@+id/action_settingFragment_to_loginActivity"
             app:destination="@id/loginActivity" />
         <action
             android:id="@+id/action_settingFragment_to_login_graph"
             app:destination="@id/login_graph" />
+        <action
+            android:id="@+id/action_settingFragment_to_homeActivity2"
+            app:destination="@id/homeActivity" />
+        <action
+            android:id="@+id/action_settingFragment_to_menstruationActivity4"
+            app:destination="@id/menstruationActivity" />
     </fragment>
-    <fragment
-        android:id="@+id/homeFragment"
-        android:name="com.example.pe_assignment.home.HomeFragment"
-        android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
-    <fragment
-        android:id="@+id/cycleFragment"
-        android:name="com.example.pe_assignment.cycle.CycleFragment"
-        android:label="CycleFragment"
-        tools:layout="@layout/fragment_cycle"/>
     <activity
         android:id="@+id/loginActivity"
         android:name="com.example.pe_assignment.login.LoginActivity"
         android:label="activity_login"
         tools:layout="@layout/activity_login" />
     <include app:graph="@navigation/login_graph" />
+    <activity
+        android:id="@+id/homeActivity"
+        android:name="com.example.pe_assignment.home.HomeActivity"
+        android:label="activity_home"
+        tools:layout="@layout/activity_home" />
+    <activity
+        android:id="@+id/menstruationActivity"
+        android:name="com.example.pe_assignment.cycle.MenstruationActivity"
+        android:label="activity_menstruation"
+        tools:layout="@layout/activity_menstruation" />
 </navigation>
