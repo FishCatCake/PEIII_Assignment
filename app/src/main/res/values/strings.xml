@@ -191,5 +191,7 @@
     <string name="learn_more_about_you">Learn more about you</string>
     <string name="set_now_or_modify_later">Set now or modify later</string>
     <string name="language">Language</string>
+    <string name="help_center">Help Center</string>
+    <string name="help">Help</string>
 
 </resources>

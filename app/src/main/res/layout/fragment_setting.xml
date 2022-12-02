@@ -67,11 +67,10 @@
             android:id="@+id/tv_my_account"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginVertical="10dp"
-            android:layout_marginStart="40dp"
-            android:layout_marginTop="50dp"
-            android:layout_marginEnd="40dp"
-            android:layout_marginBottom="40dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
             android:text="@string/my_account"
             android:textColor="@color/grey_text"
             android:textSize="15sp">
@@ -127,7 +126,7 @@
             android:textColor="@color/grey_text"
             android:text="Settings"
             android:textSize="15sp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="15dp"
             android:layout_marginHorizontal="30dp"
             >
 
@@ -140,7 +139,7 @@
             android:layout_width="350dp"
             android:layout_height="50dp"
             android:layout_below="@id/tv_title_setting"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:layout_centerHorizontal="true"
             android:clickable="true"
             android:focusable="true"
@@ -341,8 +340,8 @@
             app:cardElevation="0dp"
             android:layout_width="350dp"
             android:layout_height="50dp"
-            android:layout_below="@id/cd_setting6"
-            android:layout_marginTop="25dp"
+            android:layout_below="@id/tv_title_help"
+            android:layout_marginTop="10dp"
             android:layout_centerHorizontal="true"
             android:clickable="true"
             android:focusable="true"
@@ -358,7 +357,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginHorizontal="30dp"
                 android:layout_marginVertical="12dp"
-                android:text="@string/language_setting"
+                android:text="@string/help_center"
                 android:textSize="18sp"
                 android:textStyle="bold">
             </TextView>
@@ -374,6 +373,20 @@
                 >
             </TextView>
         </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tv_title_help"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cd_setting6"
+            android:textColor="@color/grey_text"
+            android:text="@string/help"
+            android:textSize="15sp"
+            android:layout_marginTop="15dp"
+            android:layout_marginHorizontal="30dp"
+            >
+
+        </TextView>
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cd_log_out"
