@@ -193,5 +193,7 @@
     <string name="language">Language</string>
     <string name="help_center">Help Center</string>
     <string name="help">Help</string>
+    <string name="track_log">Track log</string>
+    <string name="my_cycle">My Cycle</string>
 
 </resources>

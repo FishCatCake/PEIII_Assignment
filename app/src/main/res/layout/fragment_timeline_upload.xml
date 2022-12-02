@@ -182,16 +182,5 @@
         </androidx.cardview.widget.CardView>
 
     </LinearLayout>
-    <Button
-        android:id="@+id/next_btn"
-        android:layout_marginTop="600dp"
-        android:layout_width="@dimen/btn_grey_width"
-        android:layout_height="@dimen/btn_grey_height"
-        android:layout_gravity="center_horizontal"
-        android:background="@drawable/btn_selector"
-        android:textColor="@color/btn_text"
-        android:textAllCaps="false"
-        android:textStyle="bold"
-        android:textSize="@dimen/btn_text"
-        android:text="@string/done" />
+
 </FrameLayout>
