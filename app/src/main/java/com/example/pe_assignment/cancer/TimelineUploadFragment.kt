@@ -27,7 +27,11 @@ class TimelineUploadFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val btnSend = view.findViewById<Button>(R.id.next_btn)
+        val btnins= view.findViewById<Button>(R.id.create_ins)
+        btnins.setOnClickListener {
+            view.findNavController().navigate(R.id.cervicalCancerTimeline02fragment3)
+        }
+        val btnSend = view.findViewById<Button>(R.id.create_res)
         btnSend.setOnClickListener {
             view.findNavController().navigate(R.id.cervicalCancerTimeline02fragment3)
         }

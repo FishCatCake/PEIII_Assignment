@@ -52,7 +52,7 @@ class CancerTimelineCalendar : Fragment() {
 
         val btnback = view.findViewById<ImageButton>(R.id.back)
         btnback.setOnClickListener {
-            view.findNavController().navigate(R.id.cancerTimelineFragment)
+            view.findNavController().navigate(R.id.cancerTimelineFragment3)
         }
     }
 

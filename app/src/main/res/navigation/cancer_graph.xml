@@ -11,22 +11,13 @@
         android:label="fragment_cancer_canlendar"
         tools:layout="@layout/fragment_cancer_canlendar" >
         <action
-            android:id="@+id/action_cancerCalendarFragment_to_cancerTimelineFragment"
-            app:destination="@id/cancerTimelineFragment" />
-        <action
             android:id="@+id/action_cancerCalendarFragment_to_cancerCreateRecordActivity"
             app:destination="@id/cancerCreateRecordActivity" />
-    </fragment>
-    <fragment
-        android:id="@+id/cancerTimelineFragment"
-        android:name="com.example.pe_assignment.cancer.CancerTimelineFragment"
-        android:label="fragment_cancer_timeline"
-        tools:layout="@layout/fragment_cancer_timeline" >
         <action
-            android:id="@+id/action_cancerTimelineFragment_to_cancerCalendarFragment"
-            app:destination="@id/cancerCalendarFragment" />
+            android:id="@+id/action_cancerCalendarFragment_to_menstruationActivity2"
+            app:destination="@id/menstruationActivity2" />
         <action
-            android:id="@+id/action_cancerTimelineFragment_to_newTimelineActivity"
+            android:id="@+id/action_cancerCalendarFragment_to_newTimelineActivity"
             app:destination="@id/newTimelineActivity" />
     </fragment>
     <activity
@@ -39,4 +30,9 @@
         android:name="com.example.pe_assignment.NewTimelineActivity"
         android:label="activity_new_timeline"
         tools:layout="@layout/activity_new_timeline" />
+    <activity
+        android:id="@+id/menstruationActivity2"
+        android:name="com.example.pe_assignment.cycle.MenstruationActivity"
+        android:label="activity_menstruation"
+        tools:layout="@layout/activity_menstruation" />
 </navigation>
