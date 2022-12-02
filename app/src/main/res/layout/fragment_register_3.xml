@@ -53,13 +53,17 @@
                         android:textSize="18sp"
                         android:text="@string/personal_customization"/>
 
-                    <RadioButton
-                        android:id="@+id/register_ratio_btn1"
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        style="@style/Card_RadioButton"
-                        android:text="@string/period_prediction_reminder"
-                        android:textColor="@color/card_content2"/>
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="15dp"
+                    style="@style/Card_Title02"
+                    android:background="#F2F0F1"
+                    android:text="@string/period_prediction_reminder"
+                    android:textSize="16sp"
+                    android:textColor="@color/grey_text"
+                    android:layout_gravity="center_horizontal"/>
 
                     <TextView
                         android:id="@+id/register_title2"
@@ -84,7 +88,7 @@
                         android:paddingEnd="@dimen/card_content_padding"
                         android:layout_marginStart="@dimen/card_content_margin"
                         android:gravity="center_vertical"
-                        android:textColor="@color/card_content2"
+                        android:textColor="@color/grey_text"
                         android:textSize="16sp"/>
 
                     <Spinner
@@ -96,15 +100,16 @@
                         android:layout_marginTop="9dp"/>
                     </RelativeLayout>
 
-
-                    <RadioButton
-                        android:id="@+id/register_ratio_btn2"
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        style="@style/Card_RadioButton"
-                        android:text="@string/syc_with_huawei_health"
-                        android:textColor="@color/card_content2"
-                        android:textSize="17sp" />
+                <androidx.appcompat.widget.SwitchCompat
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="15dp"
+                    style="@style/Card_Title02"
+                    android:background="#F2F0F1"
+                    android:text="@string/syc_with_huawei_health"
+                    android:textSize="16sp"
+                    android:textColor="@color/grey_text"
+                    android:layout_gravity="center_horizontal"/>
 
 
             </LinearLayout>
