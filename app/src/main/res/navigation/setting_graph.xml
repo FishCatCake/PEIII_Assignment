@@ -5,11 +5,6 @@
     android:id="@+id/setting_graph"
     app:startDestination="@id/settingFragment">
 
-    <activity
-        android:id="@+id/settingActivity"
-        android:name="com.example.pe_assignment.setting.SettingActivity"
-        android:label="fragment_setting"
-        tools:layout="@layout/fragment_setting" />
     <fragment
         android:id="@+id/settingFragment"
         android:name="com.example.pe_assignment.setting.SettingFragment"
@@ -21,6 +16,12 @@
         <action
             android:id="@+id/action_settingFragment_to_cycleFragment2"
             app:destination="@id/cycleFragment" />
+        <action
+            android:id="@+id/action_settingFragment_to_loginActivity"
+            app:destination="@id/loginActivity" />
+        <action
+            android:id="@+id/action_settingFragment_to_login_graph"
+            app:destination="@id/login_graph" />
     </fragment>
     <fragment
         android:id="@+id/homeFragment"
@@ -32,4 +33,10 @@
         android:name="com.example.pe_assignment.cycle.CycleFragment"
         android:label="CycleFragment"
         tools:layout="@layout/fragment_cycle"/>
+    <activity
+        android:id="@+id/loginActivity"
+        android:name="com.example.pe_assignment.login.LoginActivity"
+        android:label="activity_login"
+        tools:layout="@layout/activity_login" />
+    <include app:graph="@navigation/login_graph" />
 </navigation>

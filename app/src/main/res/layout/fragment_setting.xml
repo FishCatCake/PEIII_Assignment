@@ -397,9 +397,6 @@
             android:layout_below="@id/cd_setting7"
             android:layout_marginTop="25dp"
             android:layout_centerHorizontal="true"
-            android:clickable="true"
-            android:focusable="true"
-            android:hapticFeedbackEnabled="true"
             app:cardBackgroundColor="@color/purple_theme"
             app:cardCornerRadius="15dp">
 
@@ -407,9 +404,6 @@
                 android:id="@+id/tv_log_out"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:clickable="true"
-                android:focusable="true"
-                android:hapticFeedbackEnabled="true"
                 android:textStyle="bold"
                 android:textSize="20sp"
                 android:layout_marginHorizontal="25dp"

@@ -32,7 +32,7 @@
             android:id="@+id/btn_setting"
             android:background="@drawable/btn_other"
             android:src="@drawable/btn_other"
-            android:layout_marginStart="330dp"
+            android:layout_marginStart="335dp"
             android:layout_marginTop="50dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
@@ -43,7 +43,7 @@
             android:id="@+id/btn_profile"
             android:layout_width="wrap_content"
             android:layout_height="80dp"
-            android:layout_marginStart="250dp"
+            android:layout_marginStart="240dp"
             android:layout_marginTop="30dp"
             android:background="@color/white"
             android:scaleX="0.5"
