@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/newtimeline_graph"
+    app:startDestination="@id/cancerTimelineFragment3">
+
+    <fragment
+        android:id="@+id/timelineUploadFragment"
+        android:name="com.example.pe_assignment.cancer.TimelineUploadFragment"
+        android:label="fragment_timeline_upload"
+        tools:layout="@layout/fragment_timeline_upload" >
+        <action
+            android:id="@+id/action_timelineUploadFragment_to_cervicalCancerTimeline02fragment3"
+            app:destination="@id/cervicalCancerTimeline02fragment3" />
+        <action
+            android:id="@+id/action_timelineUploadFragment_to_cancerTimelineCalendar"
+            app:destination="@id/cancerTimelineCalendar" />
+    </fragment>
+    <fragment
+        android:id="@+id/timelineinfoboardFragment"
+        android:name="com.example.pe_assignment.cancer.TimelineinfoboardFragment"
+        android:label="fragment_timelineinfoboard"
+        tools:layout="@layout/fragment_timelineinfoboard" >
+        <action
+            android:id="@+id/action_timelineinfoboardFragment_to_cervicalCancerTimeline02fragment3"
+            app:destination="@id/cervicalCancerTimeline02fragment3" />
+        <action
+            android:id="@+id/action_timelineinfoboardFragment_to_cancer_graph2"
+            app:destination="@id/cancer_graph" />
+        <action
+            android:id="@+id/action_timelineinfoboardFragment_to_cancerTimelineFragment3"
+            app:destination="@id/cancerTimelineFragment3" />
+    </fragment>
+    <fragment
+        android:id="@+id/cancerTimelineCalendar"
+        android:name="com.example.pe_assignment.cancer.CancerTimelineCalendar"
+        android:label="fragment_cancer_timeline_calendar"
+        tools:layout="@layout/fragment_cancer_timeline_calendar" >
+        <action
+            android:id="@+id/action_cancerTimelineCalendar_to_timelineUploadFragment"
+            app:destination="@id/timelineUploadFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/cervicalCancerTimeline02fragment3"
+        android:name="com.example.pe_assignment.cancer.CervicalCancerTimeline02fragment"
+        android:label="fragment_cervical_cancer_timeline02fragment"
+        tools:layout="@layout/fragment_cervical_cancer_timeline02" >
+        <action
+            android:id="@+id/action_cervicalCancerTimeline02fragment3_to_timelineinfoboardFragment"
+            app:destination="@id/timelineinfoboardFragment" />
+        <action
+            android:id="@+id/action_cervicalCancerTimeline02fragment3_to_timelineUploadFragment"
+            app:destination="@id/timelineUploadFragment" />
+    </fragment>
+    <include app:graph="@navigation/cancer_graph" />
+    <fragment
+        android:id="@+id/cancerTimelineFragment3"
+        android:name="com.example.pe_assignment.cancer.CancerTimelineFragment"
+        android:label="fragment_cancer_timeline"
+        tools:layout="@layout/fragment_cancer_timeline" >
+        <action
+            android:id="@+id/action_cancerTimelineFragment3_to_cancer_graph"
+            app:destination="@id/cancer_graph" />
+        <action
+            android:id="@+id/action_cancerTimelineFragment3_to_cancerTimelineCalendar2"
+            app:destination="@id/cancerTimelineCalendar" />
+        <action
+            android:id="@+id/action_cancerTimelineFragment3_to_menstruationActivity3"
+            app:destination="@id/menstruationActivity3" />
+    </fragment>
+    <activity
+        android:id="@+id/menstruationActivity3"
+        android:name="com.example.pe_assignment.cycle.MenstruationActivity"
+        android:label="activity_menstruation"
+        tools:layout="@layout/activity_menstruation" />
+</navigation>

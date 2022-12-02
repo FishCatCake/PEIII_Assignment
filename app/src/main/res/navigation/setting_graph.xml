@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/setting_graph"
+    app:startDestination="@id/settingFragment">
+
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.example.pe_assignment.setting.SettingFragment"
+        android:label="fragment_setting"
+        tools:layout="@layout/fragment_setting" >
+        <action
+            android:id="@+id/action_settingFragment_to_loginActivity"
+            app:destination="@id/loginActivity" />
+        <action
+            android:id="@+id/action_settingFragment_to_login_graph"
+            app:destination="@id/login_graph" />
+        <action
+            android:id="@+id/action_settingFragment_to_homeActivity2"
+            app:destination="@id/homeActivity" />
+        <action
+            android:id="@+id/action_settingFragment_to_menstruationActivity4"
+            app:destination="@id/menstruationActivity" />
+    </fragment>
+    <activity
+        android:id="@+id/loginActivity"
+        android:name="com.example.pe_assignment.login.LoginActivity"
+        android:label="activity_login"
+        tools:layout="@layout/activity_login" />
+    <include app:graph="@navigation/login_graph" />
+    <activity
+        android:id="@+id/homeActivity"
+        android:name="com.example.pe_assignment.home.HomeActivity"
+        android:label="activity_home"
+        tools:layout="@layout/activity_home" />
+    <activity
+        android:id="@+id/menstruationActivity"
+        android:name="com.example.pe_assignment.cycle.MenstruationActivity"
+        android:label="activity_menstruation"
+        tools:layout="@layout/activity_menstruation" />
+</navigation>

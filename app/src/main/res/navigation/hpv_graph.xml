@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/hpv_graph"
+    app:startDestination="@id/reviewCalendarFragment">
+    <fragment
+        android:id="@+id/reviewCalendarFragment"
+        android:name="com.example.pe_assignment.hpv.ReviewCalendarFragment"
+        android:label="fragment_review_calendar"
+        tools:layout="@layout/fragment_review_calendar" >
+        <action
+            android:id="@+id/action_reviewCalendarFragment_to_doseCalendarFragment"
+            app:destination="@id/doseCalendarFragment" />
+        <action
+            android:id="@+id/action_reviewCalendarFragment_to_homeActivity2"
+            app:destination="@id/homeActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/doseCalendarFragment"
+        android:name="com.example.pe_assignment.hpv.DoseCalendarFragment"
+        android:label="fragment_dose_calendar"
+        tools:layout="@layout/fragment_dose_calendar" >
+        <action
+            android:id="@+id/action_doseCalendarFragment_to_hpvReminderFragment"
+            app:destination="@id/hpvReminderFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/hpvReminderFragment"
+        android:name="com.example.pe_assignment.hpv.HpvReminderFragment"
+        android:label="fragment_hpv_reminder"
+        tools:layout="@layout/fragment_hpv_reminder" >
+        <action
+            android:id="@+id/action_hpvReminderFragment_to_vaccineCountdownFragment"
+            app:destination="@id/vaccineCountdownFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/vaccineCountdownFragment"
+        android:name="com.example.pe_assignment.hpv.VaccineCountdownFragment"
+        android:label="fragment_vaccine_countdown"
+        tools:layout="@layout/fragment_vaccine_countdown" >
+        <action
+            android:id="@+id/action_vaccineCountdownFragment_to_testCountdownFragment"
+            app:destination="@id/testCountdownFragment" />
+        <action
+            android:id="@+id/action_vaccineCountdownFragment_to_homeActivity"
+            app:destination="@id/homeActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/testCountdownFragment"
+        android:name="com.example.pe_assignment.hpv.TestCountdownFragment"
+        android:label="fragment_test_countdown"
+        tools:layout="@layout/fragment_test_countdown" >
+        <action
+            android:id="@+id/action_testCountdownFragment_to_hpvRecordFragment"
+            app:destination="@id/hpvRecordFragment" />
+        <action
+            android:id="@+id/action_testCountdownFragment_to_vaccineCountdownFragment"
+            app:destination="@id/vaccineCountdownFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/hpvRecordFragment"
+        android:name="com.example.pe_assignment.hpv.HpvRecordFragment"
+        android:label="fragment_hpv_record"
+        tools:layout="@layout/fragment_hpv_record" >
+        <action
+            android:id="@+id/action_hpvRecordFragment_to_testRecordFragment"
+            app:destination="@id/testRecordFragment" />
+        <action
+            android:id="@+id/action_hpvRecordFragment_to_menstruationActivity2"
+            app:destination="@id/menstruationActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/testRecordFragment"
+        android:name="com.example.pe_assignment.hpv.TestRecordFragment"
+        android:label="fragment_test_record"
+        tools:layout="@layout/fragment_test_record" >
+        <action
+            android:id="@+id/action_testRecordFragment_to_hpvRecordFragment"
+            app:destination="@id/hpvRecordFragment" />
+        <action
+            android:id="@+id/action_testRecordFragment_to_menstruationActivity2"
+            app:destination="@id/menstruationActivity" />
+    </fragment>
+    <activity
+        android:id="@+id/homeActivity"
+        android:name="com.example.pe_assignment.home.HomeActivity"
+        android:label="activity_home"
+        tools:layout="@layout/activity_home" />
+    <activity
+        android:id="@+id/menstruationActivity"
+        android:name="com.example.pe_assignment.cycle.MenstruationActivity"
+        android:label="activity_menstruation"
+        tools:layout="@layout/activity_menstruation" />
+</navigation>

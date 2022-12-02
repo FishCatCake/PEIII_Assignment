@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".hpv.ReviewCalendarFragment">
+    <include
+        layout="@layout/hpv_input_header"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="70dp">
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:scaleY="0.9"
+            android:scaleX="0.9"
+            android:src="@drawable/hpv_3_0"/>
+        <TextView
+            android:id="@+id/idTVDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="@string/date_of_first_nhpv_test_onset"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <!-- Add CalendarView to display the Calendar -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginBottom="5dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="10dp">
+
+            <TextView
+                android:id="@+id/card_title"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/input_card_orange2" />
+
+            <CalendarView
+                android:id="@+id/calendarView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp">
+
+            </CalendarView>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/next_btn"
+        android:layout_width="@dimen/btn_grey_width"
+        android:layout_height="@dimen/btn_grey_height"
+        android:layout_marginTop="600dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/btn_selector"
+        android:textColor="@color/btn_text"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:textSize="@dimen/btn_text"
+        android:text="@string/next" />
+
+</FrameLayout>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".cycle.CycleHistoryFragment">
+
+
+    <ImageButton
+        android:id="@+id/btn_back_history"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/btn_back"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="20dp"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_cycle_history"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:textColor="@color/black"
+        android:text="@string/tv_cycle_history"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </TextView>
+
+    <Button
+        android:id="@+id/btn_pdf"
+        android:radius="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="10dp"
+        android:paddingHorizontal="10dp"
+        app:layout_constraintCircleRadius="20dp"
+        android:background="@drawable/btn_selector"
+        android:text="@string/pdf"
+        android:textColor="@color/btn_text"
+        app:layout_constraintTop_toBottomOf="@+id/tv_cycle_history"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+    </Button>
+
+
+    <TextView
+        android:id="@+id/tv_record_year"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="10dp"
+        android:text="2022"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="15dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_pdf">
+    </TextView>
+
+
+<!--    <androidx.cardview.widget.CardView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:clickable="true"-->
+<!--        android:focusable="true"-->
+<!--        android:background="@drawable/bg_cycle_history"-->
+<!--        app:layout_constraintLeft_toLeftOf="parent"-->
+<!--        app:layout_constraintRight_toRightOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/tv_record_year">-->
+<!--        -->
+<!--    </androidx.cardview.widget.CardView>-->
+
+    <RelativeLayout
+        android:id="@+id/cycle_record1"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginHorizontal="10dp"
+        android:background="@drawable/bg_cycle_history"
+        android:layout_marginVertical="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_record_year"
+        >
+
+        <TextView
+            android:id="@+id/tv_current_cycle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:layout_marginStart="20dp"
+            android:text="@string/tv_current_cycle"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/tv_cycle_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@+id/tv_current_cycle"
+            android:text="Started 25 Nov"
+            android:textColor="@color/grey_text"
+            android:textSize="14sp"
+            android:textStyle="bold">
+        </TextView>
+
+        <TextView
+            android:id="@+id/tv_redirect_record"
+            android:text="@string/redirect"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="160dp"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@+id/tv_cycle_date">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/tv_cycle_length"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_current_cycle"
+            android:layout_marginStart="20dp"
+            android:text="4-day period"
+            android:textColor="@color/grey_text"
+            android:textSize="12sp"
+            android:textStyle="bold">
+        </TextView>
+
+
+        <ImageView
+            android:id="@+id/img_record"
+            android:src="@drawable/img_record_cycle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_below="@+id/tv_cycle_length"
+            android:layout_marginVertical="10dp"
+            >
+
+        </ImageView>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

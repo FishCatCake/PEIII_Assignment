@@ -1,10 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_theme">#80869ADF</color>
+    <color name="purple_text">#869ADF</color>
     <color name="purple_500">#FF6200EE</color>
+    <color name="blue_bg">#BADBF4</color>
+    <color name="purple_bg">#8E008B</color>
+    <color name="grey_text">#706B6B</color>
+    <color name="grey_bg">#E6E8EE</color>
+    <color name="orange_bg">#BC554D</color>
+    <color name="green_normal">#45B610</color>
+
+    <color name="input_purple">#8B7FF5</color>
+    <color name="input_orange">#94E23424</color>
+    <color name="input_deepPurple">#B20AAF</color>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="background">#EEEEEE</color>
+    <color name="login_btn">#869ADF</color>
+    <color name="register_btn">#E897AE</color>
+    <!-- cancer timeline -->
+    <color name="timeline_info">#667085</color>
+
+
+    <color name="input_card_orange">#F08784</color>
+    <color name="input_card_orange2">#ECA16A</color>
+    <color name="input_card_blue">#67BAE9</color>
+    <color name="input_card_blue2">#869ADF</color>
+    <color name="input_card_red">#E2869F</color>
+    <color name="input_card_purple">#A06AC0</color>
+    <color name="input_card_purple2"> #BC28B9</color>
+    <color name="input_card_blue3">#3C4874</color>
+    <color name="btn_grey">#DFDFDF</color>
+    <color name="btn_text">#0E7ACD</color>
+    <color name="countdown_text">#696565</color>
+    <color name="card_content">#CBCACA</color>
+    <color name="card_content2">#9C999A</color>
+    <color name="card_content_bg">#EAE8EA</color>
+
+
+        <!--    period tracking-->
+    <color name="btn_date1">#EF958E</color>
+    <color name="btn_date2">#F4D1CF</color>
+    <color name="text_red">#DA574D</color>
+    <color name="text_purple">#8E008B</color>
+    <color name="text_blue">#75BEF6</color>
+
+
+        <!--    Period detail-->
+    <color name="pdf">#0073CC</color>
+
+    <!--    origin color set -->
     <color name="purple_700">#FF3700B3</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="btn_upload_ins">#DD7F7D</color>
+    <color name="timeline_infoboard">#C5C5C5</color>
+    <color name="bcg_timeinfoboard">#8D83C8</color>
+    <color name="cancer_calendar">#E2869F</color>
 </resources>

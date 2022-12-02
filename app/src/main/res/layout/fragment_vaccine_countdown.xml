@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".hpv.VaccineCountdownFragment">
+
+    <include
+        layout="@layout/hpv_content_header"/>
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:orientation="vertical"
+        app:layout_anchor="@+id/linearLayout"
+        app:layout_anchorGravity="center">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:layout_gravity="center_horizontal">
+            <ImageButton
+                android:id="@+id/left_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/left_arrow"
+                android:scaleX="0.7"
+                android:scaleY="0.7"
+                android:src="@drawable/left_arrow"/>
+            <TextView
+                android:id="@+id/record_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/left_arrow"
+                android:paddingLeft="70dp"
+                android:paddingRight="70dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:text="@string/vaccine_reminder"/>
+            <ImageButton
+                android:id="@+id/right_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/record_name"
+                android:background="@drawable/right_arrow"
+                android:scaleX="0.7"
+                android:scaleY="0.7"
+                android:src="@drawable/right_arrow"/>
+        </RelativeLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Card_View"
+            android:layout_marginTop="30dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/vaccine_countdown"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Card_Title"
+                    android:background="@color/input_card_orange"
+                    android:text="@string/next_dose"/>
+
+                <ImageView
+                    android:id="@+id/countdown_1"
+                    android:layout_width="80dp"
+                    android:layout_height="110dp"
+                    android:layout_marginTop="100dp"
+                    android:layout_marginStart="11dp"
+                    android:layout_marginBottom="20dp"
+                    android:src="@drawable/vaccine_countdown_card"/>
+
+                <ImageView
+                    android:id="@id/countdown_2"
+                    android:layout_width="80dp"
+                    android:layout_height="110dp"
+                    android:layout_toEndOf="@+id/countdown_1"
+                    android:layout_marginTop="100dp"
+                    android:layout_marginStart="15dp"
+                    android:src="@drawable/vaccine_countdown_card"/>
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="110dp"
+                    android:layout_toEndOf="@+id/countdown_2"
+                    android:layout_marginTop="100dp"
+                    android:layout_marginStart="15dp"
+                    android:src="@drawable/vaccine_countdown_card"/>
+
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="120dp"
+                    android:layout_marginStart="45dp"
+                    android:text="@string/_0"
+                    android:textStyle="bold"
+                    android:textColor="@color/countdown_text"
+                    android:textSize="50sp" />
+
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/countdown_1"
+                    android:layout_marginTop="120dp"
+                    android:layout_marginStart="40dp"
+                    android:text="@string/_0"
+                    android:textStyle="bold"
+                    android:textColor="@color/countdown_text"
+                    android:textSize="50sp" />
+
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/countdown_2"
+                    android:layout_marginTop="120dp"
+                    android:layout_marginStart="40dp"
+                    android:text="@string/_7"
+                    android:textStyle="bold"
+                    android:textColor="@color/countdown_text"
+                    android:textSize="50sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/countdown_2"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="120dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="@string/days"
+                    android:textColor="@color/countdown_text"
+                    android:textSize="30sp" />
+
+
+            </RelativeLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="@string/reminder"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            />
+
+
+    </LinearLayout>
+
+</FrameLayout>

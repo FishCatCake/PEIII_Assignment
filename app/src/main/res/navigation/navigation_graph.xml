@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.pe_assignment.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_HPVActivity"
+            app:destination="@id/HPVActivity" />
+        <action
+            android:id="@+id/action_homeFragment_to_articleActivity"
+            app:destination="@id/articleActivity" />
+        <action
+            android:id="@+id/action_homeFragment_to_cancerNewUserActivity"
+            app:destination="@id/cancerNewUserActivity" />
+        <action
+            android:id="@+id/action_homeFragment_to_menstruationActivity"
+            app:destination="@id/menstruationActivity" />
+        <action
+            android:id="@+id/action_homeFragment_to_settingActivity"
+            app:destination="@id/settingActivity" />
+    </fragment>
+
+    <activity
+        android:id="@+id/HPVActivity"
+        android:name="com.example.pe_assignment.hpv.HPVActivity"
+        android:label="activity_hpvactivity"
+        tools:layout="@layout/activity_hpvactivity" />
+    <activity
+        android:id="@+id/menstruationActivity"
+        android:name="com.example.pe_assignment.cycle.MenstruationActivity"
+        android:label="activity_menstruation"
+        tools:layout="@layout/activity_menstruation" />
+    <activity
+        android:id="@+id/articleActivity"
+        android:name="com.example.pe_assignment.article.ArticleActivity"
+        android:label="activity_article"
+        tools:layout="@layout/activity_article" />
+    <activity
+        android:id="@+id/cancerNewUserActivity"
+        android:name="com.example.pe_assignment.cancer.CancerNewUserActivity"
+        android:label="activity_cancer_new_user"
+        tools:layout="@layout/activity_cancer_new_user" />
+    <activity
+        android:id="@+id/settingActivity"
+        android:name="com.example.pe_assignment.setting.SettingActivity"
+        android:label="activity_setting"
+        tools:layout="@layout/activity_setting" />
+
+</navigation>

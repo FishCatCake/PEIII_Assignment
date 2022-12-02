@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".cancer.BreastCancerRecord02Fragment">
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_anchor="@+id/linearLayout_cancer02"
+        app:layout_anchorGravity="center">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:layout_marginTop="100dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/cancer_card_text02"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Card_View"
+        android:layout_marginBottom="200dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#EAE8EA">
+
+                <TextView
+                    android:id="@+id/card_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Card_Title"
+                    android:background="@color/input_card_red"
+                    android:text="@string/cancer_symptoms" />
+
+                <RadioButton
+                    android:id="@+id/card_attr1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Card_RadioButton"
+                    android:text="@string/breast_lumps"/>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/line_horizontal_card"/>
+
+                <RadioButton
+                    android:id="@+id/card_attr2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Card_RadioButton"
+                    android:text="@string/breast_pain"/>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/line_horizontal_card"/>
+
+                <RadioButton
+                    android:id="@+id/card_attr3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Card_RadioButton"
+                    android:text="@string/change_in_breast_shape"/>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/line_horizontal_card"/>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/line_horizontal_card"/>
+
+                <RadioButton
+                    android:id="@+id/card_attr4"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Card_RadioButton"
+                    android:text="@string/sunken_skin"/>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/line_horizontal_card"/>
+
+                <RadioButton
+                    android:id="@+id/card_attr5"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Card_RadioButton"
+                    android:text="@string/fluid_in_nipples"/>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/line_horizontal_card"/>
+                <RadioButton
+                    android:id="@+id/card_attr6"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Card_RadioButton"
+                    android:text="@string/other"/>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/line_horizontal_card"/>
+            </RadioGroup>
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/next_btn"
+        android:layout_width="@dimen/btn_grey_width"
+        android:layout_height="@dimen/btn_grey_height"
+        android:layout_marginTop="-80dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/btn_selector"
+        android:textColor="@color/btn_text"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:textSize="@dimen/btn_text"
+        android:text="@string/next" />
+    </LinearLayout>
+</FrameLayout>

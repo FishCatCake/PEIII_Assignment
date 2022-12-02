@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cycle_graph"
+    app:startDestination="@id/cycleFragment">
+
+    <fragment
+        android:id="@+id/cycleFragment"
+        android:name="com.example.pe_assignment.cycle.CycleFragment"
+        android:label="fragment_cycle"
+        tools:layout="@layout/fragment_cycle">
+        <action
+            android:id="@+id/action_cycleFragment_to_selectionPeriodFragment"
+            app:destination="@id/selectionPeriodFragment" />
+        <action
+            android:id="@+id/action_cycleFragment_to_selectionSymptonFragment"
+            app:destination="@id/selectionSymptonFragment" />
+        <action
+            android:id="@+id/action_cycleFragment_to_cycleHistoryFragment"
+            app:destination="@id/cycleHistoryFragment" />
+        <action
+            android:id="@+id/action_cycleFragment_to_cycleDetailFragment"
+            app:destination="@id/cycleDetailFragment" />
+        <action
+            android:id="@+id/action_cycleFragment_to_homeActivity"
+            app:destination="@id/homeActivity" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/cycleDetailFragment"
+        android:name="com.example.pe_assignment.cycle.CycleDetailFragment"
+        android:label="fragment_cycle_detail"
+        tools:layout="@layout/fragment_cycle_detail">
+        <action
+            android:id="@+id/action_cycleDetailFragment_to_cycleFragment"
+            app:destination="@id/cycleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cycleHistoryFragment"
+        android:name="com.example.pe_assignment.cycle.CycleHistoryFragment"
+        android:label="fragment_cycle_history"
+        tools:layout="@layout/fragment_cycle_history" >
+        <action
+            android:id="@+id/action_cycleHistoryFragment_to_cycleFragment"
+            app:destination="@id/cycleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/selectionPeriodFragment"
+        android:name="com.example.pe_assignment.cycle.SelectionPeriodFragment"
+        android:label="fragment_selection_period"
+        tools:layout="@layout/fragment_selection_period" >
+        <action
+            android:id="@+id/action_selectionPeriodFragment_to_cycleFragment"
+            app:destination="@id/cycleFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/selectionSymptonFragment"
+        android:name="com.example.pe_assignment.cycle.SelectionSymptonFragment"
+        android:label="fragment_selection_sympton"
+        tools:layout="@layout/fragment_selection_sympton" >
+        <action
+            android:id="@+id/action_selectionSymptonFragment_to_cycleFragment"
+            app:destination="@id/cycleFragment" />
+    </fragment>
+
+    <activity
+        android:id="@+id/homeActivity"
+        android:name="com.example.pe_assignment.home.HomeActivity"
+        android:label="activity_home"
+        tools:layout="@layout/activity_home" />
+
+</navigation>
