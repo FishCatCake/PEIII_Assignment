@@ -12,6 +12,9 @@
         <action
             android:id="@+id/action_articleHomeFragment_to_articleFragment"
             app:destination="@id/articleFragment" />
+        <action
+            android:id="@+id/action_articleHomeFragment_to_homeActivity"
+            app:destination="@id/homeActivity" />
     </fragment>
     <fragment
         android:id="@+id/articleFragment"
@@ -22,4 +25,9 @@
             android:id="@+id/action_articleFragment_to_articleHomeFragment"
             app:destination="@id/articleHomeFragment" />
     </fragment>
+    <activity
+        android:id="@+id/homeActivity"
+        android:name="com.example.pe_assignment.home.HomeActivity"
+        android:label="activity_home"
+        tools:layout="@layout/activity_home" />
 </navigation>

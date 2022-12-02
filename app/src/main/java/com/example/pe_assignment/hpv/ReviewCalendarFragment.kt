@@ -25,9 +25,14 @@ class ReviewCalendarFragment : Fragment() {
         btnSend.setOnClickListener {
             view.findNavController().navigate(R.id.doseCalendarFragment)
         }
-        val btnSend2 = view.findViewById<ImageButton>(R.id.skip)
+        var btnSend2 = view.findViewById<ImageButton>(R.id.skip)
         btnSend2.setOnClickListener {
             view.findNavController().navigate(R.id.doseCalendarFragment)
+        }
+
+        btnSend2 = view.findViewById<ImageButton>(R.id.back)
+        btnSend2.setOnClickListener {
+            view.findNavController().navigate(R.id.homeActivity)
         }
 
     }

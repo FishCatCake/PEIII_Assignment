@@ -79,39 +79,27 @@ class ArticleHomeFragment : Fragment() {
 
 
 
-//        hotadapter.setOnItemClickListner(object : HotAdapter.OnItemClickListener{
-//            override fun onItemClick(position: Int) {
-//                view.findNavController().navigate(R.id.articleFragment)
-//                Toast.makeText(activity,"111",Toast.LENGTH_SHORT).show()
-//            }
-//
-//        })
-//
-//        recentadapter.setOnItemClickListner(object : HotAdapter.OnItemClickListener{
-//            override fun onItemClick(position: Int) {
-//                view.findNavController().navigate(R.id.articleFragment)
-//            }
-//
-//        })
-//
-//        handadapter.setOnItemClickListner(object : HotAdapter.OnItemClickListener{
-//            override fun onItemClick(position: Int) {
-//                view.findNavController().navigate(R.id.articleFragment)
-//            }
-//
-//        })
         var btnSend = view.findViewById<ImageButton>(R.id.read_btn1)
         btnSend.setOnClickListener {
             view.findNavController().navigate(R.id.articleFragment)
         }
-        btnSend = view.findViewById<ImageButton>(R.id.read_btn2)
+        btnSend = view.findViewById(R.id.read_btn2)
         btnSend.setOnClickListener {
             view.findNavController().navigate(R.id.articleFragment)
         }
-        btnSend = view.findViewById<ImageButton>(R.id.read_btn3)
+        btnSend = view.findViewById(R.id.read_btn3)
         btnSend.setOnClickListener {
             view.findNavController().navigate(R.id.articleFragment)
         }
+//        btnSend = view.findViewById(R.id.back_btn)
+//        btnSend.setOnClickListener {
+//            view.findNavController().navigate(R.id.homeFragment)
+//        }
+        btnSend = view.findViewById(R.id.back_btn)
+        btnSend.setOnClickListener {
+            view.findNavController().navigate(R.id.homeActivity)
+        }
+
     }
 
     private fun category(){

@@ -12,6 +12,9 @@
         <action
             android:id="@+id/action_reviewCalendarFragment_to_doseCalendarFragment"
             app:destination="@id/doseCalendarFragment" />
+        <action
+            android:id="@+id/action_reviewCalendarFragment_to_homeActivity2"
+            app:destination="@id/homeActivity" />
     </fragment>
     <fragment
         android:id="@+id/doseCalendarFragment"
@@ -39,6 +42,9 @@
         <action
             android:id="@+id/action_vaccineCountdownFragment_to_testCountdownFragment"
             app:destination="@id/testCountdownFragment" />
+        <action
+            android:id="@+id/action_vaccineCountdownFragment_to_homeActivity"
+            app:destination="@id/homeActivity" />
     </fragment>
     <fragment
         android:id="@+id/testCountdownFragment"
@@ -60,6 +66,9 @@
         <action
             android:id="@+id/action_hpvRecordFragment_to_testRecordFragment"
             app:destination="@id/testRecordFragment" />
+        <action
+            android:id="@+id/action_hpvRecordFragment_to_menstruationActivity2"
+            app:destination="@id/menstruationActivity" />
     </fragment>
     <fragment
         android:id="@+id/testRecordFragment"
@@ -69,5 +78,18 @@
         <action
             android:id="@+id/action_testRecordFragment_to_hpvRecordFragment"
             app:destination="@id/hpvRecordFragment" />
+        <action
+            android:id="@+id/action_testRecordFragment_to_menstruationActivity2"
+            app:destination="@id/menstruationActivity" />
     </fragment>
+    <activity
+        android:id="@+id/homeActivity"
+        android:name="com.example.pe_assignment.home.HomeActivity"
+        android:label="activity_home"
+        tools:layout="@layout/activity_home" />
+    <activity
+        android:id="@+id/menstruationActivity"
+        android:name="com.example.pe_assignment.cycle.MenstruationActivity"
+        android:label="activity_menstruation"
+        tools:layout="@layout/activity_menstruation" />
 </navigation>

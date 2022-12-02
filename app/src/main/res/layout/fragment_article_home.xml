@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:clickable="true"
     android:focusable="true"
     tools:context=".article.ArticleHomeFragment">
@@ -60,11 +61,12 @@
 
     <!--    hot article  -->
     <androidx.cardview.widget.CardView
+        android:id="@+id/hot_card"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:clickable="true"
         android:focusable="true"
-        android:layout_marginTop="10dp">
+        android:layout_marginTop="20dp">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -84,7 +86,7 @@
                 android:layout_height="wrap_content"
                 android:layout_toEndOf="@+id/hot_article"
                 android:layout_marginStart="15dp"
-                android:background="@drawable/right_arrow"
+                android:background="@drawable/ic_right_arrow"
                 android:src="@drawable/right_arrow"/>
         </RelativeLayout>
                     <androidx.recyclerview.widget.RecyclerView
@@ -101,7 +103,7 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp">
+        android:layout_marginTop="20dp">
 
         <RelativeLayout
             android:layout_width="wrap_content"
@@ -121,7 +123,7 @@
             android:layout_height="wrap_content"
             android:layout_toEndOf="@+id/recent_article"
             android:layout_marginStart="15dp"
-            android:background="@drawable/right_arrow"
+            android:background="@drawable/ic_right_arrow"
             android:src="@drawable/right_arrow"/>
         </RelativeLayout>
 
@@ -139,7 +141,7 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp">
+        android:layout_marginTop="20dp">
 
         <RelativeLayout
             android:layout_width="wrap_content"
@@ -159,7 +161,7 @@
             android:layout_height="wrap_content"
             android:layout_toEndOf="@+id/handpick_article"
             android:layout_marginStart="15dp"
-            android:background="@drawable/right_arrow"
+            android:background="@drawable/ic_right_arrow"
             android:src="@drawable/right_arrow"/>
         </RelativeLayout>
 <!--        <androidx.core.widget.NestedScrollView-->

@@ -46,6 +46,7 @@
         <activity
             android:name=".hpv.HPVActivity"
             android:exported="false">
+
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -81,6 +82,7 @@
         <activity
             android:name=".article.ArticleActivity"
             android:exported="false">
+
          <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
