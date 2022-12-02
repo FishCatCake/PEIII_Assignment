@@ -65,11 +65,11 @@ class DoseCalendarFragment : Fragment() {
         )
 
         dose = arrayOf(
-            "Date of First\n" +
+            "Date of First " +
                     "Dose Onset",
-            "Date of Second\n" +
+            "Date of Second " +
                     "Dose Onset",
-            "Date of Third\n" +
+            "Date of Third " +
                     "Dose Onset"
         )
 

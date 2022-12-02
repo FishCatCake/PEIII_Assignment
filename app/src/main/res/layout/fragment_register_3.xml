@@ -57,7 +57,6 @@
                 <androidx.appcompat.widget.SwitchCompat
                     android:layout_width="300dp"
                     android:layout_height="wrap_content"
-                    android:paddingStart="15dp"
                     style="@style/Card_Title02"
                     android:background="#F2F0F1"
                     android:text="@string/period_prediction_reminder"
@@ -96,14 +95,13 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_toEndOf="@+id/register_title2.2"
-                        android:layout_marginLeft="140dp"
+                        android:layout_marginStart="57dp"
                         android:layout_marginTop="9dp"/>
                     </RelativeLayout>
 
                 <androidx.appcompat.widget.SwitchCompat
                     android:layout_width="300dp"
                     android:layout_height="wrap_content"
-                    android:paddingStart="15dp"
                     style="@style/Card_Title02"
                     android:background="#F2F0F1"
                     android:text="@string/syc_with_huawei_health"
