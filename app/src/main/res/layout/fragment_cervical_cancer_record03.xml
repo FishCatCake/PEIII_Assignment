@@ -69,7 +69,8 @@
                         android:id="@+id/sym_description"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        style="@style/Card_Title02"
+                        style="@style/Card_RadioButton"
+                        android:textSize="18sp"
                         android:text="@string/symptom_description"/>
 
                     <ImageView
@@ -80,10 +81,15 @@
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="@color/white"
-                        android:padding="10dp"
+                        android:background="@drawable/cancer_edit_bcg"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
                         android:hint="@string/tap_here_to_enter"
-                        android:paddingStart="40dp"/>
+                        android:paddingStart="15dp"/>
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"

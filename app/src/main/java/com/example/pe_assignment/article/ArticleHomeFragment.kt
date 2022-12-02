@@ -91,10 +91,7 @@ class ArticleHomeFragment : Fragment() {
         btnSend.setOnClickListener {
             view.findNavController().navigate(R.id.articleFragment)
         }
-//        btnSend = view.findViewById(R.id.back_btn)
-//        btnSend.setOnClickListener {
-//            view.findNavController().navigate(R.id.homeFragment)
-//        }
+
         btnSend = view.findViewById(R.id.back_btn)
         btnSend.setOnClickListener {
             view.findNavController().navigate(R.id.homeActivity)

@@ -95,6 +95,7 @@
         <activity
             android:name=".cancer.CancerCalendar"
             android:exported="false">
+
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -104,17 +105,12 @@
             android:name=".article.ArticleActivity"
             android:exported="false">
 
+
          <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-        <activity
-            android:name=".hpv.CalendarActivity"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
+
         <activity
             android:name=".MainActivity"
             android:exported="false">
