@@ -6,8 +6,8 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import androidx.appcompat.app.AppCompatActivity
-import com.example.pe_assignment.Login.LoginActivity
 import com.example.pe_assignment.R
+import com.example.pe_assignment.login.LoginActivity
 
 class LoadingActivity : AppCompatActivity(), LoadingImplementation {
     override fun onFinishedLoading() {

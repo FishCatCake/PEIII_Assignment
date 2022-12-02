@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/white"
-    tools:context=".SelectionPeriodFragment">
+    tools:context=".cycle.SelectionPeriodFragment">
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -117,7 +117,7 @@
 
 
     <Button
-        android:id="@+id/next_btn"
+        android:id="@+id/btn_done_period"
         android:layout_marginTop="600dp"
         android:layout_width="@dimen/btn_grey_width"
         android:layout_height="@dimen/btn_grey_height"

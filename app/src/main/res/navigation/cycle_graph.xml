@@ -22,27 +22,62 @@
         <action
             android:id="@+id/action_cycleFragment_to_cycleDetailFragment"
             app:destination="@id/cycleDetailFragment" />
+        <action
+            android:id="@+id/action_cycleFragment_to_homeFragment2"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_cycleFragment_to_menstruationActivity"
+            app:destination="@id/menstruationActivity" />
     </fragment>
     <fragment
         android:id="@+id/cycleDetailFragment"
         android:name="com.example.pe_assignment.cycle.CycleDetailFragment"
         android:label="fragment_cycle_detail"
-        tools:layout="@layout/fragment_cycle_detail"/>
+        tools:layout="@layout/fragment_cycle_detail">
+        <action
+            android:id="@+id/action_cycleDetailFragment_to_cycleFragment"
+            app:destination="@id/cycleFragment" />
+    </fragment>
     <fragment
         android:id="@+id/cycleHistoryFragment"
         android:name="com.example.pe_assignment.cycle.CycleHistoryFragment"
         android:label="fragment_cycle_history"
-        tools:layout="@layout/fragment_cycle_history" />
+        tools:layout="@layout/fragment_cycle_history" >
+        <action
+            android:id="@+id/action_cycleHistoryFragment_to_cycleFragment"
+            app:destination="@id/cycleFragment" />
+    </fragment>
     <fragment
         android:id="@+id/selectionPeriodFragment"
-        android:name="com.example.pe_assignment.SelectionPeriodFragment"
+        android:name="com.example.pe_assignment.cycle.SelectionPeriodFragment"
         android:label="fragment_selection_period"
-        tools:layout="@layout/fragment_selection_period" />
+        tools:layout="@layout/fragment_selection_period" >
+        <action
+            android:id="@+id/action_selectionPeriodFragment_to_cycleFragment"
+            app:destination="@id/cycleFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/selectionSymptonFragment"
-        android:name="com.example.pe_assignment.SelectionSymptonFragment"
+        android:name="com.example.pe_assignment.cycle.SelectionSymptonFragment"
         android:label="fragment_selection_sympton"
-        tools:layout="@layout/fragment_selection_sympton" />
+        tools:layout="@layout/fragment_selection_sympton" >
+        <action
+            android:id="@+id/action_selectionSymptonFragment_to_cycleFragment"
+            app:destination="@id/cycleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.pe_assignment.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+
+    <activity
+        android:id="@+id/menstruationActivity"
+        android:name="com.example.pe_assignment.cycle.MenstruationActivity"
+        android:label="activity_menstruation"
+        tools:layout="@layout/activity_menstruation">
+
+    </activity>
 
 </navigation>

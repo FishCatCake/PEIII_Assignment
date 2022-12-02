@@ -25,6 +25,7 @@ class CycleFragment : Fragment() {
         val btnSendOtherData = view.findViewById<ImageButton>(R.id.btn_add_data1)
         val btnSendTemp = view.findViewById<ImageButton>(R.id.btn_add_data2)
         val btnSendHistory = view.findViewById<ImageButton>(R.id.btn_cycle_history)
+        val btnBack = view.findViewById<ImageButton>(R.id.btn_back_cycle)
 
         btnSendPeriod.setOnClickListener {
             view.findNavController().navigate(R.id.cycleDetailFragment)
@@ -39,5 +40,10 @@ class CycleFragment : Fragment() {
         btnSendHistory.setOnClickListener{
             view.findNavController().navigate(R.id.cycleHistoryFragment)
         }
+
+        btnBack.setOnClickListener {
+            view.findNavController().navigate(R.id.homeFragment)
+        }
+
     }
 }
