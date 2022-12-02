@@ -42,7 +42,7 @@ class CycleFragment : Fragment() {
         }
 
         btnBack.setOnClickListener {
-            view.findNavController().navigate(R.id.homeFragment)
+            view.findNavController().navigate(R.id.homeActivity)
         }
 
     }

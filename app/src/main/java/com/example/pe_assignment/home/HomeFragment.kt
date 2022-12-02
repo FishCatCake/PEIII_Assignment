@@ -50,7 +50,7 @@ class HomeFragment : Fragment() {
         }
 
         btnProfile.setOnClickListener{
-            view.findNavController().navigate(R.id.cycleFragment)
+            view.findNavController().navigate(R.id.menstruationActivity)
         }
    }
 
