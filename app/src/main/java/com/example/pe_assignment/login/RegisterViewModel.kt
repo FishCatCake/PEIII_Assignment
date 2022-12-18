@@ -76,6 +76,7 @@ class RegisterViewModel (private val repository: RegisterRepository) :
 
 //TODO: need to validate the password TWICE consistent
     fun register() {  // Empty field and validate username and password
+        Log.i("eee", "reg func")
         if((inputAccount.value == null) ||
             (inputPassword.value == null) ||
             (inputPasswordRe.value == null) ||

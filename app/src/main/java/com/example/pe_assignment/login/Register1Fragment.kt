@@ -77,12 +77,12 @@ class Register1Fragment : Fragment() {
     }
 
 
-//    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-//        super.onViewCreated(view, savedInstanceState)
-//
-//        val btnSend = view.findViewById<Button>(R.id.register_btn1)
-//        btnSend.setOnClickListener {
-//            view.findNavController().navigate(R.id.register2Fragment)
-//        }
-//    }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val btnSend = view.findViewById<Button>(R.id.register_btn1)
+        btnSend.setOnClickListener {
+            view.findNavController().navigate(R.id.register2Fragment)
+        }
+    }
 }
