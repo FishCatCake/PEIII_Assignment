@@ -9,6 +9,7 @@ import androidx.lifecycle.*
 import com.example.pe_assignment.RegisterRepository
 import com.example.pe_assignment.User
 import kotlinx.coroutines.*
+import java.lang.IllegalArgumentException
 import java.math.BigInteger
 import java.security.MessageDigest
 
@@ -134,5 +135,15 @@ class RegisterViewModel (private val repository: RegisterRepository) :
 
     override fun removeOnPropertyChangedCallback(callback: Observable.OnPropertyChangedCallback?) {
 
+    }
+}
+
+class RegisterViewModelFactory(private val repository: RegisterRepository) : ViewModelProvider.Factory {
+    override fun <T : ViewModel> create(modelClass: Class<T>): T {
+        if (modelClass.isAssignableFrom(RegisterViewModel::class.java)) {
+            @Suppress("UNCHECKED_CAST")
+            return RegisterViewModel(repository) as T
+        }
+        throw IllegalArgumentException("Unknown ViewModel class")
     }
 }
