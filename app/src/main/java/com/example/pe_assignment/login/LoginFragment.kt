@@ -7,16 +7,30 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
+import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.viewModels
 import androidx.navigation.findNavController
+import com.example.pe_assignment.BaseApplication
 import com.example.pe_assignment.R
+import com.example.pe_assignment.databinding.FragmentLoginBinding
 
 class LoginFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_login, container, false)
+        val binding: FragmentLoginBinding = DataBindingUtil.inflate(
+            inflater,
+            R.layout.fragment_login, container, false
+        )
+//        val registerViewModel: RegisterViewModel by viewModels {
+//            RegisterViewModelFactory((activity?.application as BaseApplication).repository)
+
+            // Inflate the layout for this fragment
+        //return inflater.inflate(R.layout.fragment_login, container, false)
+        return binding.root
+//            // Inflate the layout for this fragment
+//        return inflater.inflate(R.layout.fragment_register_1, container, false)
     }
 
 
