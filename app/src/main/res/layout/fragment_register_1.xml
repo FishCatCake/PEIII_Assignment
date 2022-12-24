@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".login.Register1Fragment">
+    tools:context="com.example.pe_assignment.login.Register1Fragment">
 
-    <LinearLayout
+    <data>
+        <variable
+            name="myViewModel"
+            type="com.example.pe_assignment.login.RegisterViewModel" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -21,7 +30,7 @@
                 android:textSize="30sp"
                 android:text="Create a new account"
                 android:textColor="#000000"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
             <EditText
                 android:layout_width="match_parent"
@@ -29,11 +38,12 @@
                 android:background="@drawable/login_edit_bcg"
                 android:padding="20dp"
                 android:drawableStart="@drawable/ic_account"
+                android:text="@={myViewModel.inputAccount}"
                 android:hint="studiodpop@gmail.com"
                 android:drawablePadding="20dp"
                 android:layout_marginStart="30dp"
                 android:layout_marginEnd="30dp"
-                android:layout_marginTop="10dp"/>
+                android:layout_marginTop="10dp" />
 
             <EditText
                 android:layout_width="match_parent"
@@ -41,11 +51,13 @@
                 android:background="@drawable/login_edit_bcg"
                 android:padding="20dp"
                 android:drawableStart="@drawable/ic_password"
+                android:text="@={myViewModel.inputPassword}"
                 android:hint="********"
                 android:drawablePadding="20dp"
                 android:layout_marginStart="30dp"
                 android:layout_marginEnd="30dp"
-                android:layout_marginTop="20dp"/>
+                android:layout_marginTop="20dp" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -63,12 +75,13 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/login_edit_bcg"
                 android:padding="20dp"
+                android:text="@={myViewModel.inputPasswordRe}"
                 android:drawableStart="@drawable/ic_password"
                 android:hint="Enter the password again"
                 android:drawablePadding="20dp"
                 android:layout_marginStart="30dp"
                 android:layout_marginEnd="30dp"
-                android:layout_marginTop="10dp"/>
+                android:layout_marginTop="10dp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -85,34 +98,38 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:orientation="horizontal">
+
                 <ImageButton
                     android:layout_width="57dp"
                     android:layout_height="57dp"
                     android:src="@drawable/icon_google"
                     android:layout_marginEnd="20dp"
                     android:layout_marginStart="20dp"
-                    android:layout_gravity="center_horizontal"/>
+                    android:layout_gravity="center_horizontal" />
+
                 <ImageButton
                     android:layout_width="57dp"
                     android:layout_height="57dp"
                     android:src="@drawable/icon_twitter"
+                    android:onClick="@{()->myViewModel.register()}"
                     android:layout_marginEnd="20dp"
                     android:layout_marginStart="20dp"
-                    android:layout_gravity="center_horizontal"/>
+                    android:layout_gravity="center_horizontal" />
             </LinearLayout>
 
         </LinearLayout>
 
-    <Button
-        android:id="@+id/register_btn1"
-        android:layout_width="@dimen/btn_grey_width"
-        android:layout_height="@dimen/btn_grey_height"
-        android:layout_marginTop="450dp"
-        android:layout_gravity="center_horizontal"
-        android:background="@drawable/btn_selector"
-        android:textColor="@color/btn_text"
-        android:textAllCaps="false"
-        android:textStyle="bold"
-        android:textSize="@dimen/btn_text"
-        android:text="Next"/>
-</FrameLayout>
+        <Button
+            android:id="@+id/register_btn1"
+            android:layout_width="@dimen/btn_grey_width"
+            android:layout_height="@dimen/btn_grey_height"
+            android:layout_marginTop="450dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/btn_selector"
+            android:textColor="@color/btn_text"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:textSize="@dimen/btn_text"
+            android:text="Next" />
+    </FrameLayout>
+</layout>
