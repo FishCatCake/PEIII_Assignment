@@ -43,7 +43,6 @@ class Register1Fragment : Fragment() {
                 hasError ->  //Boolean
             if(hasError == true) {
                 Toast.makeText(requireContext(),"Invalid inputs! Please fill all the fields with valid username/password", Toast.LENGTH_SHORT).show()
-                registerViewModel.donetoast()
             }
         })
 

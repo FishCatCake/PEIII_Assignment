@@ -18,7 +18,7 @@ import java.util.regex.Pattern
 class RegisterViewModel (private val repository: RegisterRepository) :
     ViewModel(), Observable {
 
-    var userDetailsLiveData = MutableLiveData<List<User>>()
+//    var userDetailsLiveData = MutableLiveData<List<User>>()
 
     @Bindable
     val inputAccount = MutableLiveData<String?>()
@@ -33,7 +33,7 @@ class RegisterViewModel (private val repository: RegisterRepository) :
     val inputName = MutableLiveData<String?>()
 
     @Bindable
-    val inputAge = MutableLiveData<Int?>()
+    val inputAge = MutableLiveData<String?>()
 
 
     private val _navigateto = MutableLiveData<Boolean>()
@@ -76,7 +76,7 @@ class RegisterViewModel (private val repository: RegisterRepository) :
 
 //TODO: need to validate the password TWICE consistent
     fun register() {  // Empty field and validate username and password
-        Log.i("eee", "reg func")
+        Log.i("MYTAG", "reg func")
         if((inputAccount.value == null) ||
             (inputPassword.value == null) ||
             (inputPasswordRe.value == null) ||
@@ -88,9 +88,10 @@ class RegisterViewModel (private val repository: RegisterRepository) :
                 if(userInfo == null) {  // No existing record with the same username
                     val account: String = inputAccount.value!!
                     val password: String = md5Hash(inputPassword.value!!)
-                    val name: String = inputName.value!!
-                    val age: Int = inputAge.value!!
-                    val user = User(0,account,password,name,age)
+//                    val name: String = inputName.value!!
+//                    val age: String = inputAge.value!!
+//                    val user = User(0,account,password,name,age)
+                    val user = User(0,account,password)
                     insert(user)
                     _errorToastUserName.value = false
                     _navigateto.value = true  // already inserted
