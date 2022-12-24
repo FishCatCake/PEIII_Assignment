@@ -13,18 +13,27 @@ import java.util.*
 data class Cycle(
     @PrimaryKey(autoGenerate = true)
     val id: Int = 0,
+
     @ColumnInfo(name = "start_time")
-    @TypeConverters(Converters::class)
     val startTime: Date?,
 
-    @ColumnInfo(name = "symptom")
-    val symptomId: String,
-
     @ColumnInfo(name = "temperature")
-    val temperatureId: String,
+    val temperature: Float,
+
+//    @ColumnInfo(name = "symptoms_1")
+//    val symptoms1: String?,
+//    @ColumnInfo(name = "symptoms_2")
+//    val symptoms2: String?,
+//    @ColumnInfo(name = "symptoms_3")
+//    val symptoms3: String?,
+//    @ColumnInfo(name = "symptoms_4")
+//    val symptoms4: String?,
+//    @ColumnInfo(name = "symptoms_5")
+//    val symptoms5: String?,
 
 )
-class Converters {
+
+public class Converters {
     @TypeConverter
     fun fromTimestamp(value: Long?): Date? {
         return value?.let { Date(it) }
