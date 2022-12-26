@@ -27,7 +27,7 @@ abstract class UserDatabase : RoomDatabase() {
                     userDao.deleteAll()
 
 //                    // Add sample words.
-                    var user = User(0,"Sample","Sample")
+                    var user = User(0,"Sample","Sample","Sample","Sample")
                     userDao.insert(user)
                 }
             }
@@ -49,7 +49,7 @@ abstract class UserDatabase : RoomDatabase() {
                 val instance = Room.databaseBuilder(
                     context.applicationContext,
                     UserDatabase::class.java,
-                    "t_database"
+                    "u_database"
                 )
                     .addCallback(UserDatabaseCallback(scope))
                     .build()
@@ -58,26 +58,5 @@ abstract class UserDatabase : RoomDatabase() {
                 instance
             }
         }
-
-//        fun getInstance(context: Context): UserDatabase {
-//            synchronized(this) {
-//
-//                var instance = INSTANCE
-//
-//                if (instance == null) {
-//                    instance = Room.databaseBuilder(
-//                        context.applicationContext,
-//                        UserDatabase::class.java,
-//                        "user_database"
-//                    )
-//                        .fallbackToDestructiveMigration()
-//                        .build()
-//
-//                    INSTANCE = instance
-//                }
-//                return instance
-//            }
-//        }
-
     }
 }

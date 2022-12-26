@@ -13,11 +13,11 @@ data class User(
     val account: String,
 
     @ColumnInfo(name = "password")
-    val password: String
-//
-//    @ColumnInfo(name = "name")
-//    val name: String,
-//
-//    @ColumnInfo(name = "age")
-//    val age: String
+    val password: String,
+
+    @ColumnInfo(name = "name")
+    val name: String,
+
+    @ColumnInfo(name = "age")
+    val age: String
 )
