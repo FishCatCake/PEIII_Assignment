@@ -33,7 +33,7 @@ class RegisterViewModel (private val repository: RegisterRepository) :
     val inputName = MutableLiveData<String?>()
 
     @Bindable
-    val inputAge = MutableLiveData<Int?>()
+    val inputAge = MutableLiveData<String?>()
 
 
     private val _navigateto = MutableLiveData<Boolean>()
@@ -89,7 +89,7 @@ class RegisterViewModel (private val repository: RegisterRepository) :
                     val account: String = inputAccount.value!!
                     val password: String = md5Hash(inputPassword.value!!)
                     val name: String = inputName.value!!
-                    val age: Int = inputAge.value!!
+                    val age: String = inputAge.value!!
                     val user = User(0,account,password,name,age)
                     insert(user)
                     _errorToastUserName.value = false

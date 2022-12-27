@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".hpv.ReviewCalendarFragment">
+
+    <data>
+        <variable
+            name="hpvViewModel"
+            type="com.example.pe_assignment.database.HpvViewModel" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
     <include
         layout="@layout/hpv_input_header"/>
     <LinearLayout
@@ -43,9 +52,13 @@
             app:cardElevation="10dp">
 
             <TextView
-                android:id="@+id/card_title"
+                android:id="@+id/review_date"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
+                android:text="@={hpvViewModel.reviewDay}"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textStyle="bold"
                 android:background="@color/input_card_orange2" />
 
             <CalendarView
@@ -65,6 +78,7 @@
         android:layout_marginTop="600dp"
         android:layout_gravity="center_horizontal"
         android:background="@drawable/btn_selector"
+        android:onClick="@{()->hpvViewModel.hpv()}"
         android:textColor="@color/btn_text"
         android:textAllCaps="false"
         android:textStyle="bold"
@@ -72,3 +86,4 @@
         android:text="@string/next" />
 
 </FrameLayout>
+</layout>
