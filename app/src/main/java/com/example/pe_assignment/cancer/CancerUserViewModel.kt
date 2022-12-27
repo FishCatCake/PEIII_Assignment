@@ -45,8 +45,9 @@ class CancerUserViewModel (private val repository: CancerNewRepository) : ViewMo
     fun addNew() {  // Empty field and validate username and password
         Log.i("MYTAG", "reg func")
         if(
-            (_phrase.value == null) ||
-            (_userid.value == null)
+            (_phrase.value == null)
+//            ||
+//            (_userid.value == null)
         ) {
             _errorToast.value = true
         } else {  // register
@@ -54,8 +55,8 @@ class CancerUserViewModel (private val repository: CancerNewRepository) : ViewMo
 //                val userInfo = repository.getUserCredential(_account.value.toString())
 //                if(userInfo == null) {  // No existing record with the same username
                     val phrase: String = _phrase.value!!
-                    val uid: Long = _userid.value!!
-                    val cuser = UserCancerPhrase(0,phrase,uid)
+//                    val uid: Long = _userid.value!!
+                    val cuser = UserCancerPhrase(0,phrase,1)
                     insert(cuser)
                     _errorToastUserName.value = false
                     _navigateto.value = true  // already inserted

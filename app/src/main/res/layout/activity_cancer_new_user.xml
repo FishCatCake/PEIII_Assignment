@@ -5,6 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".cancer.CancerNewUserActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true">
     <fragment
         android:id="@+id/cancernewcontainer"
         android:name="androidx.navigation.fragment.NavHostFragment"
@@ -13,4 +18,5 @@
         app:defaultNavHost="true"
         android:layout_weight="1"
         app:navGraph="@navigation/cancer_newuser_graph"/>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
