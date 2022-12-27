@@ -6,14 +6,14 @@ import androidx.room.ForeignKey
 import androidx.room.PrimaryKey
 import com.example.pe_assignment.User
 
-//@Entity(tableName = "user_cancer_phrase_table",
-//    foreignKeys = [ForeignKey(
-//        entity = User::class,
-//        childColumns = arrayOf("uid"),
-//        parentColumns = arrayOf("id")
-//    )]
-//)
-@Entity(tableName = "user_cancer_phrase_table")
+@Entity(tableName = "user_cancer_phrase_table",
+    foreignKeys = [ForeignKey(
+        entity = User::class,
+        childColumns = arrayOf("uid"),
+        parentColumns = arrayOf("id")
+    )]
+)
+
 data class UserCancerPhrase(
 
     @PrimaryKey(autoGenerate = true)
