@@ -1,7 +1,7 @@
 package com.example.pe_assignment.database
 
 import androidx.room.*
-import java.util.*
+import java.util.Date
 
 @Entity(tableName = "cycle_table",
     foreignKeys = [ForeignKey(
@@ -14,11 +14,17 @@ data class Cycle(
     @PrimaryKey(autoGenerate = true)
     val id: Int = 0,
 
-    @ColumnInfo(name = "start_time")
-    val startTime: Date?,
+    @ColumnInfo(name = "year")
+    val year: Int,
+
+    @ColumnInfo(name = "month")
+    val month: Int,
+
+    @ColumnInfo(name = "date")
+    val date: Int,
 
     @ColumnInfo(name = "temperature")
-    val temperature: Float,
+    val temperature: Double,
 
 //    @ColumnInfo(name = "symptoms_1")
 //    val symptoms1: String?,
@@ -33,14 +39,14 @@ data class Cycle(
 
 )
 
-public class Converters {
-    @TypeConverter
-    fun fromTimestamp(value: Long?): Date? {
-        return value?.let { Date(it) }
-    }
-
-    @TypeConverter
-    fun dateToTimestamp(date: Date?): Long? {
-        return date?.time?.toLong()
-    }
-}
+//public class Converters {
+//    @TypeConverter
+//    fun fromTimestamp(value: Long?): Date? {
+//        return value?.let { Date(it) }
+//    }
+//
+//    @TypeConverter
+//    fun dateToTimestamp(date: Date?): Long? {
+//        return date?.time?.toLong()
+//    }
+//}

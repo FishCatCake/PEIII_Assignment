@@ -9,8 +9,8 @@ import androidx.room.TypeConverters
 //@TypeConverters(Converters::class)
 @Database(entities = [User::class, Cycle::class, HPV::class, Cancer::class, Treatment::class], version = 1)
 abstract class AppDatabase:RoomDatabase() {
-
     abstract fun CycleDAO():CycleDAO
+
     companion object{
         private var INSTANCE: AppDatabase? = null
 
