@@ -19,6 +19,21 @@
         android:background="@color/white"
         tools:context="cycle.CycleFragment">
 
+        <!--text view for displaying the selected date-->
+        <TextView
+            android:id="@+id/idTVDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="Current Date"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="MissingConstraints" />
+
 
         <ImageButton
             android:id="@+id/btn_back_cycle"
