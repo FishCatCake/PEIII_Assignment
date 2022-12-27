@@ -1,15 +1,11 @@
 package com.example.pe_assignment.login
 
 
-import android.provider.SyncStateContract.Helpers.insert
 import android.util.Log
-import androidx.databinding.Bindable
-import androidx.databinding.Observable
 import androidx.lifecycle.*
-import com.example.pe_assignment.RegisterRepository
-import com.example.pe_assignment.User
+import com.example.pe_assignment.database.repository.RegisterRepository
+import com.example.pe_assignment.database.entity.User
 import kotlinx.coroutines.*
-import java.lang.IllegalArgumentException
 import java.math.BigInteger
 import java.security.MessageDigest
 

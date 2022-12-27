@@ -1,8 +1,8 @@
 package com.example.pe_assignment
 
 import android.app.Application
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
+import com.example.pe_assignment.database.UserDatabase
+import com.example.pe_assignment.database.repository.RegisterRepository
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.SupervisorJob
 

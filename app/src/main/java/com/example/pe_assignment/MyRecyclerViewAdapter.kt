@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
+import com.example.pe_assignment.database.entity.User
 import com.example.pe_assignment.databinding.UserInfoItemBinding
 
 

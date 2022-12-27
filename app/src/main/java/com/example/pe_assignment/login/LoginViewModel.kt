@@ -1,12 +1,11 @@
 package com.example.pe_assignment.login
 
-import android.app.Application
 import android.util.Log
 import androidx.databinding.Bindable
 import androidx.databinding.Observable
 import androidx.lifecycle.*
-import com.example.pe_assignment.RegisterRepository
-import com.example.pe_assignment.User
+import com.example.pe_assignment.database.repository.RegisterRepository
+import com.example.pe_assignment.database.entity.User
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job

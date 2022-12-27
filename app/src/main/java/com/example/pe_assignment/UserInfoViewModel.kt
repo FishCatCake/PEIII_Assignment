@@ -5,6 +5,8 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.asLiveData
+import com.example.pe_assignment.database.entity.User
+import com.example.pe_assignment.database.repository.RegisterRepository
 
 class UserInfoViewModel (private val repository: RegisterRepository):
     ViewModel() {
