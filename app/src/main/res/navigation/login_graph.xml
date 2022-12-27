@@ -14,7 +14,7 @@
             android:id="@+id/action_loginFragment_to_register1Fragment"
             app:destination="@id/register1Fragment" />
         <action
-            android:id="@+id/action_loginFragment_to_homeActivity"
+            android:id="@+id/action_loginFragment_to_homeActivity2"
             app:destination="@id/homeActivity" />
     </fragment>
     <fragment
@@ -41,8 +41,8 @@
         android:label="Register3Fragment"
         tools:layout="@layout/fragment_register_3">
         <action
-            android:id="@+id/action_register3Fragment_to_loginFragment"
-            app:destination="@id/loginFragment" />
+            android:id="@+id/action_register3Fragment_to_homeActivity"
+            app:destination="@id/homeActivity" />
     </fragment>
     <activity
         android:id="@+id/homeActivity"

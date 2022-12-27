@@ -15,37 +15,26 @@ import java.security.MessageDigest
 
 import java.util.regex.Pattern
 
+class RegisterViewModel (private val repository: RegisterRepository) :
+    ViewModel(), Observable {
 
-class RegisterViewModel(private val repository: RegisterRepository) : ViewModel(){
-//    var userDetailsLiveData = MutableLiveData<List<User>>()
+    var userDetailsLiveData = MutableLiveData<List<User>>()
 
+    @Bindable
+    val inputAccount = MutableLiveData<String?>()
 
+    @Bindable
+    val inputPassword = MutableLiveData<String?>()
 
-    private val _account = MutableLiveData<String?>("")
-    private val _name = MutableLiveData<String?>("")
+    @Bindable
+    val inputPasswordRe = MutableLiveData<String?>()
 
+    @Bindable
+    val inputName = MutableLiveData<String?>()
 
-    fun setAccount(useraccount: String) {
-        _account.value = useraccount
-    }
+    @Bindable
+    val inputAge = MutableLiveData<Int?>()
 
-    fun setName(username: String) {
-        _name.value = username
-    }
-    private val _password = MutableLiveData<String?>("")
-    private val _passwordRe = MutableLiveData<String?>("")
-
-    fun setPassword(password: String) {
-        _password.value = password
-    }
-    fun setPasswordRe(passwordre: String) {
-        _passwordRe.value = passwordre
-    }
-
-    private val _age = MutableLiveData<String?>("")
-    fun setAge(age: String) {
-        _age.value = age
-    }
 
     private val _navigateto = MutableLiveData<Boolean>()
     val navigateto: LiveData<Boolean>
@@ -87,30 +76,28 @@ class RegisterViewModel(private val repository: RegisterRepository) : ViewModel(
 
 //TODO: need to validate the password TWICE consistent
     fun register() {  // Empty field and validate username and password
-        Log.i("MYTAG", "reg func")
-        if(
-            (_account.value == null) ||
-            (_password.value == null) ||
-            (_passwordRe.value == null) ||
-            (!validate(_password.value.toString()))
-        ) {
+        Log.i("eee", "reg func")
+        if((inputAccount.value == null) ||
+            (inputPassword.value == null) ||
+            (inputPasswordRe.value == null) ||
+            (!validate(inputPassword.value.toString()))) {
             _errorToast.value = true
         } else {  // register
             uiScope.launch {
-                val userInfo = repository.getUserCredential(_account.value.toString())
+                val userInfo = repository.getUserCredential(inputAccount.value.toString())
                 if(userInfo == null) {  // No existing record with the same username
-                    val account: String = _account.value!!
-                    val password: String = md5Hash(_password.value!!)
-                    val name: String = _name.value!!
-                    val age: String = _age.value!!
+                    val account: String = inputAccount.value!!
+                    val password: String = md5Hash(inputPassword.value!!)
+                    val name: String = inputName.value!!
+                    val age: Int = inputAge.value!!
                     val user = User(0,account,password,name,age)
                     insert(user)
                     _errorToastUserName.value = false
                     _navigateto.value = true  // already inserted
-                    _account.value = null
-                    _age.value = null
-                    _name.value = null
-                    _password.value = null
+                    inputName.value = null
+                    inputAge.value = null
+                    inputAccount.value = null
+                    inputPassword.value = null
                 }
                 else {
                     _errorToastUserName.value = true
@@ -142,6 +129,22 @@ class RegisterViewModel(private val repository: RegisterRepository) : ViewModel(
         viewModelScope.launch(Dispatchers.IO) {
         repository.insert(user)
     }
+
+    override fun addOnPropertyChangedCallback(callback: Observable.OnPropertyChangedCallback?) {
+
+    }
+
+    override fun removeOnPropertyChangedCallback(callback: Observable.OnPropertyChangedCallback?) {
+
+    }
 }
 
-
+class RegisterViewModelFactory(private val repository: RegisterRepository) : ViewModelProvider.Factory {
+    override fun <T : ViewModel> create(modelClass: Class<T>): T {
+        if (modelClass.isAssignableFrom(RegisterViewModel::class.java)) {
+            @Suppress("UNCHECKED_CAST")
+            return RegisterViewModel(repository) as T
+        }
+        throw IllegalArgumentException("Unknown ViewModel class")
+    }
+}
