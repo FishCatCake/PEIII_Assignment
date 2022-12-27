@@ -26,7 +26,7 @@ class Register3Fragment : Fragment() {
         // btn to home
         val btnRegister3 = view.findViewById<Button>(R.id.btn_register3)
         btnRegister3.setOnClickListener {
-            view.findNavController().navigate(R.id.homeActivity)
+            view.findNavController().navigate(R.id.loginFragment)
         }
 
         // access the spinner

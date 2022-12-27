@@ -28,8 +28,8 @@ class MyviewHolder(private val binding :UserInfoItemBinding): RecyclerView.ViewH
 
     fun bind(user : User){
         binding.accountTextView.text = user.account
-        binding.nameTextView.text = user.name
-        binding.ageTextView.text = user.age.toString()
+//        binding.nameTextView.text = user.name
+//        binding.ageTextView.text = user.age.toString()
     }
 
 }
