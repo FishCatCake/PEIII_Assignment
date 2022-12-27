@@ -15,8 +15,6 @@ import java.util.regex.Pattern
 class RegisterViewModel(private val repository: RegisterRepository) : ViewModel(){
 //    var userDetailsLiveData = MutableLiveData<List<User>>()
 
-
-
     private val _account = MutableLiveData<String?>("")
     private val _name = MutableLiveData<String?>("")
 
