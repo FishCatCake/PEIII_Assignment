@@ -5,6 +5,7 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.sqlite.db.SupportSQLiteDatabase
+import com.example.pe_assignment.database.dao.CycleDao
 import com.example.pe_assignment.database.dao.UserDao
 import com.example.pe_assignment.database.entity.Cycle
 import com.example.pe_assignment.database.entity.User
@@ -15,6 +16,7 @@ import kotlinx.coroutines.launch
 abstract class UserDatabase : RoomDatabase() {
 
     abstract fun userDao(): UserDao
+    abstract fun cycleDao(): CycleDao
 
     private class UserDatabaseCallback(
         private val scope: CoroutineScope

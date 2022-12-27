@@ -67,8 +67,6 @@ class Register1Fragment : Fragment() {
         return fragmentBinding.root
     }
 
-
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
