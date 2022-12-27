@@ -6,11 +6,12 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.sqlite.db.SupportSQLiteDatabase
 import com.example.pe_assignment.database.dao.UserDao
+import com.example.pe_assignment.database.entity.Cycle
 import com.example.pe_assignment.database.entity.User
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
-@Database(entities = [User::class], version = 1, exportSchema = false)
+@Database(entities = arrayOf(User::class, Cycle::class), version = 1, exportSchema = false)
 abstract class UserDatabase : RoomDatabase() {
 
     abstract fun userDao(): UserDao
