@@ -1,10 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".hpv.ReviewCalendarFragment">
+
+    <data>
+        <variable
+            name="hpvViewModel"
+            type="com.example.pe_assignment.hpv.HpvViewModel" />
+        <variable
+            name="register1Fragment"
+            type="com.example.pe_assignment.hpv.DoseCalendarFragment" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
     <include
         layout="@layout/hpv_input_header"/>
     <LinearLayout
@@ -43,9 +54,10 @@
             app:cardElevation="10dp">
 
             <TextView
-                android:id="@+id/card_title"
+                android:id="@+id/review_date"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
+
                 android:background="@color/input_card_orange2" />
 
             <CalendarView
@@ -63,6 +75,7 @@
         android:layout_width="@dimen/btn_grey_width"
         android:layout_height="@dimen/btn_grey_height"
         android:layout_marginTop="600dp"
+
         android:layout_gravity="center_horizontal"
         android:background="@drawable/btn_selector"
         android:textColor="@color/btn_text"
@@ -70,5 +83,5 @@
         android:textStyle="bold"
         android:textSize="@dimen/btn_text"
         android:text="@string/next" />
-
-</FrameLayout>
+    </FrameLayout>
+</layout>

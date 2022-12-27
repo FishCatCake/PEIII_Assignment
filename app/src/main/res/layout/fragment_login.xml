@@ -7,6 +7,10 @@
         <variable
             name="myLoginViewModel"
             type="com.example.pe_assignment.login.LoginViewModel" />
+
+        <variable
+            name="loginFragment"
+            type="com.example.pe_assignment.login.LoginFragment" />
     </data>
 
     <FrameLayout
@@ -39,6 +43,7 @@
                     android:textStyle="bold" />
 
                 <EditText
+                    android:id="@+id/name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/login_edit_bcg"
