@@ -1,7 +1,6 @@
 package com.example.pe_assignment.home
 
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -52,14 +51,6 @@ class HomeFragment : Fragment() {
 
         btnProfile.setOnClickListener{
             view.findNavController().navigate(R.id.menstruationActivity)
-        }
-
-        var name= arguments?.getString("id")
-        if (name != null) {
-            Log.i("aaa",name)
-        }
-        else{
-            Log.i("aaa","null")
         }
    }
 
