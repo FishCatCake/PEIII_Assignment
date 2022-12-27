@@ -17,12 +17,17 @@ import java.security.MessageDigest
 class LoginViewModel(private val repository: RegisterRepository) :
     ViewModel(), Observable {
 
+//    var id: Int = 0
+
     @Bindable
     val inputUsername = MutableLiveData<String?>()
 
     @Bindable
     val inputPassword = MutableLiveData<String?>()
 
+    fun setName(name: String) {
+        inputUsername.value = name
+    }
     private val _navigatetoRegister = MutableLiveData<Boolean>()
     val navigatetoRegister: LiveData<Boolean>
         get() = _navigatetoRegister  // if it is true, then we navigate to the Signup/Register screen
@@ -68,6 +73,7 @@ class LoginViewModel(private val repository: RegisterRepository) :
                 val user: User = repository.getUserCredential(inputUsername.value.toString())
                 if(user != null) {
                     if(user.password == md5Hash(inputPassword.value.toString())) {  // valid user with correct password
+//                        id = user.id
                         _navigatetoUserDetails.value = true
                         inputUsername.value = null
                         inputPassword.value = null
@@ -81,6 +87,13 @@ class LoginViewModel(private val repository: RegisterRepository) :
         }
     }
 
+//    suspend fun getID(){
+//        var id: User = repository.getID(inputUsername.value.toString())
+//    }
+
+    fun getUserCredential(){
+        var name: User = repository.getUserCredential(inputUsername.value.toString())
+    }
     fun signUp() {
         _navigatetoRegister.value = true
     }

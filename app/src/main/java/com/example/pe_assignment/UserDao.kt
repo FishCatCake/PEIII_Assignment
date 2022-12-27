@@ -14,10 +14,11 @@ interface UserDao {
     @Query("SELECT * FROM user_table ORDER BY id")
     fun getUsers(): Flow<List<User>>
 
+
     @Query("DELETE FROM user_table")
     fun deleteAll()
 
     // Login
     @Query("SELECT * FROM user_table WHERE account = :userName")
-    suspend fun getUserCredential(userName: String): User
+    fun getUserCredential(userName: String): User
 }
