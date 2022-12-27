@@ -10,4 +10,5 @@ class BaseApplication : Application() {
     val applicationScope = CoroutineScope(SupervisorJob())
     val database: UserDatabase by lazy { UserDatabase.getInstance(this, applicationScope) }
     val repository: RegisterRepository by lazy { RegisterRepository(database.userDao()) }
+    val repository_cancernew: CancerNewRepository by lazy { CancerNewRepository(database.usercancerphraseDao()) }
 }

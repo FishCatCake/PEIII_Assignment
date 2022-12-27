@@ -8,10 +8,11 @@ import androidx.sqlite.db.SupportSQLiteDatabase
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
-@Database(entities = [User::class], version = 1, exportSchema = false)
+@Database(entities = [User::class,UserCancerPhrase::class], version = 1, exportSchema = false)
 abstract class UserDatabase : RoomDatabase() {
 
     abstract fun userDao(): UserDao
+    abstract fun usercancerphraseDao(): UserCancerPhraseDAO
 
     private class UserDatabaseCallback(
         private val scope: CoroutineScope
@@ -22,13 +23,17 @@ abstract class UserDatabase : RoomDatabase() {
             INSTANCE?.let { database ->
                 scope.launch {
                     var userDao = database.userDao()
+                    var usercancerphraseDao = database.usercancerphraseDao()
 
                     // Delete all content here.
                     userDao.deleteAll()
+                    usercancerphraseDao.deleteAll()
 
 //                    // Add sample words.
                     var user = User(0,"Sample","Sample","Sample","Sample")
                     userDao.insert(user)
+                    var cuser = UserCancerPhrase(0,"Sample",0)
+                    usercancerphraseDao.insert(cuser)
                 }
             }
         }
