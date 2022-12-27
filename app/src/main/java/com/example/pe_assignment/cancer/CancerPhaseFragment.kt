@@ -51,15 +51,14 @@ class CancerPhaseFragment : Fragment() {
             cancernewFragment = this@CancerPhaseFragment
         }
 
-        val btnback = view.findViewById<ImageButton>(R.id.back)
-        btnback.setOnClickListener {
-            view.findNavController().navigate(R.id.cancerTypeFragment)
-        }
         val btnskip = view.findViewById<ImageButton>(R.id.skip)
         btnskip.setOnClickListener {
             view.findNavController().navigate(R.id.cancer_graph)
         }
-
+        val btnback = view.findViewById<ImageButton>(R.id.back)
+        btnback.setOnClickListener {
+            view.findNavController().navigate(R.id.homeActivity)
+        }
     }
 
     fun goToNextScreen() {
@@ -71,7 +70,8 @@ class CancerPhaseFragment : Fragment() {
 //            view.findNavController().navigate(R.id.cancer_graph)
 //        }
         sharedViewModel.addNew()
-        findNavController().navigate(R.id.action_cancerPhaseFragment_to_cancer_graph)
+        findNavController().navigate(R.id.cancer_graph)
+        //findNavController().navigate(R.id.action_cancerPhaseFragment_to_cancer_graph)
     }
 
     override fun onDestroyView() {
