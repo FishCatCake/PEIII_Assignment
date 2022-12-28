@@ -19,7 +19,7 @@ class RegisterRepository (private val dao: UserDao){
 //    }
 
     // Login
-    fun getUserCredential(userName: String): User {
+    suspend fun getUserCredential(userName: String): User {
         return dao.getUserCredential(userName)
     }
 

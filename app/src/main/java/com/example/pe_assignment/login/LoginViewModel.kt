@@ -91,7 +91,7 @@ class LoginViewModel(private val repository: RegisterRepository) :
 //        var id: User = repository.getID(inputUsername.value.toString())
 //    }
 
-    fun getUserCredential(){
+    suspend fun getUserCredential(){
         var name: User = repository.getUserCredential(inputUsername.value.toString())
     }
     fun signUp() {

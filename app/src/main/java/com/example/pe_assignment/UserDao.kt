@@ -20,5 +20,5 @@ interface UserDao {
 
     // Login
     @Query("SELECT * FROM user_table WHERE account = :userName")
-    fun getUserCredential(userName: String): User
+    suspend fun getUserCredential(userName: String): User
 }
