@@ -9,10 +9,11 @@ import android.view.ViewGroup
 import android.widget.ImageButton
 import androidx.cardview.widget.CardView
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.navArgs
 import com.example.pe_assignment.R
 
 class HomeFragment : Fragment() {
-
+    val args: HomeActivityArgs by navArgs()
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -54,13 +55,6 @@ class HomeFragment : Fragment() {
             view.findNavController().navigate(R.id.menstruationActivity)
         }
 
-        var name= arguments?.getString("id")
-        if (name != null) {
-            Log.i("aaa",name)
-        }
-        else{
-            Log.i("aaa","null")
-        }
    }
 
 }

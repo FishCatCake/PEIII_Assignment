@@ -50,9 +50,9 @@
         android:label="activity_home"
         tools:layout="@layout/activity_home" >
         <argument
-            android:name="uid"
-            app:argType="integer"
-            android:defaultValue="1" />
+            android:name="name"
+            app:argType="string"
+            android:defaultValue="sample" />
     </activity>
 
 </navigation>
