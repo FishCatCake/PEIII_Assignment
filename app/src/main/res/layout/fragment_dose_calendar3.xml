@@ -2,9 +2,9 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".hpv.DoseCalendarFragment">
+    tools:context=".hpv.DoseCalendarFragment3">
 
     <include
         layout="@layout/hpv_input_header"/>
@@ -14,12 +14,12 @@
         android:orientation="vertical"
         android:layout_marginTop="80dp">
 
-    <ImageView
-        android:id="@+id/hpv_process"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:layout_gravity="center_horizontal"
-        android:src="@drawable/hpv_3_1"/>
+        <ImageView
+            android:id="@+id/hpv_process"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/hpv_3_1"/>
 
 
         <LinearLayout
@@ -36,7 +36,7 @@
                 android:layout_marginTop="10dp"
                 android:textStyle="bold"
                 android:textColor="@color/black"
-                android:text="@string/date_of_first_n_dose_onset"
+                android:text="Date of third dose onset:"
                 android:textSize="20sp"/>
 
             <androidx.cardview.widget.CardView
@@ -55,7 +55,7 @@
                     android:background="@color/input_card_orange2" />
 
                 <CalendarView
-                    android:id="@+id/hpv_first_dose"
+                    android:id="@+id/hpv_second_dose"
                     android:layout_width="310dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
@@ -70,13 +70,13 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp"
                 android:textColor="@color/grey_text"
-                android:text="@string/_1_3"/>
+                android:text="@string/_3_3"/>
         </LinearLayout>
 
 
     </LinearLayout>
     <Button
-        android:id="@+id/next_btn1"
+        android:id="@+id/next_btn3"
         android:layout_width="@dimen/btn_grey_width"
         android:layout_height="@dimen/btn_grey_height"
         android:layout_marginTop="600dp"

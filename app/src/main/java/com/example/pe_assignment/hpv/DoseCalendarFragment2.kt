@@ -8,31 +8,33 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageButton
 import androidx.navigation.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.pe_assignment.R
 
-class HpvReminderFragment : Fragment() {
+class DoseCalendarFragment2 : Fragment() {
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_hpv_reminder, container, false)
+        return inflater.inflate(R.layout.fragment_dose_calendar2, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val btnSend = view.findViewById<Button>(R.id.done_btn)
+        val btnSend = view.findViewById<Button>(R.id.next_btn2)
         btnSend.setOnClickListener {
-            view.findNavController().navigate(R.id.vaccineCountdownFragment)
+            view.findNavController().navigate(R.id.doseCalendarFragment3)
         }
         var btnSend2 = view.findViewById<ImageButton>(R.id.skip)
         btnSend2.setOnClickListener {
-            view.findNavController().navigate(R.id.vaccineCountdownFragment)
+            view.findNavController().navigate(R.id.doseCalendarFragment3)
         }
         btnSend2 = view.findViewById<ImageButton>(R.id.back)
         btnSend2.setOnClickListener {
-            view.findNavController().navigate(R.id.doseCalendarFragment3)
+            view.findNavController().navigate(R.id.doseCalendarFragment)
         }
 
     }

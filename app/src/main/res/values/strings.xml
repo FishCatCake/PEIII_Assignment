@@ -195,5 +195,7 @@
     <string name="help">Help</string>
     <string name="track_log">Track log</string>
     <string name="my_cycle">My Cycle</string>
+    <string name="_2_3">2/3</string>
+    <string name="_3_3">3/3</string>
 
 </resources>

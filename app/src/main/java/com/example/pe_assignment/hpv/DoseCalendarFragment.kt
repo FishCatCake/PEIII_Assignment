@@ -33,21 +33,13 @@ class DoseCalendarFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        dataInitialize()
-        val layoutManager = LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false)
-        recyclerView = view.findViewById(R.id.recycler_record)
-        recyclerView.layoutManager = layoutManager
-        recyclerView.setHasFixedSize(true)
-        adapter = HpvCalendarAdapter(calendarArrayList)
-        recyclerView.adapter = adapter
-
         val btnSend = view.findViewById<Button>(R.id.next_btn1)
         btnSend.setOnClickListener {
-            view.findNavController().navigate(R.id.hpvReminderFragment)
+            view.findNavController().navigate(R.id.doseCalendarFragment2)
         }
         var btnSend2 = view.findViewById<ImageButton>(R.id.skip)
         btnSend2.setOnClickListener {
-            view.findNavController().navigate(R.id.hpvReminderFragment)
+            view.findNavController().navigate(R.id.doseCalendarFragment2)
         }
         btnSend2 = view.findViewById<ImageButton>(R.id.back)
         btnSend2.setOnClickListener {
