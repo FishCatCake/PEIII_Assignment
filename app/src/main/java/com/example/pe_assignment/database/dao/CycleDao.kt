@@ -14,11 +14,13 @@ interface CycleDao {
     suspend fun insert(cycle: Cycle)
 
     @Query("SELECT cycle_date FROM cycle_table ORDER BY id")
-    fun getDates(): Flow<List<String>>
+    fun getDates(): Flow<List<Float>>
 
     @Query("SELECT temperature FROM cycle_table ORDER BY cycle_date")
-    fun getTemp(): Flow<List<String>>
+    fun getTemp(): Flow<List<Float>>
 
+    @Query("SELECT * FROM cycle_table ORDER BY id")
+    fun getAll(): Flow<List<Cycle>>
 //    @Query("SELECT temperature FROM cycle_table ORDER BY id")
 //    fun getTemp(): Flow<List<>>
 

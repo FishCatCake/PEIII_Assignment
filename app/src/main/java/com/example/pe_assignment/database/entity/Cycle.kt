@@ -17,16 +17,16 @@ data class Cycle(
     val id: Int = 0,
 
     @ColumnInfo(name = "cycle_year")
-    val year: String,
+    val year: Float,
 
     @ColumnInfo(name = "cycle_month")
-    val month: String,
+    val month: Float,
 
     @ColumnInfo(name = "cycle_date")
-    val date: String,
+    val date: Float,
 
     @ColumnInfo(name = "temperature")
-    val temperature: String,
+    val temperature: Float,
 
 //    @ColumnInfo(name = "symptoms_1")
 //    val symptoms1: String?,
