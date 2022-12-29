@@ -52,7 +52,7 @@ class ReviewCalendarFragment : Fragment() {
         }
         val calendarView: CalendarView = view.findViewById(R.id.calendarView)
         calendarView.setOnDateChangeListener { view, year, month, dateOfMonth ->
-            val msg = "Selected Date: " + dateOfMonth + "/ " + (month + 1) + "/ " + year
+            val msg = " "+ dateOfMonth + "/ " + (month + 1) + "/ " + year
             sharedViewModel.setReviewYear(year.toString())
             Log.i("year",year.toString())
             sharedViewModel.setReviewMonth((month + 1).toString())
