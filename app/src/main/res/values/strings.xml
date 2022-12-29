@@ -195,5 +195,6 @@
     <string name="help">Help</string>
     <string name="track_log">Track log</string>
     <string name="my_cycle">My Cycle</string>
+    <string name="hint_temp">key in your daily temperature</string>
 
 </resources>

@@ -25,6 +25,10 @@
         <action
             android:id="@+id/action_cycleFragment_to_homeActivity"
             app:destination="@id/homeActivity" />
+        <action
+            android:id="@+id/action_cycleFragment_to_cycleTemperatureFragment2"
+            app:destination="@id/cycleTemperatureFragment" />
+
 
     </fragment>
     <fragment
@@ -70,5 +74,15 @@
         android:name="com.example.pe_assignment.home.HomeActivity"
         android:label="activity_home"
         tools:layout="@layout/activity_home" />
+
+    <fragment
+        android:id="@+id/cycleTemperatureFragment"
+        android:name="com.example.pe_assignment.cycle.CycleTemperatureFragment"
+        android:label="fragment_cycle_temperature"
+        tools:layout="@layout/fragment_cycle_temperature" >
+        <action
+            android:id="@+id/action_cycleTemperatureFragment2_to_cycleFragment"
+            app:destination="@id/cycleFragment" />
+    </fragment>
 
 </navigation>
