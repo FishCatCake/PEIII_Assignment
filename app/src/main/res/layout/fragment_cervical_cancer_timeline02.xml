@@ -1,59 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".cancer.CervicalCancerTimeline02fragment">
 
-    <include
-        layout="@layout/header_back"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+    <data>
+        <variable
+            name="myViewModel"
+            type="com.example.pe_assignment.cancer.CancerTimelineViewModel" />
+        <variable
+            name="desFragment"
+            type="com.example.pe_assignment.cancer.CervicalCancerTimeline02fragment" />
+    </data>
 
-
-    <TextView
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:padding="10dp"
-        android:text="29 May, 2022"
-        android:textColor="#000000"
-        android:textSize="23sp"
-        android:textStyle="bold"
-        android:layout_marginVertical="20dp" />
+        android:layout_height="match_parent">
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="100dp"
-        android:orientation="vertical"
-        app:layout_anchor="@+id/linearLayout"
-        app:layout_anchorGravity="center">
+        <include
+            layout="@layout/header_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:layout_marginTop="10dp"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:layout_gravity="center_horizontal"
-            android:text="@string/detailed_medical_information"/>
-
-        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:cardBackgroundColor="#FAFAFA"
-            style="@style/Card_View"
-            app:cardCornerRadius="10dp"
-            app:cardElevation="10dp">
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="New Record"
+            android:textColor="#000000"
+            android:textSize="23sp"
+            android:textStyle="bold"
+            android:layout_marginVertical="20dp" />
 
-            <LinearLayout
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="100dp"
+            android:orientation="vertical"
+            app:layout_anchor="@+id/linearLayout"
+            app:layout_anchorGravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/detailed_medical_information" />
+
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                app:cardBackgroundColor="#FAFAFA"
+                style="@style/Card_View"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
                     <TextView
                         android:id="@+id/card_title"
@@ -62,23 +73,25 @@
                         style="@style/Card_Title"
                         android:background="@color/input_card_purple"
                         android:text="@string/diagnostic_result"
-                        android:textColor="@color/white"/>
+                        android:textColor="@color/white" />
 
                     <TextView
                         android:id="@+id/card_name"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         style="@style/Card_Title02"
-                        android:text="@string/title"/>
+                        android:text="@string/title" />
+
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/line_horizontal_card"/>
+                        android:src="@drawable/line_horizontal_card" />
 
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@drawable/cancer_edit_bcg"
+                        android:id="@+id/timeline_title"
                         android:layout_marginStart="20dp"
                         android:layout_marginEnd="20dp"
                         android:layout_marginTop="5dp"
@@ -87,26 +100,29 @@
                         android:paddingTop="5dp"
                         android:paddingBottom="5dp"
                         android:hint="@string/new_record_title"
-                        android:paddingStart="20dp"/>
+                        android:paddingStart="20dp" />
+
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="10dp"
-                        android:src="@drawable/line_horizontal_card"/>
+                        android:src="@drawable/line_horizontal_card" />
 
                     <TextView
                         android:id="@+id/card_name2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         style="@style/Card_Title02"
-                        android:text="@string/description"/>
+                        android:text="@string/description" />
+
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="10dp"
-                        android:src="@drawable/line_horizontal_card"/>
+                        android:src="@drawable/line_horizontal_card" />
 
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:id="@+id/timeline_des"
                         android:background="@drawable/cancer_edit_bcg"
                         android:layout_marginStart="20dp"
                         android:layout_marginEnd="20dp"
@@ -116,22 +132,24 @@
                         android:padding="10dp"
                         android:paddingBottom="5dp"
                         android:hint="@string/short_description_of_the_record"
-                        android:paddingStart="20dp"/>
+                        android:paddingStart="20dp" />
+
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="8dp"
-                        android:src="@drawable/line_horizontal_card"/>
+                        android:src="@drawable/line_horizontal_card" />
 
                     <TextView
                         android:id="@+id/card_name3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         style="@style/Card_Title02"
-                        android:text="@string/file"/>
+                        android:text="@string/file" />
+
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="10dp"
-                        android:src="@drawable/line_horizontal_card"/>
+                        android:src="@drawable/line_horizontal_card" />
 
 
                     <ImageButton
@@ -140,22 +158,24 @@
                         android:background="@drawable/upload_btn"
                         android:src="@drawable/upload_btn"
                         android:scaleX="0.7"
-                        android:scaleY="0.7"/>
-            </LinearLayout>
+                        android:scaleY="0.7" />
+                </LinearLayout>
 
-        </androidx.cardview.widget.CardView>
-    </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
 
-    <Button
-        android:id="@+id/next_btn"
-        android:layout_marginTop="600dp"
-        android:layout_width="@dimen/btn_grey_width"
-        android:layout_height="@dimen/btn_grey_height"
-        android:layout_gravity="center_horizontal"
-        android:background="@drawable/btn_selector"
-        android:textColor="@color/btn_text"
-        android:textAllCaps="false"
-        android:textStyle="bold"
-        android:textSize="@dimen/btn_text"
-        android:text="@string/next" />
-</FrameLayout>
+        <Button
+            android:id="@+id/next_btn"
+            android:layout_marginTop="600dp"
+            android:layout_width="@dimen/btn_grey_width"
+            android:layout_height="@dimen/btn_grey_height"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/btn_selector"
+            android:onClick="@{()->desFragment.goToNextScreen()}"
+            android:textColor="@color/btn_text"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:textSize="@dimen/btn_text"
+            android:text="@string/next" />
+    </FrameLayout>
+</layout>

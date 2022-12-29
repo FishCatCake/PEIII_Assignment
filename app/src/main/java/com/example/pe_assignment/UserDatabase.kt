@@ -8,12 +8,13 @@ import androidx.sqlite.db.SupportSQLiteDatabase
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
-@Database(entities = [User::class,UserCancerPhrase::class,CancerRecord::class], version = 5, exportSchema = false)
+@Database(entities = [User::class,UserCancerPhrase::class,CancerRecord::class,TimelineRecord::class], version = 6, exportSchema = false)
 abstract class UserDatabase : RoomDatabase() {
 
     abstract fun userDao(): UserDao
     abstract fun usercancerphraseDao(): UserCancerPhraseDAO
     abstract fun usercancerrecordDao(): CancerRecordDAO
+    abstract fun usercancertimelineDao(): TimelineRecordDAO
 
     private class UserDatabaseCallback(
         private val scope: CoroutineScope
@@ -26,10 +27,12 @@ abstract class UserDatabase : RoomDatabase() {
                     var userDao = database.userDao()
                     var usercancerphraseDao = database.usercancerphraseDao()
                     var usercancerrecordDao = database.usercancerrecordDao()
+                    var usercancertimelineDao = database.usercancertimelineDao()
                     // Delete all content here.
                     userDao.deleteAll()
                     usercancerphraseDao.deleteAll()
                     usercancerrecordDao.deleteAll()
+                    usercancertimelineDao.deleteAll()
 
 //                    // Add sample words.
                     var user = User(0,"Sample","Sample","Sample","Sample")
@@ -38,6 +41,9 @@ abstract class UserDatabase : RoomDatabase() {
                     usercancerphraseDao.insert(cuser)
                     var crecord = CancerRecord(0,"Sample","Sample","Sample","Sample","Sample","Sample","1")
                     usercancerrecordDao.insert(crecord)
+
+                    var ctimeline = TimelineRecord(0,"Sample","Sample","Sample","Sample","Sample","Sample","1")
+                    usercancertimelineDao.insert(ctimeline)
 
                 }
             }

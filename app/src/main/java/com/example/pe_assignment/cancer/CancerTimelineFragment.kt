@@ -6,9 +6,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import androidx.fragment.app.activityViewModels
+import androidx.lifecycle.Observer
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.pe_assignment.BaseApplication
 import com.example.pe_assignment.R
 
 
@@ -21,13 +24,23 @@ class CancerTimelineFragment : Fragment() {
     lateinit var date : Array<String>
     lateinit var info : Array<String>
     //lateinit var btn : Array<String>
-
+    private val sharedViewModel: CancerTimelineViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
+//        val sharedViewModel: CancerRecordViewModel by activityViewModels() {
+//            CancerTimelineViewModelFactory((activity?.application as BaseApplication).repository_cancertimeline)
+//        }
+//        sharedViewModel.navigateto.observe(viewLifecycleOwner, Observer {
+//                hasFinished ->  // if it is true
+//            if(hasFinished == true) {
+////                    goToNextScreen()
+//                sharedViewModel.doneNavigating()
+//            }
+//        })
         return inflater.inflate(R.layout.fragment_cancer_timeline, container, false)
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
