@@ -4,8 +4,10 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.CalendarView
 import android.widget.CalendarView.OnDateChangeListener
 import android.widget.ImageButton
+import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.findNavController
@@ -15,6 +17,8 @@ import com.example.pe_assignment.R
 import com.example.pe_assignment.login.RegisterViewModelFactory
 import kotlinx.android.synthetic.main.activity_calendar.*
 import com.example.pe_assignment.databinding.FragmentCycleBinding
+import kotlinx.android.synthetic.main.activity_calendar.view.*
+import java.util.*
 
 
 class CycleFragment : Fragment() {
@@ -32,11 +36,20 @@ class CycleFragment : Fragment() {
             CycleViewModelFactory((activity?.application as BaseApplication).repositoryCycle)
         }
 
+//        sharedViewModel.navigateto.observe(viewLifecycleOwner, Observer {
+//                hasFinished ->  // if it is true
+//            if(hasFinished == true) {
+//                goToNextScreen()
+//                sharedViewModel.doneNavigating()
+//            }
+//        })
 
         binding = fragmentBinding
         return fragmentBinding.root
         //return inflater.inflate(R.layout.fragment_cycle, container, false)
     }
+
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -54,7 +67,7 @@ class CycleFragment : Fragment() {
             view.findNavController().navigate(R.id.selectionSymptonFragment)
         }
         btnSendTemp.setOnClickListener{
-            view.findNavController().navigate(R.id.selectionSymptonFragment) //to change
+            view.findNavController().navigate(R.id.cycleTemperatureFragment) //to change
         }
         btnSendHistory.setOnClickListener{
             view.findNavController().navigate(R.id.cycleHistoryFragment)
@@ -64,6 +77,23 @@ class CycleFragment : Fragment() {
             view.findNavController().navigate(R.id.homeActivity)
         }
 
+
+        // calendar
+        var calendarView = view.findViewById<CalendarView>(R.id.calendar_cycle)
+        var dateTV = view.findViewById<TextView>(R.id.idTVDate)
+
+        // on below line we are adding set on
+        // date change listener for calendar view.
+        calendarView.setOnDateChangeListener{ view, year, month, dayOfMonth ->
+            // Create calender object with which will have system date time.
+            val calender: Calendar = Calendar.getInstance()
+            // Set attributes in calender object as per selected date.
+            calender.set(year, month, dayOfMonth)
+            val Date = (dayOfMonth.toString() + "-"
+                            + (month + 1) + "-" + year)
+                    // set this date in TextView for Display
+                   dateTV.setText(Date)
+                }
         // binding
         binding?.apply {
             lifecycleOwner = viewLifecycleOwner
