@@ -43,10 +43,14 @@
 
                     <RadioButton
                         android:id="@+id/card_attr1"
+                        style="@style/Card_RadioButton"
+                        android:checked="@{periodViewModel.flow.equals(@string/exercising)}"
+                        android:onClick="@{() -> myViewModel.setPeriod(@string/exercising)}"
+
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
-                        style="@style/Card_RadioButton"
-                        android:text="@string/had_flow"/>
+                        android:text="@string/had_flow" />
+
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
