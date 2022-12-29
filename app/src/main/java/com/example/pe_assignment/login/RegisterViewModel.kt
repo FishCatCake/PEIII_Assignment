@@ -12,7 +12,8 @@ import java.security.MessageDigest
 import java.util.regex.Pattern
 
 
-class RegisterViewModel(private val repository: RegisterRepository) : ViewModel(){
+class RegisterViewModel(private val repository: RegisterRepository)
+    : ViewModel(){
 //    var userDetailsLiveData = MutableLiveData<List<User>>()
 
     private val _account = MutableLiveData<String?>("")
