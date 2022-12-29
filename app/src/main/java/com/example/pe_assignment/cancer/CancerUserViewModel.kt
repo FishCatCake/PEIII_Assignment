@@ -17,14 +17,14 @@ import kotlinx.coroutines.launch
 class CancerUserViewModel (private val repository: CancerNewRepository) : ViewModel(){
     private val _phrase = MutableLiveData<String?>("")
     val phrase: MutableLiveData<String?> = _phrase
-    private val _userid = MutableLiveData<Long?>()
-    val userid: MutableLiveData<Long?> = _userid
+    private val _userid = MutableLiveData<String?>()
+    val userid: MutableLiveData<String?> = _userid
 
     fun setPhrase(phrase: String) {
         _phrase.value = phrase
     }
 
-    fun setUserId(uid: Long) {
+    fun setUserId(uid: String) {
         _userid.value = uid
     }
 
@@ -55,8 +55,8 @@ class CancerUserViewModel (private val repository: CancerNewRepository) : ViewMo
 //                val userInfo = repository.getUserCredential(_account.value.toString())
 //                if(userInfo == null) {  // No existing record with the same username
                     val phrase: String = _phrase.value!!
-//                    val uid: Long = _userid.value!!
-                    val cuser = UserCancerPhrase(0,phrase,1)
+                    val uid: String = _userid.value!!
+                    val cuser = UserCancerPhrase(0,phrase,uid)
                     insert(cuser)
                     _errorToastUserName.value = false
                     _navigateto.value = true  // already inserted

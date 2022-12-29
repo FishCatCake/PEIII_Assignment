@@ -32,7 +32,7 @@ abstract class UserDatabase : RoomDatabase() {
 //                    // Add sample words.
                     var user = User(0,"Sample","Sample","Sample","Sample")
                     userDao.insert(user)
-                    var cuser = UserCancerPhrase(0,"Sample",0)
+                    var cuser = UserCancerPhrase(0,"Sample","Sample")
                     usercancerphraseDao.insert(cuser)
                 }
             }
@@ -54,7 +54,7 @@ abstract class UserDatabase : RoomDatabase() {
                 val instance = Room.databaseBuilder(
                     context.applicationContext,
                     UserDatabase::class.java,
-                    "u_database"
+                    "z_database"
                 )
                     .addCallback(UserDatabaseCallback(scope))
                     .build()
