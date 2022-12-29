@@ -54,9 +54,9 @@ class CancerUserViewModel (private val repository: CancerNewRepository) : ViewMo
             uiScope.launch {
 //                val userInfo = repository.getUserCredential(_account.value.toString())
 //                if(userInfo == null) {  // No existing record with the same username
-                    val phrase: String = _phrase.value!!
-                    val uid: String = _userid.value!!
-                    val cuser = UserCancerPhrase(0,phrase,uid)
+                    val phrase: String = _phrase.value.toString()
+//                    val uid: String = _userid.value!!
+                    val cuser = UserCancerPhrase(0,phrase,"1")
                     insert(cuser)
                     _errorToastUserName.value = false
                     _navigateto.value = true  // already inserted

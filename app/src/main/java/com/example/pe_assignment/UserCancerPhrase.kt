@@ -3,15 +3,7 @@ package com.example.pe_assignment
 import androidx.room.*
 import com.example.pe_assignment.User
 
-@Entity(tableName = "user_cancer_phrase_table",
-    foreignKeys = [ForeignKey(
-        entity = User::class,
-        childColumns = arrayOf("uid"),
-        parentColumns = arrayOf("name")
-    )],
-    indices = [Index(value = ["uid"], unique = true)]
-)
-//@Entity(tableName = "user_cancer_phrase_table")
+@Entity(tableName = "user_cancer_phrase_table")
 data class UserCancerPhrase(
 
     @PrimaryKey(autoGenerate = true)
@@ -21,5 +13,5 @@ data class UserCancerPhrase(
     val phrase: String,
 
     @ColumnInfo(name = "uid")
-    val uname: String
+    val uid: String
 )

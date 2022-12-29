@@ -14,7 +14,7 @@ interface UserCancerPhraseDAO {
 //    @Query("SELECT * FROM user_table ORDER BY id")
 //    fun getUsers(): Flow<List<User>>
 
-    @Query("DELETE FROM user_table")
+    @Query("DELETE FROM user_cancer_phrase_table")
     fun deleteAll()
 
 }

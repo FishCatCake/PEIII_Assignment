@@ -33,15 +33,16 @@ class CancerPhaseFragment : Fragment() {
             sharedViewModel.navigateto.observe(viewLifecycleOwner, Observer {
                     hasFinished ->  // if it is true
                 if(hasFinished == true) {
-                    goToNextScreen()
+//                    goToNextScreen()
                     sharedViewModel.doneNavigating()
                 }
             })
 
-
             binding = fragmentBinding
             return fragmentBinding.root
     }
+
+
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -53,26 +54,18 @@ class CancerPhaseFragment : Fragment() {
 
         val btnskip = view.findViewById<ImageButton>(R.id.skip)
         btnskip.setOnClickListener {
-            view.findNavController().navigate(R.id.cancer_graph)
+            view.findNavController().navigate(R.id.cancerCalendarFragment)
         }
         val btnback = view.findViewById<ImageButton>(R.id.back)
         btnback.setOnClickListener {
-            view.findNavController().navigate(R.id.homeActivity)
+            view.findNavController().navigate(R.id.homeActivity2)
         }
     }
 
     fun goToNextScreen() {
-//        val phrase: String = binding?.userAccount?.text.toString()
-//        sharedViewModel.setPhrase(phrase)
-//
-//        val btnSend = view.findViewById<Button>(R.id.next_btn)
-//        btnSend.setOnClickListener {
-//            view.findNavController().navigate(R.id.cancer_graph)
-//        }
         sharedViewModel.addNew()
-        findNavController().navigate(R.id.cancer_graph)
-        //findNavController().navigate(R.id.action_cancerPhaseFragment_to_cancer_graph)
-    }
+        view?.findNavController()?.navigate(R.id.cancerCalendarFragment)
+       }
 
     override fun onDestroyView() {
         super.onDestroyView()

@@ -8,11 +8,12 @@ import androidx.sqlite.db.SupportSQLiteDatabase
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
-@Database(entities = [User::class,UserCancerPhrase::class], version = 2, exportSchema = false)
+@Database(entities = [User::class,UserCancerPhrase::class,CancerRecord::class], version = 5, exportSchema = false)
 abstract class UserDatabase : RoomDatabase() {
 
     abstract fun userDao(): UserDao
     abstract fun usercancerphraseDao(): UserCancerPhraseDAO
+    abstract fun usercancerrecordDao(): CancerRecordDAO
 
     private class UserDatabaseCallback(
         private val scope: CoroutineScope
@@ -24,16 +25,20 @@ abstract class UserDatabase : RoomDatabase() {
                 scope.launch {
                     var userDao = database.userDao()
                     var usercancerphraseDao = database.usercancerphraseDao()
-
+                    var usercancerrecordDao = database.usercancerrecordDao()
                     // Delete all content here.
                     userDao.deleteAll()
                     usercancerphraseDao.deleteAll()
+                    usercancerrecordDao.deleteAll()
 
 //                    // Add sample words.
                     var user = User(0,"Sample","Sample","Sample","Sample")
                     userDao.insert(user)
-                    var cuser = UserCancerPhrase(0,"Sample","Sample")
+                    var cuser = UserCancerPhrase(0,"Sample","1")
                     usercancerphraseDao.insert(cuser)
+                    var crecord = CancerRecord(0,"Sample","Sample","Sample","Sample","Sample","Sample","1")
+                    usercancerrecordDao.insert(crecord)
+
                 }
             }
         }
@@ -54,9 +59,10 @@ abstract class UserDatabase : RoomDatabase() {
                 val instance = Room.databaseBuilder(
                     context.applicationContext,
                     UserDatabase::class.java,
-                    "z_database"
+                    "x_database"
                 )
                     .addCallback(UserDatabaseCallback(scope))
+                    .fallbackToDestructiveMigration()
                     .build()
                 INSTANCE = instance
                 // return instance

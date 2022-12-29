@@ -8,8 +8,8 @@ import com.example.pe_assignment.R
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import androidx.navigation.ui.NavigationUI
-//
-//class MenstruationActivity : AppCompatActivity() {
+
+class MenstruationActivity : AppCompatActivity() {
 //    //private lateinit var navController: NavController
 //
 //    private val cycleViewModel: CycleViewModel by lazy{
@@ -29,4 +29,4 @@ import androidx.navigation.ui.NavigationUI
 ////    override fun onSupportNavigateUp(): Boolean {
 ////        return NavigationUI.navigateUp(navController, null)
 ////    }
-//}
+}

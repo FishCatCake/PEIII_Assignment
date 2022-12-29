@@ -1,148 +1,185 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".cancer.CervicalCancerRecord02Fragment">
-    <include
-        layout="@layout/header_back"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:padding="10dp"
-        android:text="Today"
-        android:textColor="#000000"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        android:layout_marginVertical="20dp" />
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="100dp"
-        android:orientation="vertical"
-        app:layout_anchor="@+id/linearLayout"
-        app:layout_anchorGravity="center">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/black"
-        android:layout_marginTop="10dp"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:layout_gravity="center_horizontal"
-        android:text="@string/cancer_card_text02"/>
+    <data>
+        <variable
+            name="myViewModel"
+            type="com.example.pe_assignment.cancer.CancerRecordViewModel" />
+        <variable
+            name="record2Fragment"
+            type="com.example.pe_assignment.cancer.CervicalCancerRecord02Fragment" />
+    </data>
 
-    <androidx.cardview.widget.CardView
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        style="@style/Card_View"
-        app:cardCornerRadius="10dp"
-        app:cardElevation="10dp">
+        android:layout_height="match_parent">
 
-        <RelativeLayout
+        <include
+            layout="@layout/header_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
-            <RadioGroup
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Today"
+            android:textColor="#000000"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:layout_marginVertical="20dp" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="100dp"
+            android:orientation="vertical"
+            app:layout_anchor="@+id/linearLayout"
+            app:layout_anchorGravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/cancer_card_text02" />
+
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/card_content_bg">
+                style="@style/Card_View"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="10dp">
 
-                <TextView
-                    android:id="@+id/card_title"
+                <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    style="@style/Card_Title"
-                    android:background="@color/input_card_red"
-                    android:text="@string/cancer_symptoms"/>
+                    android:orientation="vertical">
 
-                <RadioButton
-                    android:id="@+id/card_attr1"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    style="@style/Card_RadioButton"
-                    android:text="@string/vaginal_bleeding"/>
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/line_horizontal_card"/>
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/card_content_bg">
 
-                <RadioButton
-                    android:id="@+id/card_attr2"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    style="@style/Card_RadioButton"
-                    android:text="@string/pelvic_pain"/>
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="6dp"
-                    android:src="@drawable/line_horizontal_card"/>
+                        <TextView
+                            android:id="@+id/card_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            style="@style/Card_Title"
+                            android:background="@color/input_card_red"
+                            android:text="@string/cancer_symptoms" />
 
-                <RadioButton
-                    android:id="@+id/card_attr3"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    style="@style/Card_RadioButton"
-                    android:text="@string/pain_during_intercourse"/>
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/line_horizontal_card"/>
+                        <RadioButton
+                            android:id="@+id/card_attr1"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:checked="@{myViewModel.sym.equals(@string/vaginal_bleeding)}"
+                            android:onClick="@{() -> myViewModel.setSym(@string/vaginal_bleeding)}"
+                            style="@style/Card_RadioButton"
+                            android:text="@string/vaginal_bleeding" />
 
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/line_horizontal_card" />
 
-                <RadioButton
-                    android:id="@+id/card_attr4"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    style="@style/Card_RadioButton"
-                    android:text="@string/watery_bloody_vaginal_discharge"/>
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="5dp"
-                    android:src="@drawable/line_horizontal_card"/>
+                        <RadioButton
+                            android:id="@+id/card_attr2"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:checked="@{myViewModel.sym.equals(@string/pelvic_pain)}"
+                            android:onClick="@{() -> myViewModel.setSym(@string/pelvic_pain)}"
+                            style="@style/Card_RadioButton"
+                            android:text="@string/pelvic_pain" />
 
-                <RadioButton
-                    android:id="@+id/card_attr5"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    style="@style/Card_RadioButton"
-                    android:text="@string/abnormal_secretion"/>
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/line_horizontal_card"/>
-                <RadioButton
-                    android:id="@+id/card_attr6"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    style="@style/Card_RadioButton"
-                    android:text="@string/other"/>
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/line_horizontal_card"/>
-            </RadioGroup>
-        </RelativeLayout>
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="6dp"
+                            android:src="@drawable/line_horizontal_card" />
+
+                        <RadioButton
+                            android:id="@+id/card_attr3"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:checked="@{myViewModel.sym.equals(@string/pain_during_intercourse)}"
+                            android:onClick="@{() -> myViewModel.setSym(@string/pain_during_intercourse)}"
+                            style="@style/Card_RadioButton"
+                            android:text="@string/pain_during_intercourse" />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/line_horizontal_card" />
 
 
-    </androidx.cardview.widget.CardView>
-    </LinearLayout>
-    <Button
-        android:id="@+id/next_btn"
-        android:layout_width="@dimen/btn_grey_width"
-        android:layout_height="@dimen/btn_grey_height"
-        android:layout_marginTop="600dp"
-        android:layout_gravity="center_horizontal"
-        android:background="@drawable/btn_selector"
-        android:textColor="@color/btn_text"
-        android:textAllCaps="false"
-        android:textStyle="bold"
-        android:textSize="@dimen/btn_text"
-        android:text="@string/next" />
-</FrameLayout>
+                        <RadioButton
+                            android:id="@+id/card_attr4"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:checked="@{myViewModel.sym.equals(@string/watery_bloody_vaginal_discharge)}"
+                            android:onClick="@{() -> myViewModel.setSym(@string/watery_bloody_vaginal_discharge)}"
+                            style="@style/Card_RadioButton"
+                            android:text="@string/watery_bloody_vaginal_discharge" />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp"
+                            android:src="@drawable/line_horizontal_card" />
+
+                        <RadioButton
+                            android:id="@+id/card_attr5"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:checked="@{myViewModel.sym.equals(@string/abnormal_secretion)}"
+                            android:onClick="@{() -> myViewModel.setSym(@string/abnormal_secretion)}"
+                            style="@style/Card_RadioButton"
+                            android:text="@string/abnormal_secretion" />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/line_horizontal_card" />
+
+                        <RadioButton
+                            android:id="@+id/card_attr6"
+                            android:layout_width="fill_parent"
+                            android:checked="@{myViewModel.sym.equals(@string/other)}"
+                            android:onClick="@{() -> record2Fragment.goToOhter()}"
+                            android:layout_height="wrap_content"
+                            style="@style/Card_RadioButton"
+                            android:text="@string/other" />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/line_horizontal_card" />
+                    </RadioGroup>
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/next_btn"
+            android:layout_width="@dimen/btn_grey_width"
+            android:layout_height="@dimen/btn_grey_height"
+            android:layout_marginTop="600dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/btn_selector"
+            android:onClick="@{()->record2Fragment.goToNextScreen()}"
+            android:textColor="@color/btn_text"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:textSize="@dimen/btn_text"
+            android:text="@string/next" />
+    </FrameLayout>
+</layout>

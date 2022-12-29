@@ -30,7 +30,7 @@
     <string name="cd_dose">🗓️ Dose Recording</string>
     <string name="cd_vaccine_title">HPV Vaccine</string>
     <string name="cd_cancer_tracking">🏥 Cancer Tracking</string>
-    <string name="cd_title_cancer">Breast/Cervical Cancer</string>
+    <string name="cd_title_cancer">Cervical Cancer</string>
     <string name="cd_cancer_desc1">🗒️ Medical Record</string>
     <string name="cd_cancer_desc2">❤️‍🩹 Sympton Log</string>
 
