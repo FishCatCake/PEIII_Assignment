@@ -7,7 +7,7 @@ import com.example.pe_assignment.User
 import kotlinx.coroutines.flow.Flow
 
 @Dao
-interface HPVDAO {
+interface HPVDao {
 
     @Insert
     suspend fun insert(hpv: HPV)

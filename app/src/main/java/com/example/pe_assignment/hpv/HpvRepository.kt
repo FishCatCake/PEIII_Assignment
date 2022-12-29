@@ -2,7 +2,7 @@ package com.example.pe_assignment.hpv
 
 import kotlinx.coroutines.flow.Flow
 
-class HpvRepository (private val dao: HPVDAO){
+class HpvRepository (private val dao: HPVDao){
 
     suspend fun insert(hpv: HPV) {
         dao.insert(hpv)

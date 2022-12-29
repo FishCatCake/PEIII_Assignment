@@ -10,7 +10,7 @@ import com.example.pe_assignment.hpv.HPVDao
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
-@Database(entities = [User::class,HPV::class], version = 3, exportSchema = false)
+@Database(entities = [User::class,HPV::class], version = 4, exportSchema = false)
 abstract class UserDatabase : RoomDatabase() {
 
     abstract fun userDao(): UserDao
@@ -33,7 +33,7 @@ abstract class UserDatabase : RoomDatabase() {
                     val user = User(0,"Sample","Sample","Sample","Sample")
                     userDao.insert(user)
 
-                    val hpv = HPV(0,0)
+                    val hpv = HPV(0,"0","0","0","0","0","0","0","0","0","0","0","0","0")
                     hpvDao.insert(hpv)
                 }
             }

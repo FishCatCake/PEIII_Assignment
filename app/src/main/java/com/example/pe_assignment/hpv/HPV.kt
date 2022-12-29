@@ -20,31 +20,31 @@ data class HPV(
     val Reviewday: String,
 
     @ColumnInfo(name = "First_Dose_Year")
-    val Dose1Year: String,
+    val FirstYear: String,
 
     @ColumnInfo(name = "First_Dose_Month")
-    val Dose1Month: String,
+    val FirstMonth: String,
 
     @ColumnInfo(name = "First_Dose_day")
-    val Dose1day: String,
+    val Firstday: String,
 
     @ColumnInfo(name = "Second_Dose_Year")
-    val Dose2Year: String,
+    val SecondYear: String,
 
     @ColumnInfo(name = "Second_Dose_Month")
-    val Dose2Month: String,
+    val SecondMonth: String,
 
-    @ColumnInfo(name = "Third_Dose_day")
-    val Dose2day: String,
+    @ColumnInfo(name = "Second_Dose_day")
+    val Secondday: String,
 
     @ColumnInfo(name = "Third_Dose_Year")
-    val Dose3Year: String,
+    val ThirdYear: String,
 
     @ColumnInfo(name = "Third_Dose_Month")
-    val Dose3Month: String,
+    val ThirdMonth: String,
 
     @ColumnInfo(name = "Third_Dose_day")
-    val Dose3day: String,
+    val Thirdday: String,
 
     @ColumnInfo(name = "uid")
     val uid: String

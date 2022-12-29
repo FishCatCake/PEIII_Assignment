@@ -50,15 +50,15 @@ class ReviewCalendarFragment : Fragment() {
             hpvViewModel = sharedViewModel
             reviewCalendarFragment = this@ReviewCalendarFragment
         }
-        val calendarView: CalendarView = view.findViewById(R.id.calendarView3)
+        val calendarView: CalendarView = view.findViewById(R.id.calendarView)
         calendarView.setOnDateChangeListener { view, year, month, dateOfMonth ->
             val msg = "Selected Date: " + dateOfMonth + "/ " + (month + 1) + "/ " + year
             sharedViewModel.setReviewYear(year.toString())
             Log.i("year",year.toString())
             sharedViewModel.setReviewMonth((month + 1).toString())
-            Log.i("year",(month + 1).toString())
+            Log.i("month",(month + 1).toString())
             sharedViewModel.setReviewDate(dateOfMonth.toString())
-            Log.i("year",dateOfMonth.toString())
+            Log.i("day",dateOfMonth.toString())
             //Toast.makeText(this, msg, Toast.LENGTH_LONG).show()
         }
 

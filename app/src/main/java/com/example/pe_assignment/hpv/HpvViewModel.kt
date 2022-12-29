@@ -101,6 +101,7 @@ class HpvViewModel (private val repository: HpvRepository) : ViewModel(){
 
     private val viewModelJob = Job()
     private val uiScope = CoroutineScope(Dispatchers.Main + viewModelJob)
+
     fun addRecord() {  // Empty field and validate username and password
         Log.i("MYTAG", "reg func")
         if(
