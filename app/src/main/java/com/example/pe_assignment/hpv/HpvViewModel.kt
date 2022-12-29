@@ -2,6 +2,7 @@ package com.example.pe_assignment.hpv
 
 
 import android.provider.SyncStateContract.Helpers.insert
+import android.util.Log
 import androidx.databinding.Bindable
 import androidx.databinding.Observable
 import androidx.lifecycle.*
@@ -15,25 +16,24 @@ import java.util.Date
 class HpvViewModel(private val repository: HpvRepository) :
     ViewModel(), Observable {
 
-    @Bindable
-    val reviewTime = MutableLiveData<Date?>()
-
-    @Bindable
-    val firstDose = MutableLiveData<Date?>()
-
-    @Bindable
-    val secondDose = MutableLiveData<Date?>()
-
-    @Bindable
-    val thirdDose = MutableLiveData<Date?>()
-
-    fun setReviewDate(reviewdate: Date) {
-        reviewTime.value = reviewdate
+    private val _reviewTime = MutableLiveData<Int?>(0)
+    fun setDate(reviewTime: String) {
+        _reviewTime.value = reviewTime.toInt()
     }
 
-    private val _navigatetoRegister = MutableLiveData<Boolean>()
-    val navigatetoRegister: LiveData<Boolean>
-        get() = _navigatetoRegister  // if it is true, then we navigate to the Signup/Register screen
+//    @Bindable
+//    val firstDose = MutableLiveData<Date?>()
+//
+//    @Bindable
+//    val secondDose = MutableLiveData<Date?>()
+//
+//    @Bindable
+//    val thirdDose = MutableLiveData<Date?>()
+
+
+    private val _navigateto = MutableLiveData<Boolean>()
+    val navigateto: LiveData<Boolean>
+        get() = _navigateto
 
     private val _errorToast = MutableLiveData<Boolean>()
     val errorToast: LiveData<Boolean>
@@ -43,37 +43,30 @@ class HpvViewModel(private val repository: HpvRepository) :
     private val uiScope = CoroutineScope(Dispatchers.Main + viewModelJob)
 
     fun Date() {
-        if(reviewTime.value == null ||
-            firstDose.value == null||
-            secondDose.value == null||
-            thirdDose.value == null    ) {
+        Log.i("Date", "Enter")
+        if(_reviewTime.value == null) {
             _errorToast.value = true
         } else {
             uiScope.launch {
-                val reviewTime: Date = reviewTime.value!!
-                val firstDose: Date = firstDose.value!!
-                val secondDose: Date = secondDose.value!!
-                val thirdDose: Date = thirdDose.value!!
-                val hpv = HPV(0,reviewTime,firstDose,secondDose,thirdDose)
+                val reviewTime: Int = _reviewTime.value!!
+                val hpv = HPV(0,reviewTime)
                 insert(hpv)
-
+                _navigateto.value = true
             }
 
     }
 
-    fun signUp() {
-        _navigatetoRegister.value = true
-    }
-
-    fun doneNavigatingRegister() {
-        _navigatetoRegister.value = false
-    }
 }
 
     private fun insert(hpv: HPV) : Job =
         viewModelScope.launch(Dispatchers.IO) {
             repository.insert(hpv)
         }
+
+    fun doneNavigating() {
+        _navigateto.value = false
+        Log.i("MYTAG", "Done navigating ")
+    }
 
     override fun addOnPropertyChangedCallback(callback: Observable.OnPropertyChangedCallback?) {
         TODO("Not yet implemented")
@@ -82,4 +75,6 @@ class HpvViewModel(private val repository: HpvRepository) :
     override fun removeOnPropertyChangedCallback(callback: Observable.OnPropertyChangedCallback?) {
         TODO("Not yet implemented")
     }
+
+
 }

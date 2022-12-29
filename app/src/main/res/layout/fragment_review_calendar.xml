@@ -9,8 +9,8 @@
             name="hpvViewModel"
             type="com.example.pe_assignment.hpv.HpvViewModel" />
         <variable
-            name="register1Fragment"
-            type="com.example.pe_assignment.hpv.DoseCalendarFragment" />
+            name="reviewCalendarFragment"
+            type="com.example.pe_assignment.hpv.ReviewCalendarFragment" />
     </data>
 
     <FrameLayout
@@ -53,12 +53,22 @@
             app:cardCornerRadius="10dp"
             app:cardElevation="10dp">
 
-            <TextView
-                android:id="@+id/review_date"
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
+                android:background="@color/input_card_orange2"
+                android:gravity="center">
 
-                android:background="@color/input_card_orange2" />
+            <TextView
+                android:id="@+id/review_year"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+
+<!--                <EditText-->
+<!--                    android:id="@+id/review_year"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="match_parent" />-->
+            </RelativeLayout>
 
             <CalendarView
                 android:id="@+id/calendarView"
@@ -75,7 +85,7 @@
         android:layout_width="@dimen/btn_grey_width"
         android:layout_height="@dimen/btn_grey_height"
         android:layout_marginTop="600dp"
-
+        android:onClick="@{()->reviewCalendarFragment.goToNextScreen()}"
         android:layout_gravity="center_horizontal"
         android:background="@drawable/btn_selector"
         android:textColor="@color/btn_text"
