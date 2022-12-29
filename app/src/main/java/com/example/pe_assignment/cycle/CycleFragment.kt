@@ -22,33 +22,24 @@ import java.util.*
 
 
 class CycleFragment : Fragment() {
-//    private var binding: FragmentCycleBinding? = null
-//    private val sharedViewModel: CycleViewModel by activityViewModels()
+    private var binding: FragmentCycleBinding? = null
+    private val sharedViewModel: PeriodViewModel by activityViewModels()
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_cycle, container, false)
+        val fragmentBinding = FragmentCycleBinding.inflate(
+            inflater, container, false
+        )
 
-//        val fragmentBinding = FragmentCycleBinding.inflate(
-//            inflater, container, false
-//        )
-//        val sharedViewModel: CycleViewModel by activityViewModels() {
-//            CycleViewModelFactory((activity?.application as BaseApplication).repositoryCycle)
-//        }
+        val sharedViewModel: PeriodViewModel by activityViewModels() {
+            PeriodViewModelFactory((activity?.application as BaseApplication).repoPeriod)
 
-//        sharedViewModel.navigateto.observe(viewLifecycleOwner, Observer {
-//                hasFinished ->  // if it is true
-//            if(hasFinished == true) {
-//                goToNextScreen()
-//                sharedViewModel.doneNavigating()
-//            }
-//        })
+        }
 
-//        binding = fragmentBinding
-//        return fragmentBinding.root
-        //return inflater.inflate(R.layout.fragment_cycle, container, false)
+        binding = fragmentBinding
+        return fragmentBinding.root
+
     }
 
 
@@ -61,6 +52,12 @@ class CycleFragment : Fragment() {
         val btnSendHistory = view.findViewById<ImageButton>(R.id.btn_cycle_history)
         val btnBack = view.findViewById<ImageButton>(R.id.btn_back_cycle)
 
+        // calendar
+        var calendarView : CalendarView = view.findViewById<CalendarView>(R.id.calendar_cycle)
+        calendarView.setOnDateChangeListener { view, date, month, year
+            sharedViewModel.setDate(inputDate = )
+
+        }
         btnSendPeriod.setOnClickListener {
             view.findNavController().navigate(R.id.selectionPeriodFragment)
         }

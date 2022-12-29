@@ -16,14 +16,14 @@ data class Cycle(
     @PrimaryKey(autoGenerate = true)
     val id: Int = 0,
 
-//    @ColumnInfo(name = "cycle_year")
-//    val year: Int,
-//
-//    @ColumnInfo(name = "cycle_month")
-//    val month: Int,
-//
-//    @ColumnInfo(name = "cycle_date")
-//    val date: Int,
+    @ColumnInfo(name = "cycle_year")
+    val year: Int,
+
+    @ColumnInfo(name = "cycle_month")
+    val month: Int,
+
+    @ColumnInfo(name = "cycle_date")
+    val date: Int,
 
     @ColumnInfo(name = "temperature")
     val temperature: String,

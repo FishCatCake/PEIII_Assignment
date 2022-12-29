@@ -4,12 +4,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-<!--        <variable-->
-<!--            name="CycleViewModel"-->
-<!--            type="com.example.pe_assignment.cycle.CycleViewModel" />-->
-<!--        <variable-->
-<!--            name="cycleFragment"-->
-<!--            type="com.example.pe_assignment.cycle.CycleFragment" />-->
+        <variable
+            name="CycleViewModel"
+            type="com.example.pe_assignment.cycle.PeriodViewModel" />
+        <variable
+            name="cycleFragment"
+            type="com.example.pe_assignment.cycle.CycleFragment" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

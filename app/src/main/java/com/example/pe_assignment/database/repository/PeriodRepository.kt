@@ -9,9 +9,14 @@ class PeriodRepository (private val dao:CycleDao) {
         dao.insert(cycle)
     }
 
-    // Get cycle list
-    var cycleList: Flow<List<Cycle>> = dao.getCycles()
-    fun getCycles(): Flow<List<Cycle>> {
-        return cycleList
+    // Get temp list
+    var tempList: Flow<List<String>> = dao.getTemp()
+    fun getTemp(): Flow<List<String>> {
+        return tempList
+    }
+    // get date list
+    var dateList:Flow<List<Int>> = dao.getDates()
+    fun getDates(): Flow<List<Int>> {
+        return dateList
     }
 }

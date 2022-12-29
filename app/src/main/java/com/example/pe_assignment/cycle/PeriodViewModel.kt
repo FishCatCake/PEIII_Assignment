@@ -20,6 +20,24 @@ class PeriodViewModel(private val repository:PeriodRepository)
         _inputTemp.value = inputTemp
     }
 
+    // calendar data
+    private val _inputDate = MutableLiveData<Int>()
+    private val _inputMonth = MutableLiveData<Int>()
+    private val _inputYear = MutableLiveData<Int>()
+    // date
+    fun setDate(inputDate: Int){
+        _inputDate.value = inputDate
+    }
+    // month
+    fun setMonth(inputMonth: Int){
+        _inputMonth.value = inputMonth
+    }
+    // year
+    fun setYear(inputYear: Int){
+        _inputYear.value = inputYear
+    }
+
+
     private val _navigateto = MutableLiveData<Boolean>()
     val navigateto: LiveData<Boolean>
         get() = _navigateto
@@ -35,10 +53,15 @@ class PeriodViewModel(private val repository:PeriodRepository)
     private val viewModelJob = Job()
     private val uiScope = CoroutineScope(Dispatchers.Main + viewModelJob)
 
-   fun insertTemp(){
+    // insert all
+   fun insertAll(){
        uiScope.launch {
            val inputTemp: String = _inputTemp.value!!
-           val cycle = Cycle(0, inputTemp)
+           val inputDate: Int = _inputDate.value!!
+           val inputMonth: Int = _inputMonth.value!!
+           val inputYear: Int = _inputYear.value!!
+
+           val cycle = Cycle(0, inputDate, inputMonth, inputYear, inputTemp)
            insert(cycle)
        }
    }
