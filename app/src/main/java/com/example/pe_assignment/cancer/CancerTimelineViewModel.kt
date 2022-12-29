@@ -36,6 +36,7 @@ class CancerTimelineViewModel (private val repository: TimelineRecordRepository)
     fun setDate(date: String) {
         _date.value = date
     }
+
     fun setTitle(title: String) {
         _title.value = title
     }
@@ -87,7 +88,7 @@ class CancerTimelineViewModel (private val repository: TimelineRecordRepository)
                     _navigateto.value = true  // already inserted
                     _year.value = null
                     _month.value = null
-                    _date.value = null
+//                    _date.value = null
                     _title.value = null
                     _description.value = null
                     _file.value = null
