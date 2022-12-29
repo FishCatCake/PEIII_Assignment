@@ -17,13 +17,13 @@ data class Cycle(
     val id: Int = 0,
 
     @ColumnInfo(name = "cycle_year")
-    val year: Int,
+    val year: String,
 
     @ColumnInfo(name = "cycle_month")
-    val month: Int,
+    val month: String,
 
     @ColumnInfo(name = "cycle_date")
-    val date: Int,
+    val date: String,
 
     @ColumnInfo(name = "temperature")
     val temperature: String,

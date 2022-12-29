@@ -21,19 +21,19 @@ class PeriodViewModel(private val repository:PeriodRepository)
     }
 
     // calendar data
-    private val _inputDate = MutableLiveData<Int>()
-    private val _inputMonth = MutableLiveData<Int>()
-    private val _inputYear = MutableLiveData<Int>()
+    private val _inputDate = MutableLiveData<String>()
+    private val _inputMonth = MutableLiveData<String>()
+    private val _inputYear = MutableLiveData<String>()
     // date
-    fun setDate(inputDate: Int){
+    fun setDate(inputDate: String){
         _inputDate.value = inputDate
     }
     // month
-    fun setMonth(inputMonth: Int){
+    fun setMonth(inputMonth: String){
         _inputMonth.value = inputMonth
     }
     // year
-    fun setYear(inputYear: Int){
+    fun setYear(inputYear: String){
         _inputYear.value = inputYear
     }
 
@@ -57,11 +57,11 @@ class PeriodViewModel(private val repository:PeriodRepository)
    fun insertAll(){
        uiScope.launch {
            val inputTemp: String = _inputTemp.value!!
-           val inputDate: Int = _inputDate.value!!
-           val inputMonth: Int = _inputMonth.value!!
-           val inputYear: Int = _inputYear.value!!
+           val inputDate: String = _inputDate.value!!
+           val inputMonth: String = _inputMonth.value!!
+           val inputYear: String = _inputYear.value!!
 
-           val cycle = Cycle(0, inputDate, inputMonth, inputYear, inputTemp)
+           val cycle = Cycle(0, inputYear, inputMonth, inputDate, inputTemp)
            insert(cycle)
        }
    }

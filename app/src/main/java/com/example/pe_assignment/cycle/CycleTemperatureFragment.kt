@@ -57,7 +57,7 @@ class CycleTemperatureFragment : Fragment() {
     fun goToNextScreen() {
         val temp: String = binding?.cycleTemp?.text.toString()
         sharedViewModel.setTemp(temp)
-        // sharedViewModel.insertTemp()
+        sharedViewModel.insertAll()
         findNavController().navigate(R.id.cycleFragment)
     }
 

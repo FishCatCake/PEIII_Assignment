@@ -1,6 +1,7 @@
 package com.example.pe_assignment.cycle
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,6 +11,7 @@ import android.widget.ImageButton
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.fragment.app.setFragmentResult
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import com.example.pe_assignment.BaseApplication
@@ -18,7 +20,7 @@ import com.example.pe_assignment.login.RegisterViewModelFactory
 import kotlinx.android.synthetic.main.activity_calendar.*
 import com.example.pe_assignment.databinding.FragmentCycleBinding
 import kotlinx.android.synthetic.main.activity_calendar.view.*
-import java.util.*
+import androidx.lifecycle.Observer
 
 
 class CycleFragment : Fragment() {
@@ -37,6 +39,13 @@ class CycleFragment : Fragment() {
 
         }
 
+        sharedViewModel.navigateto.observe(viewLifecycleOwner, Observer {
+                hasFinished ->  // if it is true
+            if(hasFinished == true) {
+                // gotoNext...
+                sharedViewModel.doneNavigating()
+            }
+        })
         binding = fragmentBinding
         return fragmentBinding.root
 
@@ -54,9 +63,15 @@ class CycleFragment : Fragment() {
 
         // calendar
         var calendarView : CalendarView = view.findViewById<CalendarView>(R.id.calendar_cycle)
-        calendarView.setOnDateChangeListener { view, date, month, year
-            sharedViewModel.setDate(inputDate = )
-
+        calendarView.setOnDateChangeListener { view, year, month, dateOfMonth ->
+            val msg = "Selected Date: " + dateOfMonth + "/ " + (month + 1) + "/ " + year
+            sharedViewModel.setYear(year.toString())
+            Log.i("year",year.toString())
+            sharedViewModel.setMonth((month + 1).toString())
+            Log.i("year",(month + 1).toString())
+            sharedViewModel.setDate(dateOfMonth.toString())
+            Log.i("year",dateOfMonth.toString())
+            //Toast.makeText(this, msg, Toast.LENGTH_LONG).show()
         }
         btnSendPeriod.setOnClickListener {
             view.findNavController().navigate(R.id.selectionPeriodFragment)

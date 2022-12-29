@@ -15,8 +15,8 @@ class PeriodRepository (private val dao:CycleDao) {
         return tempList
     }
     // get date list
-    var dateList:Flow<List<Int>> = dao.getDates()
-    fun getDates(): Flow<List<Int>> {
+    var dateList:Flow<List<String>> = dao.getDates()
+    fun getDates(): Flow<List<String>> {
         return dateList
     }
 }
