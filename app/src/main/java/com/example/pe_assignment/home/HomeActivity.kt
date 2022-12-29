@@ -1,12 +1,10 @@
 package com.example.pe_assignment.home
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.widget.TextView
-import androidx.navigation.fragment.navArgs
+import android.widget.Button
+import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.navArgs
-
 import com.example.pe_assignment.R
 
 class HomeActivity : AppCompatActivity() {
@@ -17,6 +15,12 @@ class HomeActivity : AppCompatActivity() {
 
         val name = args.name
         Log.i("recieve1",name)
+
+//        val bundle = Bundle()
+//        bundle.putString("name","test")
+//        val fragment = HomeFragment()
+//        fragment.arguments = bundle
+
     }
 
 }
