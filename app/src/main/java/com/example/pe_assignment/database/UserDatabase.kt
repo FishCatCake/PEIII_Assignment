@@ -12,7 +12,7 @@ import com.example.pe_assignment.database.entity.User
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
-@Database(entities = arrayOf(User::class, Cycle::class), version = 1, exportSchema = false)
+@Database(entities = [User::class, Cycle::class], version = 1, exportSchema = false)
 abstract class UserDatabase : RoomDatabase() {
 
     abstract fun userDao(): UserDao
@@ -27,6 +27,7 @@ abstract class UserDatabase : RoomDatabase() {
             INSTANCE?.let { database ->
                 scope.launch {
                     var userDao = database.userDao()
+                    var cycleDao = database.cycleDao()
 
                     // Delete all content here.
                     userDao.deleteAll()
@@ -34,6 +35,9 @@ abstract class UserDatabase : RoomDatabase() {
 //                    // Add sample words.
                     var user = User(0,"Sample","Sample","Sample","Sample")
                     userDao.insert(user)
+                    // sample temp
+                    var cycle = Cycle(0, "37")
+                    cycleDao.insert(cycle)
                 }
             }
         }
@@ -56,6 +60,7 @@ abstract class UserDatabase : RoomDatabase() {
                     UserDatabase::class.java,
                     "u_database"
                 )
+                    .fallbackToDestructiveMigration()
                     .addCallback(UserDatabaseCallback(scope))
                     .build()
                 INSTANCE = instance

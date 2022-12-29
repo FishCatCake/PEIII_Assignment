@@ -1,4 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
+<layout>
+   <data>
+       <variable
+           name="periodViewModel"
+           type="com.example.pe_assignment.cycle.PeriodViewModel" />
+       <variable
+           name="cycleTemperatureFragment"
+           type="com.example.pe_assignment.cycle.CycleTemperatureFragment" />
+   </data>
+
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -6,6 +16,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/white"
     tools:context=".cycle.CycleTemperatureFragment">
+
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -58,6 +69,7 @@
     <Button
         android:id="@+id/btn_done_temp"
         android:layout_marginTop="600dp"
+        android:onClick="@{()->cycleTemperatureFragment.goToNextScreen()}"
         android:layout_width="@dimen/btn_grey_width"
         android:layout_height="@dimen/btn_grey_height"
         android:layout_gravity="center_horizontal"
@@ -70,3 +82,4 @@
 
 
 </FrameLayout>
+</layout>

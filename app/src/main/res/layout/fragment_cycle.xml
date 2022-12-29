@@ -4,12 +4,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-        <variable
-            name="CycleViewModel"
-            type="com.example.pe_assignment.cycle.CycleViewModel" />
-        <variable
-            name="cycleFragment"
-            type="com.example.pe_assignment.cycle.CycleFragment" />
+<!--        <variable-->
+<!--            name="CycleViewModel"-->
+<!--            type="com.example.pe_assignment.cycle.CycleViewModel" />-->
+<!--        <variable-->
+<!--            name="cycleFragment"-->
+<!--            type="com.example.pe_assignment.cycle.CycleFragment" />-->
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -19,20 +19,20 @@
         android:background="@color/white"
         tools:context="cycle.CycleFragment">
 
-        <!--text view for displaying the selected date-->
-        <TextView
-            android:id="@+id/idTVDate"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:gravity="center"
-            android:padding="8dp"
-            android:text="Current Date"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            tools:ignore="MissingConstraints" />
+<!--        &lt;!&ndash;text view for displaying the selected date&ndash;&gt;-->
+<!--        <TextView-->
+<!--            android:id="@+id/idTVDate"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_margin="8dp"-->
+<!--            android:gravity="center"-->
+<!--            android:padding="8dp"-->
+<!--            android:text="Current Date"-->
+<!--            android:textAlignment="center"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="20sp"-->
+<!--            android:textStyle="bold"-->
+<!--            tools:ignore="MissingConstraints" />-->
 
 
         <ImageButton

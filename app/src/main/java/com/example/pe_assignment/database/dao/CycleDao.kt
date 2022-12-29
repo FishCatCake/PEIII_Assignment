@@ -13,8 +13,11 @@ interface CycleDao {
     @Insert
     suspend fun insert(cycle: Cycle)
 
-    @Query("SELECT * FROM cycle_table ORDER BY id")
+    @Query("SELECT temperature FROM cycle_table ORDER BY id")
     fun getCycles(): Flow<List<Cycle>>
+
+//    @Query("SELECT temperature FROM cycle_table ORDER BY id")
+//    fun getTemp(): Flow<List<>>
 
 //    // Login
 //    @Query("SELECT * FROM cycle_table WHERE id = :userName")

@@ -22,19 +22,21 @@ import java.util.*
 
 
 class CycleFragment : Fragment() {
-    private var binding: FragmentCycleBinding? = null
-    private val sharedViewModel: CycleViewModel by activityViewModels()
+//    private var binding: FragmentCycleBinding? = null
+//    private val sharedViewModel: CycleViewModel by activityViewModels()
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val fragmentBinding = FragmentCycleBinding.inflate(
-            inflater, container, false
-        )
-        val sharedViewModel: CycleViewModel by activityViewModels() {
-            CycleViewModelFactory((activity?.application as BaseApplication).repositoryCycle)
-        }
+        return inflater.inflate(R.layout.fragment_cycle, container, false)
+
+//        val fragmentBinding = FragmentCycleBinding.inflate(
+//            inflater, container, false
+//        )
+//        val sharedViewModel: CycleViewModel by activityViewModels() {
+//            CycleViewModelFactory((activity?.application as BaseApplication).repositoryCycle)
+//        }
 
 //        sharedViewModel.navigateto.observe(viewLifecycleOwner, Observer {
 //                hasFinished ->  // if it is true
@@ -44,8 +46,8 @@ class CycleFragment : Fragment() {
 //            }
 //        })
 
-        binding = fragmentBinding
-        return fragmentBinding.root
+//        binding = fragmentBinding
+//        return fragmentBinding.root
         //return inflater.inflate(R.layout.fragment_cycle, container, false)
     }
 
@@ -60,7 +62,7 @@ class CycleFragment : Fragment() {
         val btnBack = view.findViewById<ImageButton>(R.id.btn_back_cycle)
 
         btnSendPeriod.setOnClickListener {
-            view.findNavController().navigate(R.id.cycleDetailFragment)
+            view.findNavController().navigate(R.id.selectionPeriodFragment)
         }
 
         btnSendOtherData.setOnClickListener{
@@ -78,45 +80,45 @@ class CycleFragment : Fragment() {
         }
 
 
-        // calendar
-        var calendarView = view.findViewById<CalendarView>(R.id.calendar_cycle)
-        var dateTV = view.findViewById<TextView>(R.id.idTVDate)
-
-        // on below line we are adding set on
-        // date change listener for calendar view.
-        calendarView.setOnDateChangeListener{ view, year, month, dayOfMonth ->
-            // Create calender object with which will have system date time.
-            val calender: Calendar = Calendar.getInstance()
-            // Set attributes in calender object as per selected date.
-            calender.set(year, month, dayOfMonth)
-            val Date = (dayOfMonth.toString() + "-"
-                            + (month + 1) + "-" + year)
-                    // set this date in TextView for Display
-                   dateTV.setText(Date)
-                }
+//        // calendar
+//        var calendarView = view.findViewById<CalendarView>(R.id.calendar_cycle)
+//        var dateTV = view.findViewById<TextView>(R.id.idTVDate)
+//
+//        // on below line we are adding set on
+//        // date change listener for calendar view.
+//        calendarView.setOnDateChangeListener{ view, year, month, dayOfMonth ->
+//            // Create calender object with which will have system date time.
+//            val calender: Calendar = Calendar.getInstance()
+//            // Set attributes in calender object as per selected date.
+//            calender.set(year, month, dayOfMonth)
+//            val Date = (dayOfMonth.toString() + "-"
+//                            + (month + 1) + "-" + year)
+//                    // set this date in TextView for Display
+//                   dateTV.setText(Date)
+//                }
         // binding
-        binding?.apply {
-            lifecycleOwner = viewLifecycleOwner
-            cycleViewModel = sharedViewModel
-            cycleFragment = this@CycleFragment
-        }
+//        binding?.apply {
+//            lifecycleOwner = viewLifecycleOwner
+////            cycleViewModel = sharedViewModel
+//            cycleFragment = this@CycleFragment
+//        }
 
     }
 
 
-    fun goToNextScreen() {
+//    fun goToNextScreen() {
+//
+////        val account: String = binding?.userAccount?.text.toString()
+////        val password: String = binding?.userPassword?.text.toString()
+////        val passwordre: String = binding?.userPasswordre?.text.toString()
+////        sharedViewModel.setAccount(account)
+////        sharedViewModel.setPassword(password)
+////        sharedViewModel.setPasswordRe(passwordre)
+//        //findNavController().navigate(R.id.action_register1Fragment_to_register2Fragment)
+//    }
 
-//        val account: String = binding?.userAccount?.text.toString()
-//        val password: String = binding?.userPassword?.text.toString()
-//        val passwordre: String = binding?.userPasswordre?.text.toString()
-//        sharedViewModel.setAccount(account)
-//        sharedViewModel.setPassword(password)
-//        sharedViewModel.setPasswordRe(passwordre)
-        //findNavController().navigate(R.id.action_register1Fragment_to_register2Fragment)
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        binding = null
-    }
+//    override fun onDestroyView() {
+//        super.onDestroyView()
+//        binding = null
+//    }
 }

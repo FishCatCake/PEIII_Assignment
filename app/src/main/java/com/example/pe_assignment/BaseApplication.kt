@@ -2,7 +2,7 @@ package com.example.pe_assignment
 
 import android.app.Application
 import com.example.pe_assignment.database.UserDatabase
-import com.example.pe_assignment.database.repository.CycleRepository
+import com.example.pe_assignment.database.repository.PeriodRepository
 import com.example.pe_assignment.database.repository.RegisterRepository
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.SupervisorJob
@@ -12,5 +12,6 @@ class BaseApplication : Application() {
     val database: UserDatabase by lazy { UserDatabase.getInstance(this, applicationScope) }
     val repository: RegisterRepository by lazy { RegisterRepository(database.userDao()) }
     // cycle
-    val repositoryCycle: CycleRepository by lazy { CycleRepository(database.cycleDao()) }
+    // val repositoryCycle: CycleRepository by lazy { CycleRepository(database.cycleDao()) }
+    val repoPeriod: PeriodRepository by lazy {PeriodRepository(database.cycleDao())}
 }

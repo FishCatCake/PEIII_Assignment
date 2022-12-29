@@ -4,8 +4,7 @@ import com.example.pe_assignment.database.dao.CycleDao
 import com.example.pe_assignment.database.entity.Cycle
 import kotlinx.coroutines.flow.Flow
 
-class CycleRepository (private val dao:CycleDao){
-    // Register / Sign Up
+class PeriodRepository (private val dao:CycleDao) {
     suspend fun insert(cycle: Cycle) {
         dao.insert(cycle)
     }
