@@ -8,10 +8,11 @@ import android.view.ViewGroup
 import android.widget.ImageButton
 import androidx.cardview.widget.CardView
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.navArgs
 import com.example.pe_assignment.R
 
 class HomeFragment : Fragment() {
-
+    val args: HomeActivityArgs by navArgs()
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -52,6 +53,7 @@ class HomeFragment : Fragment() {
         btnProfile.setOnClickListener{
             view.findNavController().navigate(R.id.menstruationActivity)
         }
+
    }
 
 }

@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
+import androidx.core.os.bundleOf
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
@@ -18,6 +19,8 @@ import androidx.navigation.fragment.findNavController
 import com.example.pe_assignment.BaseApplication
 import com.example.pe_assignment.R
 import com.example.pe_assignment.databinding.FragmentLoginBinding
+import kotlinx.android.synthetic.main.activity_login.*
+import kotlinx.android.synthetic.main.fragment_login.*
 
 class LoginFragment : Fragment() {
     override fun onCreateView(
@@ -87,7 +90,10 @@ class LoginFragment : Fragment() {
     }
 
     private fun navigateUserDetails() {
-        findNavController().navigate(R.id.action_loginFragment_to_homeActivity)
+        var name = logincontainer.name.text.toString()
+        val action = LoginFragmentDirections.actionLoginFragmentToHomeActivity(name)
+        logincontainer.findNavController().navigate(action)
+        Log.i("before",name)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

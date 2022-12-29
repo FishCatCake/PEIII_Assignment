@@ -195,9 +195,14 @@
     <string name="help">Help</string>
     <string name="track_log">Track log</string>
     <string name="my_cycle">My Cycle</string>
+
     <string name="phase_1">Phase 1</string>
     <string name="phase_2">Phase 2</string>
     <string name="phase_3">Phase 3</string>
     <string name="phase_4">Phase 4</string>
+
+    <string name="_2_3">2/3</string>
+    <string name="_3_3">3/3</string>
+
 
 </resources>
