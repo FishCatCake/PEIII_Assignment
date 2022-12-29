@@ -59,9 +59,9 @@ class DoseCalendarFragment3 : Fragment() {
             sharedViewModel.setDose3Year(year.toString())
             Log.i("year",year.toString())
             sharedViewModel.setDose3Month((month + 1).toString())
-            Log.i("year",(month + 1).toString())
+            Log.i("month",(month + 1).toString())
             sharedViewModel.setDose3Date(dateOfMonth.toString())
-            Log.i("year",dateOfMonth.toString())
+            Log.i("day",dateOfMonth.toString())
             //Toast.makeText(this, msg, Toast.LENGTH_LONG).show()
         }
 
@@ -81,6 +81,7 @@ class DoseCalendarFragment3 : Fragment() {
     }
 
     fun goToNextScreen() {
+        sharedViewModel.HPV()
         findNavController().navigate(R.id.action_doseCalendarFragment3_to_hpvReminderFragment)
     }
 }

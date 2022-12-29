@@ -60,16 +60,12 @@ class DoseCalendarFragment : Fragment() {
             sharedViewModel.setDose1Year(year.toString())
             Log.i("year",year.toString())
             sharedViewModel.setDose1Month((month + 1).toString())
-            Log.i("year",(month + 1).toString())
+            Log.i("month",(month + 1).toString())
             sharedViewModel.setDose1Date(dateOfMonth.toString())
-            Log.i("year",dateOfMonth.toString())
+            Log.i("day",dateOfMonth.toString())
             //Toast.makeText(this, msg, Toast.LENGTH_LONG).show()
         }
 
-//        val btnSend = view.findViewById<Button>(R.id.next_btn1)
-//        btnSend.setOnClickListener {
-//            view.findNavController().navigate(R.id.doseCalendarFragment2)
-//        }
         var btnSend2 = view.findViewById<ImageButton>(R.id.skip)
         btnSend2.setOnClickListener {
             view.findNavController().navigate(R.id.doseCalendarFragment2)
