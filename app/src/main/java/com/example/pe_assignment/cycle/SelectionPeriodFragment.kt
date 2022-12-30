@@ -45,6 +45,12 @@ class SelectionPeriodFragment : Fragment() {
     
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding?.apply {
+            lifecycleOwner = viewLifecycleOwner
+            periodViewModel = sharedViewModel
+            periodSelectionFragment = this@SelectionPeriodFragment
+        }
+
         val btnDone = view.findViewById<Button>(R.id.btn_done_period)
 
         btnDone.setOnClickListener{
