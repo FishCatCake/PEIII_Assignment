@@ -35,6 +35,26 @@ class PeriodViewModel(private val repository:PeriodRepository)
         _inputYear.value = inputYear.toFloat()
     }
 
+    // period
+    private val _inputPeriod = MutableLiveData<String>("")
+    val period: MutableLiveData<String> = _inputPeriod
+    fun setPeriod(inputPeriod: String){
+        _inputPeriod.value = inputPeriod
+    }
+
+    // level
+    private val _inputLevel = MutableLiveData<String>("")
+    val level: MutableLiveData<String> = _inputLevel
+    fun setLevel(inputLevel: String){
+        _inputLevel.value = inputLevel
+    }
+    // symptom
+    private val _inputSym = MutableLiveData<String>("")
+    val sym: MutableLiveData<String> = _inputSym
+    fun setSym(inputSym: String){
+        _inputPeriod.value = inputSym
+    }
+
     //get all
     fun getAll(): Flow<List<Cycle>> = repository.getAll()
     // get temp list
@@ -65,8 +85,10 @@ class PeriodViewModel(private val repository:PeriodRepository)
            val inputDate: Float = _inputDate.value!!
            val inputMonth: Float = _inputMonth.value!!
            val inputYear: Float = _inputYear.value!!
-
-           val cycle = Cycle(0, inputYear, inputMonth, inputDate, inputTemp)
+           val inputPeriod: String = _inputPeriod.value!!
+           val inputLevel: String = _inputLevel.value!!
+           val inputSym: String = _inputSym.value!!
+           val cycle = Cycle(0, inputYear, inputMonth, inputDate, inputTemp, inputPeriod,inputLevel, inputSym)
            insert(cycle)
        }
    }

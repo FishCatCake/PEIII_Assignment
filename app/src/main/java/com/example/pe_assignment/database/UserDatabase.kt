@@ -36,7 +36,7 @@ abstract class UserDatabase : RoomDatabase() {
                     var user = User(0,"Sample","Sample","Sample","Sample")
                     userDao.insert(user)
                     // sample temp
-                    var cycle = Cycle(0, 2022f,12f,30f,37f)
+                    var cycle = Cycle(0, 2022f,12f,30f,37f, "Had Flow", "Heavy", "Acne")
                     cycleDao.insert(cycle)
                 }
             }

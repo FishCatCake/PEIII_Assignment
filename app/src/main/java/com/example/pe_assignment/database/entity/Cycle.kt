@@ -16,6 +16,8 @@ data class Cycle(
     @PrimaryKey(autoGenerate = true)
     val id: Int = 0,
 
+
+
     @ColumnInfo(name = "cycle_year")
     val year: Float,
 
@@ -27,6 +29,15 @@ data class Cycle(
 
     @ColumnInfo(name = "temperature")
     val temperature: Float,
+
+    @ColumnInfo(name = "period")
+    val period: String,
+
+    @ColumnInfo(name = "level")
+    val level: String,
+
+    @ColumnInfo(name = "symptom")
+    val symptom: String,
 
 //    @ColumnInfo(name = "symptoms_1")
 //    val symptoms1: String?,
