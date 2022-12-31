@@ -1,9 +1,9 @@
-package com.example.pe_assignment.hpv
+package com.example.pe_assignment.database.dao
 
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
-import com.example.pe_assignment.User
+import com.example.pe_assignment.database.entity.HPV
 import kotlinx.coroutines.flow.Flow
 
 @Dao

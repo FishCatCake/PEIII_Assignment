@@ -1,8 +1,6 @@
-package com.example.pe_assignment.hpv
+package com.example.pe_assignment.database.entity
 
 import androidx.room.*
-import com.example.pe_assignment.User
-import java.util.Date
 
 @Entity(tableName = "hpv_table")
 data class HPV(

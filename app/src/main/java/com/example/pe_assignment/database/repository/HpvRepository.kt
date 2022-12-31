@@ -1,5 +1,7 @@
-package com.example.pe_assignment.hpv
+package com.example.pe_assignment.database.repository
 
+import com.example.pe_assignment.database.dao.HPVDao
+import com.example.pe_assignment.database.entity.HPV
 import kotlinx.coroutines.flow.Flow
 
 class HpvRepository (private val dao: HPVDao){
