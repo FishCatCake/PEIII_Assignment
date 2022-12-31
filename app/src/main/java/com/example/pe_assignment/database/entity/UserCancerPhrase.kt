@@ -1,4 +1,4 @@
-package com.example.pe_assignment
+package com.example.pe_assignment.database.entity
 
 import androidx.room.*
 import com.example.pe_assignment.User

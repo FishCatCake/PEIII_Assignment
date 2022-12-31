@@ -1,8 +1,10 @@
-package com.example.pe_assignment
+package com.example.pe_assignment.database.repository
 
+import com.example.pe_assignment.database.entity.TimelineRecord
+import com.example.pe_assignment.database.dao.TimelineRecordDao
 import kotlinx.coroutines.flow.Flow
 
-class TimelineRecordRepository (private val dao: TimelineRecordDAO){
+class TimelineRecordRepository (private val dao: TimelineRecordDao){
     suspend fun insert(Timeline: TimelineRecord) {
         dao.insert(Timeline)
     }

@@ -1,12 +1,12 @@
-package com.example.pe_assignment
+package com.example.pe_assignment.database.dao
 
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
-import kotlinx.coroutines.flow.Flow
+import com.example.pe_assignment.database.entity.UserCancerPhrase
 
 @Dao
-interface UserCancerPhraseDAO {
+interface UserCancerPhraseDao {
     // register new cancer user
     @Insert
     suspend fun insert(cuser: UserCancerPhrase)

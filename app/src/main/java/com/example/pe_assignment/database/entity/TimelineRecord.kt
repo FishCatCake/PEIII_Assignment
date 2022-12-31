@@ -1,12 +1,12 @@
-package com.example.pe_assignment
+package com.example.pe_assignment.database.entity
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.Index
 import androidx.room.PrimaryKey
 
-@Entity(tableName = "cancer_record")
-data class CancerRecord(
+@Entity(tableName = "cancer_timeline")
+data class TimelineRecord(
 
     @PrimaryKey(autoGenerate = true)
     val id: Int = 0,
@@ -20,14 +20,14 @@ data class CancerRecord(
     @ColumnInfo(name = "dateofMonth")
     val dateofMonth: String,
 
-    @ColumnInfo(name = "Time")
-    val Time: String,
+    @ColumnInfo(name = "Title")
+    val Title: String,
 
-    @ColumnInfo(name = "Symptom")
-    val Symptom: String,
+    @ColumnInfo(name = "Description")
+    val Description: String,
 
-    @ColumnInfo(name = "SymptomAddition")
-    val SymptomAddition: String,
+    @ColumnInfo(name = "File")
+    val File: String,
 
     @ColumnInfo(name = "uid")
     val uid: String

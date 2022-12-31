@@ -1,8 +1,10 @@
-package com.example.pe_assignment
+package com.example.pe_assignment.database.repository
 
+import com.example.pe_assignment.database.entity.CancerRecord
+import com.example.pe_assignment.database.dao.CancerRecordDao
 import kotlinx.coroutines.flow.Flow
 
-class CancerRecordRepository (private val dao: CancerRecordDAO){
+class CancerRecordRepository (private val dao: CancerRecordDao){
     suspend fun insert(record: CancerRecord) {
         dao.insert(record)
     }
