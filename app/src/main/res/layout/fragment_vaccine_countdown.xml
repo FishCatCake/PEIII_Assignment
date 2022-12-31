@@ -1,12 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context=".hpv.VaccineCountdownFragment">
 
+    <data>
+        <variable
+            name="vaccineViewModel"
+            type="com.example.pe_assignment.hpv.HpvViewModel" />
+        <variable
+            name="vaccineCountdownFragment"
+            type="com.example.pe_assignment.hpv.VaccineCountdownFragment" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
     <include
         layout="@layout/hpv_content_header"/>
     <LinearLayout
@@ -101,16 +111,18 @@
                     android:src="@drawable/vaccine_countdown_card"/>
 
                 <TextView
+                    android:id="@+id/vaccine_hundred"
                     android:layout_width="50dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="120dp"
-                    android:layout_marginStart="45dp"
+                    android:layout_marginStart="35dp"
                     android:text="@string/_0"
                     android:textStyle="bold"
                     android:textColor="@color/countdown_text"
                     android:textSize="50sp" />
 
                 <TextView
+                    android:id="@+id/vaccine_ten"
                     android:layout_width="50dp"
                     android:layout_height="wrap_content"
                     android:layout_toEndOf="@id/countdown_1"
@@ -122,6 +134,7 @@
                     android:textSize="50sp" />
 
                 <TextView
+                    android:id="@+id/vaccine_num"
                     android:layout_width="50dp"
                     android:layout_height="wrap_content"
                     android:layout_toEndOf="@id/countdown_2"
@@ -150,6 +163,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/vaccine_reminder"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:text="@string/reminder"
@@ -161,5 +175,5 @@
 
 
     </LinearLayout>
-
-</FrameLayout>
+    </FrameLayout>
+</layout>
