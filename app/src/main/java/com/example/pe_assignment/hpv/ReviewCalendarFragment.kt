@@ -18,8 +18,13 @@ import com.example.pe_assignment.BaseApplication
 import com.example.pe_assignment.databinding.FragmentReviewCalendarBinding
 import androidx.lifecycle.Observer
 import androidx.navigation.findNavController
+import com.example.pe_assignment.cycle.PeriodViewModel
+import com.example.pe_assignment.databinding.FragmentCycleDetailBinding
 
 class ReviewCalendarFragment : Fragment() {
+    private var binding: FragmentReviewCalendarBinding? = null
+    private val sharedViewModel: HpvViewModel by activityViewModels()
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -29,7 +34,7 @@ class ReviewCalendarFragment : Fragment() {
             inflater, container, false
         )
         val sharedViewModel: HpvViewModel by activityViewModels(){
-
+            HpvViewModelFactory((activity?.application as BaseApplication).hpvrepository)
         }
         sharedViewModel.navigateto.observe(viewLifecycleOwner, Observer {
                 hasFinished ->  // if it is true
