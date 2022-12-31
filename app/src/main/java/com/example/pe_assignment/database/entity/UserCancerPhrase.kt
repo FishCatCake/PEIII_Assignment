@@ -1,7 +1,6 @@
 package com.example.pe_assignment.database.entity
 
 import androidx.room.*
-import com.example.pe_assignment.User
 
 @Entity(tableName = "user_cancer_phrase_table")
 data class UserCancerPhrase(

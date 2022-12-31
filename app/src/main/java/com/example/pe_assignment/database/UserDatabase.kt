@@ -10,7 +10,7 @@ import com.example.pe_assignment.database.entity.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
-@Database(entities = [User::class, Cycle::class, UserCancerPhrase::class,CancerRecord::class,TimelineRecord::class], version = 1, exportSchema = false)
+@Database(entities = [User::class, Cycle::class, UserCancerPhrase::class,CancerRecord::class,TimelineRecord::class, HPV::class], version = 1, exportSchema = false)
 abstract class UserDatabase : RoomDatabase() {
 
     abstract fun userDao(): UserDao

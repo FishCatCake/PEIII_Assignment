@@ -10,23 +10,23 @@ import androidx.navigation.Navigation
 import androidx.navigation.ui.NavigationUI
 
 class MenstruationActivity : AppCompatActivity() {
-//    //private lateinit var navController: NavController
-//
-//    private val cycleViewModel: CycleViewModel by lazy{
+    //private lateinit var navController: NavController
+
+//    private val periodViewModel: PeriodViewModel by lazy{
 //        this?.run{
-//            ViewModelProvider(this, CycleViewModelFactory((this?.application as CycleApplication)
+//            ViewModelProvider(this, PeriodViewModelFactory((this?.application as CycleApplication)
 //                .dataBase.CycleDAO())).get(CycleViewModel::class.java)
 //        }?:throw Exception("Invalid")
 //    }
-//
-//    override fun onCreate(savedInstanceState: Bundle?) {
-//        super.onCreate(savedInstanceState)
-//        setContentView(R.layout.activity_menstruation)
-//
-//       // navController = Navigation.findNavController(this, R.id.cycle_container)
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_menstruation)
+
+       // navController = Navigation.findNavController(this, R.id.cycle_container)
+    }
+
+//    override fun onSupportNavigateUp(): Boolean {
+//        return NavigationUI.navigateUp(navController, null)
 //    }
-//
-////    override fun onSupportNavigateUp(): Boolean {
-////        return NavigationUI.navigateUp(navController, null)
-////    }
 }

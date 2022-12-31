@@ -1,12 +1,12 @@
 package com.example.pe_assignment.hpv
 
-
 import android.provider.SyncStateContract.Helpers.insert
 import android.util.Log
 import androidx.databinding.Bindable
 import androidx.databinding.Observable
 import androidx.lifecycle.*
-import com.example.pe_assignment.User
+import com.example.pe_assignment.database.entity.HPV
+import com.example.pe_assignment.database.repository.HpvRepository
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
