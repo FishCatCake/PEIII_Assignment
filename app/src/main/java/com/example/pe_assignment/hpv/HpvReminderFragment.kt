@@ -32,7 +32,7 @@ class HpvReminderFragment : Fragment() {
         }
         btnSend2 = view.findViewById<ImageButton>(R.id.back)
         btnSend2.setOnClickListener {
-            view.findNavController().navigate(R.id.doseCalendarFragment)
+            view.findNavController().navigate(R.id.doseCalendarFragment3)
         }
 
     }

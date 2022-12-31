@@ -1,38 +1,26 @@
 package com.example.pe_assignment.article
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageButton
+import androidx.cardview.widget.CardView
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.pe_assignment.*
+import com.example.pe_assignment.login.LoginFragmentDirections
+import kotlinx.android.synthetic.main.activity_login.*
+import kotlinx.android.synthetic.main.fragment_login.*
 
 
 class ArticleHomeFragment : Fragment() {
-    //Category
-    private lateinit var catadapter: CategoryAdapter
-    private lateinit var catrecyclerView: RecyclerView
-    private lateinit var catArrayList: ArrayList<CategoryModel>
-    private lateinit var category : Array<String>
-    //Hot articles
-    private lateinit var hotadapter: HotAdapter
-    private lateinit var hotrecyclerView: RecyclerView
-    private lateinit var hotArrayList: ArrayList<HotModel>
-    private lateinit var hotarticle : Array<Int>
-    //Recent articles
-    private lateinit var recentadapter: HotAdapter
-    private lateinit var recentrecyclerView: RecyclerView
-    private lateinit var recentArrayList: ArrayList<HotModel>
-    private lateinit var recentarticle : Array<Int>
-    //Handpick articles
-    private lateinit var handadapter: HotAdapter
-    private lateinit var handrecyclerView: RecyclerView
-    private lateinit var handArrayList: ArrayList<HotModel>
-    private lateinit var handarticle : Array<Int>
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -43,118 +31,75 @@ class ArticleHomeFragment : Fragment() {
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        category()
-        hotarticle()
-        recentarticle()
-        handarticle()
-        //Category
-        val catlayoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL,false)
-        catrecyclerView = view.findViewById(R.id.category_recyclerview)
-        catrecyclerView.layoutManager = catlayoutManager
-        catrecyclerView.setHasFixedSize(true)
-        catadapter = CategoryAdapter(catArrayList)
-        catrecyclerView.adapter = catadapter
 
-        //Hot article
-        val hotlayoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL,false)
-        hotrecyclerView = view.findViewById(R.id.hot_recyclerview)
-        hotrecyclerView.layoutManager = hotlayoutManager
-        hotrecyclerView.setHasFixedSize(true)
-        hotadapter = HotAdapter(hotArrayList)
-        hotrecyclerView.adapter = hotadapter
-        //Recent article
-        val recentlayoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL,false)
-        recentrecyclerView = view.findViewById(R.id.recent_recyclerview)
-        recentrecyclerView.layoutManager = recentlayoutManager
-        recentrecyclerView.setHasFixedSize(true)
-        recentadapter = HotAdapter(recentArrayList)
-        recentrecyclerView.adapter = recentadapter
-        //Handpick article
-        val handlayoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL,false)
-        handrecyclerView = view.findViewById(R.id.handpick_recyclerview)
-        handrecyclerView.layoutManager = handlayoutManager
-        handrecyclerView.setHasFixedSize(true)
-        handadapter = HotAdapter(handArrayList)
-        handrecyclerView.adapter = handadapter
-
-
-
-        var btnSend = view.findViewById<ImageButton>(R.id.read_btn1)
-        btnSend.setOnClickListener {
-            view.findNavController().navigate(R.id.articleFragment)
-        }
-        btnSend = view.findViewById(R.id.read_btn2)
-        btnSend.setOnClickListener {
-            view.findNavController().navigate(R.id.articleFragment)
-        }
-        btnSend = view.findViewById(R.id.read_btn3)
-        btnSend.setOnClickListener {
-            view.findNavController().navigate(R.id.articleFragment)
+        var hot = view.findViewById<ImageButton>(R.id.hot1)
+        hot.setOnClickListener {
+            val bundle = Bundle()
+            bundle.putString("url","https://lifecoachingandtherapy.com/2020/06/08/7-solo-sex-tips-for-all-adults-on-national-sex-day/")
+            view.findNavController().navigate(R.id.articleFragment,bundle)
         }
 
-        btnSend = view.findViewById(R.id.back_btn)
+        hot = view.findViewById(R.id.hot2)
+        hot.setOnClickListener {
+            val bundle = Bundle()
+            bundle.putString("url","https://www.realsimple.com/beauty-fashion/clothing/shopping-guide")
+            view.findNavController().navigate(R.id.articleFragment,bundle)
+        }
+
+        hot = view.findViewById(R.id.hot3)
+        hot.setOnClickListener {
+            val bundle = Bundle()
+            bundle.putString("url","https://www.shopify.com/enterprise/ecommerce-fashion-industry")
+            view.findNavController().navigate(R.id.articleFragment,bundle)
+        }
+
+        var recent = view.findViewById<ImageButton>(R.id.recent1)
+        recent.setOnClickListener {
+            val bundle = Bundle()
+            bundle.putString("url","https://www.buzzfeed.com/terripous/pieces-of-advice-all-women-need-to-hear")
+            view.findNavController().navigate(R.id.articleFragment,bundle)
+        }
+
+        recent = view.findViewById(R.id.recent2)
+        recent.setOnClickListener {
+            val bundle = Bundle()
+            bundle.putString("url","https://abcflora.com/blogs/flower-blog/best-flowers-to-give-a-girl")
+            view.findNavController().navigate(R.id.articleFragment,bundle)
+        }
+
+        recent = view.findViewById(R.id.recent3)
+        recent.setOnClickListener {
+            val bundle = Bundle()
+            bundle.putString("url","https://iamafoodblog.com/")
+            view.findNavController().navigate(R.id.articleFragment,bundle)
+        }
+
+        var handpick = view.findViewById<ImageButton>(R.id.handpick1)
+        handpick.setOnClickListener {
+            val bundle = Bundle()
+            bundle.putString("url","https://www.nytimes.com/guides/well/beginner-yoga")
+            view.findNavController().navigate(R.id.articleFragment,bundle)
+        }
+
+        handpick = view.findViewById<ImageButton>(R.id.handpick2)
+        handpick.setOnClickListener {
+            val bundle = Bundle()
+            bundle.putString("url","https://osteopathic.org/what-is-osteopathic-medicine/benefits-of-yoga/")
+            view.findNavController().navigate(R.id.articleFragment,bundle)
+        }
+
+        handpick = view.findViewById<ImageButton>(R.id.handpick3)
+        handpick.setOnClickListener {
+            val bundle = Bundle()
+            bundle.putString("url","https://www.vogue.in/beauty/gallery/the-biggest-hair-colour-trends-for-2022")
+            view.findNavController().navigate(R.id.articleFragment,bundle)
+        }
+
+        val btnSend = view.findViewById<ImageButton>(R.id.back_btn)
         btnSend.setOnClickListener {
             view.findNavController().navigate(R.id.homeActivity)
         }
 
     }
 
-    private fun category(){
-        catArrayList = arrayListOf()
-        category = arrayOf(
-            "Sex",
-            "Health",
-            "Disease",
-            "Sport"
-        )
-
-        for(i in category.indices){
-            val category = CategoryModel(category[i])
-            catArrayList.add(category)
-        }
-    }
-
-    private fun hotarticle(){
-        hotArrayList = arrayListOf()
-        hotarticle = arrayOf(
-            R.drawable.articlelist_1,
-            R.drawable.articlelist_2,
-            R.drawable.articlelist_3
-        )
-
-        for(i in hotarticle.indices){
-            val hotarticle = HotModel(hotarticle[i])
-            hotArrayList.add(hotarticle)
-        }
-    }
-
-    private fun recentarticle(){
-        recentArrayList = arrayListOf()
-        recentarticle = arrayOf(
-            R.drawable.articlelist_4,
-            R.drawable.articlelist_5,
-            R.drawable.articlelist_6
-        )
-
-        for(i in recentarticle.indices){
-            val recentarticle = HotModel(recentarticle[i])
-            recentArrayList.add(recentarticle)
-        }
-    }
-
-    private fun handarticle(){
-        handArrayList = arrayListOf()
-        handarticle = arrayOf(
-            R.drawable.articlelist_7,
-            R.drawable.articlelist_8,
-            R.drawable.articlelist_9
-        )
-
-        for(i in handarticle.indices){
-            val handarticle = HotModel(handarticle[i])
-            handArrayList.add(handarticle)
-        }
-
-
-    }
 }

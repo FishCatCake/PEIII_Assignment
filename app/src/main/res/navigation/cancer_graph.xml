@@ -3,28 +3,81 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/cancer_graph"
-    app:startDestination="@id/cancerCalendarFragment">
+    app:startDestination="@id/cancerPhaseFragment">
 
+
+    <fragment
+        android:id="@+id/cervicalCancerRecord02Fragment"
+        android:name="com.example.pe_assignment.cancer.CervicalCancerRecord02Fragment"
+        android:label="fragment_cervical_cancer_record02"
+        tools:layout="@layout/fragment_cervical_cancer_record02">
+
+        <action
+            android:id="@+id/action_cervicalCancerRecord02Fragment_to_cervicalCancerRecord03Fragment2"
+            app:destination="@id/cervicalCancerRecord03Fragment" />
+        <action
+            android:id="@+id/action_cervicalCancerRecord02Fragment_to_cervicalCancerRecord01Fragment2"
+            app:destination="@id/cervicalCancerRecord01Fragment" />
+        <action
+            android:id="@+id/action_cervicalCancerRecord02Fragment_to_cancerCalendarFragment"
+            app:destination="@id/cancerCalendarFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/cervicalCancerRecord01Fragment"
+        android:name="com.example.pe_assignment.cancer.CervicalCancerRecord01Fragment"
+        android:label="fragment_cervical_cancer_record01"
+        tools:layout="@layout/fragment_cervical_cancer_record01">
+
+        <action
+            android:id="@+id/action_cervicalCancerRecord01Fragment_to_cervicalCancerRecord02Fragment2"
+            app:destination="@id/cervicalCancerRecord02Fragment" />
+        <action
+            android:id="@+id/action_cervicalCancerRecord01Fragment_to_cancerCalendarFragment"
+            app:destination="@id/cancerCalendarFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/cervicalCancerRecord03Fragment"
+        android:name="com.example.pe_assignment.cancer.CervicalCancerRecord03Fragment"
+        android:label="fragment_cervical_cancer_record03"
+        tools:layout="@layout/fragment_cervical_cancer_record03">
+
+        <action
+            android:id="@+id/action_cervicalCancerRecord03Fragment_to_cancerCalendarFragment"
+            app:destination="@id/cancerCalendarFragment" />
+        <action
+            android:id="@+id/action_cervicalCancerRecord03Fragment_to_cervicalCancerRecord02Fragment2"
+            app:destination="@id/cervicalCancerRecord02Fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/cancerPhaseFragment"
+        android:name="com.example.pe_assignment.cancer.CancerPhaseFragment"
+        android:label="fragment_cancer_phase"
+        tools:layout="@layout/fragment_cancer_phase">
+        <action
+            android:id="@+id/action_cancerPhaseFragment_to_cancerCalendarFragment"
+            app:destination="@id/cancerCalendarFragment" />
+        <action
+            android:id="@+id/action_cancerPhaseFragment_to_homeActivity2"
+            app:destination="@id/homeActivity2" />
+    </fragment>
     <fragment
         android:id="@+id/cancerCalendarFragment"
         android:name="com.example.pe_assignment.cancer.CancerCalendarFragment"
         android:label="fragment_cancer_canlendar"
         tools:layout="@layout/fragment_cancer_canlendar" >
         <action
-            android:id="@+id/action_cancerCalendarFragment_to_cancerCreateRecordActivity"
-            app:destination="@id/cancerCreateRecordActivity" />
-        <action
             android:id="@+id/action_cancerCalendarFragment_to_menstruationActivity2"
             app:destination="@id/menstruationActivity2" />
         <action
             android:id="@+id/action_cancerCalendarFragment_to_newTimelineActivity"
             app:destination="@id/newTimelineActivity" />
+        <action
+            android:id="@+id/action_cancerCalendarFragment_to_cervicalCancerRecord01Fragment"
+            app:destination="@id/cervicalCancerRecord01Fragment" />
     </fragment>
-    <activity
-        android:id="@+id/cancerCreateRecordActivity"
-        android:name="com.example.pe_assignment.cancer.CancerCreateRecordActivity"
-        android:label="activity_cancer_create_record"
-        tools:layout="@layout/activity_cancer_create_record" />
     <activity
         android:id="@+id/newTimelineActivity"
         android:name="com.example.pe_assignment.cancer.NewTimelineActivity"
@@ -35,4 +88,9 @@
         android:name="com.example.pe_assignment.cycle.MenstruationActivity"
         android:label="activity_menstruation"
         tools:layout="@layout/activity_menstruation" />
+    <activity
+        android:id="@+id/homeActivity2"
+        android:name="com.example.pe_assignment.home.HomeActivity"
+        android:label="activity_home"
+        tools:layout="@layout/activity_home" />
 </navigation>

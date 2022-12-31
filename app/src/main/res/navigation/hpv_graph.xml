@@ -22,8 +22,11 @@
         android:label="fragment_dose_calendar"
         tools:layout="@layout/fragment_dose_calendar" >
         <action
-            android:id="@+id/action_doseCalendarFragment_to_hpvReminderFragment"
-            app:destination="@id/hpvReminderFragment" />
+            android:id="@+id/action_doseCalendarFragment_to_doseCalendarFragment2"
+            app:destination="@id/doseCalendarFragment2" />
+        <action
+            android:id="@+id/action_doseCalendarFragment_to_reviewCalendarFragment"
+            app:destination="@id/reviewCalendarFragment" />
     </fragment>
     <fragment
         android:id="@+id/hpvReminderFragment"
@@ -92,4 +95,28 @@
         android:name="com.example.pe_assignment.cycle.MenstruationActivity"
         android:label="activity_menstruation"
         tools:layout="@layout/activity_menstruation" />
+    <fragment
+        android:id="@+id/doseCalendarFragment2"
+        android:name="com.example.pe_assignment.hpv.DoseCalendarFragment2"
+        android:label="fragment_dose_calendar2"
+        tools:layout="@layout/fragment_dose_calendar2" >
+        <action
+            android:id="@+id/action_doseCalendarFragment2_to_doseCalendarFragment3"
+            app:destination="@id/doseCalendarFragment3" />
+        <action
+            android:id="@+id/action_doseCalendarFragment2_to_doseCalendarFragment"
+            app:destination="@id/doseCalendarFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/doseCalendarFragment3"
+        android:name="com.example.pe_assignment.hpv.DoseCalendarFragment3"
+        android:label="fragment_dose_calendar3"
+        tools:layout="@layout/fragment_dose_calendar3" >
+        <action
+            android:id="@+id/action_doseCalendarFragment3_to_hpvReminderFragment"
+            app:destination="@id/hpvReminderFragment" />
+        <action
+            android:id="@+id/action_doseCalendarFragment3_to_doseCalendarFragment2"
+            app:destination="@id/doseCalendarFragment2" />
+    </fragment>
 </navigation>

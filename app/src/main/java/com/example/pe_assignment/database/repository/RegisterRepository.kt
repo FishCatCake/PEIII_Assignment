@@ -10,6 +10,7 @@ class RegisterRepository (private val dao: UserDao){
         dao.insert(user)
     }
 
+
     // Get user list
     var userList: Flow<List<User>> = dao.getUsers()
     fun getUsers(): Flow<List<User>> {

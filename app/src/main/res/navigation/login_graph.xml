@@ -48,6 +48,12 @@
         android:id="@+id/homeActivity"
         android:name="com.example.pe_assignment.home.HomeActivity"
         android:label="activity_home"
-        tools:layout="@layout/activity_home" />
+        tools:layout="@layout/activity_home" >
+        <argument
+            android:name="name"
+            app:argType="string"
+            android:defaultValue="sample" />
+    </activity>
+
 
 </navigation>

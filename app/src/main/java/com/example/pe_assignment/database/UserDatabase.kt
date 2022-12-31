@@ -12,11 +12,15 @@ import com.example.pe_assignment.database.entity.User
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
-@Database(entities = [User::class, Cycle::class], version = 1, exportSchema = false)
+@Database(entities = [User::class, Cycle::class, UserCancerPhrase::class,CancerRecord::class,TimelineRecord::class], version = 1, exportSchema = false)
 abstract class UserDatabase : RoomDatabase() {
 
     abstract fun userDao(): UserDao
     abstract fun cycleDao(): CycleDao
+
+    abstract fun usercancerphraseDao(): UserCancerPhraseDAO
+    abstract fun usercancerrecordDao(): CancerRecordDAO
+    abstract fun usercancertimelineDao(): TimelineRecordDAO
 
     private class UserDatabaseCallback(
         private val scope: CoroutineScope
@@ -29,15 +33,32 @@ abstract class UserDatabase : RoomDatabase() {
                     var userDao = database.userDao()
                     var cycleDao = database.cycleDao()
 
+                    var usercancerphraseDao = database.usercancerphraseDao()
+                    var usercancerrecordDao = database.usercancerrecordDao()
+                    var usercancertimelineDao = database.usercancertimelineDao()
+
                     // Delete all content here.
                     userDao.deleteAll()
+                    usercancerphraseDao.deleteAll()
+                    usercancerrecordDao.deleteAll()
+                    usercancertimelineDao.deleteAll()
 
 //                    // Add sample words.
                     var user = User(0,"Sample","Sample","Sample","Sample")
                     userDao.insert(user)
+
                     // sample temp
                     var cycle = Cycle(0, 2022f,12f,30f,37f, "Had Flow", "Heavy", "Acne")
                     cycleDao.insert(cycle)
+
+                    var cuser = UserCancerPhrase(0,"Sample","1")
+                    usercancerphraseDao.insert(cuser)
+                    var crecord = CancerRecord(0,"Sample","Sample","Sample","Sample","Sample","Sample","1")
+                    usercancerrecordDao.insert(crecord)
+
+                    var ctimeline = TimelineRecord(0,"Sample","Sample","Sample","Sample","Sample","Sample","1")
+                    usercancertimelineDao.insert(ctimeline)
+
                 }
             }
         }
@@ -58,10 +79,11 @@ abstract class UserDatabase : RoomDatabase() {
                 val instance = Room.databaseBuilder(
                     context.applicationContext,
                     UserDatabase::class.java,
-                    "u_database"
+                    "x_database"
                 )
                     .fallbackToDestructiveMigration()
                     .addCallback(UserDatabaseCallback(scope))
+                    .fallbackToDestructiveMigration()
                     .build()
                 INSTANCE = instance
                 // return instance

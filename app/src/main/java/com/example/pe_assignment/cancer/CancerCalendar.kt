@@ -13,13 +13,7 @@ class CancerCalendar : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_cancer_calendar)
 
-        val calendarView: CalendarView = findViewById(R.id.calendarView3)
-        calendarView.setOnDateChangeListener{view,year,month,dateOfMonth ->
-            val msg = "Selected Date: " + dateOfMonth + "/ " + (month+1) + "/ " +year
 
-            Toast.makeText(this,msg, Toast.LENGTH_LONG).show()
-
-        }
     }
 
 }

@@ -30,7 +30,7 @@
     <string name="cd_dose">🗓️ Dose Recording</string>
     <string name="cd_vaccine_title">HPV Vaccine</string>
     <string name="cd_cancer_tracking">🏥 Cancer Tracking</string>
-    <string name="cd_title_cancer">Breast/Cervical Cancer</string>
+    <string name="cd_title_cancer">Cervical Cancer</string>
     <string name="cd_cancer_desc1">🗒️ Medical Record</string>
     <string name="cd_cancer_desc2">❤️‍🩹 Sympton Log</string>
 
@@ -196,5 +196,14 @@
     <string name="track_log">Track log</string>
     <string name="my_cycle">My Cycle</string>
     <string name="hint_temp">key in your daily temperature</string>
+
+    <string name="phase_1">Phase 1</string>
+    <string name="phase_2">Phase 2</string>
+    <string name="phase_3">Phase 3</string>
+    <string name="phase_4">Phase 4</string>
+
+    <string name="_2_3">2/3</string>
+    <string name="_3_3">3/3</string>
+
 
 </resources>

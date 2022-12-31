@@ -10,6 +10,7 @@ import com.example.pe_assignment.R
 
 class HotAdapter(private val hotList : ArrayList<HotModel>):RecyclerView.Adapter<HotAdapter.HotViewHolder>() {
 
+    var onItemClick : ((HotModel)->Unit)? = null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HotViewHolder {
         val itemView = LayoutInflater.from(parent.context).inflate(
@@ -24,6 +25,9 @@ class HotAdapter(private val hotList : ArrayList<HotModel>):RecyclerView.Adapter
         val currentItem = hotList[position]
         holder.hot.setImageResource(currentItem.imageSrc)
 
+        holder.itemView.setOnClickListener {
+            onItemClick?.invoke(currentItem)
+        }
     }
 
     override fun getItemCount(): Int {
