@@ -2,10 +2,7 @@ package com.example.pe_assignment.cancer
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.example.pe_assignment.CancerNewRepository
-import com.example.pe_assignment.CancerRecordRepository
-import com.example.pe_assignment.TimelineRecord
-import com.example.pe_assignment.TimelineRecordRepository
+import com.example.pe_assignment.database.repository.TimelineRecordRepository
 import java.lang.IllegalArgumentException
 
 class CancerTimelineViewModelFactory(private val repository: TimelineRecordRepository) : ViewModelProvider.Factory {

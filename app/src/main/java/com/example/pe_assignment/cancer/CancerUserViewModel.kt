@@ -5,10 +5,8 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.pe_assignment.CancerNewRepository
-import com.example.pe_assignment.RegisterRepository
-import com.example.pe_assignment.User
-import com.example.pe_assignment.UserCancerPhrase
+import com.example.pe_assignment.database.repository.CancerNewRepository
+import com.example.pe_assignment.database.entity.UserCancerPhrase
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job

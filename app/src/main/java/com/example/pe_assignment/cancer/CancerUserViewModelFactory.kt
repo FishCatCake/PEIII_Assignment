@@ -2,7 +2,7 @@ package com.example.pe_assignment.cancer
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.example.pe_assignment.CancerNewRepository
+import com.example.pe_assignment.database.repository.CancerNewRepository
 import java.lang.IllegalArgumentException
 
 class CancerUserViewModelFactory(private val repository: CancerNewRepository) : ViewModelProvider.Factory {

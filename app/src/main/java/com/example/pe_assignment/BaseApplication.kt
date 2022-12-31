@@ -2,8 +2,7 @@ package com.example.pe_assignment
 
 import android.app.Application
 import com.example.pe_assignment.database.UserDatabase
-import com.example.pe_assignment.database.repository.PeriodRepository
-import com.example.pe_assignment.database.repository.RegisterRepository
+import com.example.pe_assignment.database.repository.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.SupervisorJob
 
@@ -15,7 +14,7 @@ class BaseApplication : Application() {
     // val repositoryCycle: CycleRepository by lazy { CycleRepository(database.cycleDao()) }
     val repoPeriod: PeriodRepository by lazy {PeriodRepository(database.cycleDao())}
     val repository_cancernew: CancerNewRepository by lazy { CancerNewRepository(database.usercancerphraseDao()) }
-    val repository_cancerrecord: CancerRecordRepository by lazy { CancerRecordRepository(database.usercancerrecordDao())}
-    val repository_cancertimeline: TimelineRecordRepository by lazy { TimelineRecordRepository(database.usercancertimelineDao())}
+    val repository_cancerrecord: CancerRecordRepository by lazy { CancerRecordRepository(database.usercancerrecordDao()) }
+    val repository_cancertimeline: TimelineRecordRepository by lazy { TimelineRecordRepository(database.usercancertimelineDao()) }
 
 }
