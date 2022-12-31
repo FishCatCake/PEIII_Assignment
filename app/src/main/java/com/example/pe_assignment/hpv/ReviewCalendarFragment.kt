@@ -28,8 +28,8 @@ class ReviewCalendarFragment : Fragment() {
         val fragmentBinding = FragmentReviewCalendarBinding.inflate(
             inflater, container, false
         )
-        val sharedViewModel: HpvViewModel by activityViewModels() {
-            HpvViewModelFactory((activity?.application as BaseApplication).hpvrepository)
+        val sharedViewModel: HpvViewModel by activityViewModels(){
+
         }
         sharedViewModel.navigateto.observe(viewLifecycleOwner, Observer {
                 hasFinished ->  // if it is true

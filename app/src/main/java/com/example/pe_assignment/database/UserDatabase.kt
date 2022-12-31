@@ -15,6 +15,7 @@ abstract class UserDatabase : RoomDatabase() {
 
     abstract fun userDao(): UserDao
     abstract fun cycleDao(): CycleDao
+    abstract fun hpvDao():HPVDao
 
     abstract fun usercancerphraseDao(): UserCancerPhraseDao
     abstract fun usercancerrecordDao(): CancerRecordDao
