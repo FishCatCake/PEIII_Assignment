@@ -1,4 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="periodViewModel"
+            type="com.example.pe_assignment.cycle.PeriodViewModel" />
+        <variable
+            name="symptonSelectionFragment"
+            type="com.example.pe_assignment.cycle.SelectionSymptonFragment" />
+    </data>
+
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -62,6 +72,8 @@
                         android:id="@+id/card_attr1"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
+                        android:checked="@{periodViewModel.sym.equals(@string/abdominal_cramps)}"
+                        android:onClick="@{() -> periodViewModel.setSym(@string/abdominal_cramps)}"
                         style="@style/Card_RadioButton"
                         android:text="@string/abdominal_cramps"/>
                     <ImageView
@@ -73,8 +85,14 @@
                         android:id="@+id/card_attr2"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
+                        android:checked="@{periodViewModel.sym.equals(@string/acne)}"
+                        android:onClick="@{() -> periodViewModel.setSym(@string/acne)}"
                         style="@style/Card_RadioButton"
                         android:text="@string/acne"/>
+
+<!--                    android:checked="@{myViewModel.time.equals(@string/exercising)}"-->
+<!--                    android:onClick="@{() -> myViewModel.setTime(@string/exercising)}"-->
+
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -106,6 +124,8 @@
                         android:id="@+id/card_attr4"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:checked="@{periodViewModel.sym.equals(@string/chills)}"
+                        android:onClick="@{() -> periodViewModel.setSym(@string/chills)}"
                         style="@style/Card_RadioButton"
                         android:text="@string/appetite_changes"/>
                     <ImageView
@@ -117,6 +137,8 @@
                         android:id="@+id/card_attr5"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:checked="@{periodViewModel.sym.equals(@string/baldder_incontinence)}"
+                        android:onClick="@{() -> periodViewModel.setSym(@string/baldder_incontinence)}"
                         style="@style/Card_RadioButton"
                         android:text="@string/baldder_incontinence"/>
                     <ImageView
@@ -145,3 +167,4 @@
         android:textSize="@dimen/btn_text"
         android:text="@string/done" />
 </FrameLayout>
+</layout>

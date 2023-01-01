@@ -1,5 +1,7 @@
-package com.example.pe_assignment
+package com.example.pe_assignment.database.repository
 
+import com.example.pe_assignment.database.dao.UserDao
+import com.example.pe_assignment.database.entity.User
 import kotlinx.coroutines.flow.Flow
 
 class RegisterRepository (private val dao: UserDao){
@@ -8,15 +10,12 @@ class RegisterRepository (private val dao: UserDao){
         dao.insert(user)
     }
 
+
     // Get user list
     var userList: Flow<List<User>> = dao.getUsers()
     fun getUsers(): Flow<List<User>> {
         return userList
     }
-
-//    suspend fun getID(userName: String):User{
-//        return dao.getID(userName)
-//    }
 
     // Login
     suspend fun getUserCredential(userName: String): User {

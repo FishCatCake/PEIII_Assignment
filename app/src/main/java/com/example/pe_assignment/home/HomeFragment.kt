@@ -43,7 +43,7 @@ class HomeFragment : Fragment() {
         }
 
         cdCancer.setOnClickListener {
-            view.findNavController().navigate(R.id.cancerNewUserActivity)
+            view.findNavController().navigate(R.id.cancerCalendar)
         }
 
         cdArticle.setOnClickListener {

@@ -6,21 +6,26 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.CalendarView
+import android.widget.Button
 import android.widget.ImageButton
+import androidx.navigation.findNavController
+import com.example.pe_assignment.R
+import android.widget.CalendarView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.example.pe_assignment.BaseApplication
-import com.example.pe_assignment.R
 import com.example.pe_assignment.databinding.FragmentReviewCalendarBinding
 import androidx.lifecycle.Observer
 import androidx.navigation.findNavController
+import com.example.pe_assignment.cycle.PeriodViewModel
+import com.example.pe_assignment.databinding.FragmentCycleDetailBinding
 
 class ReviewCalendarFragment : Fragment() {
     private var binding: FragmentReviewCalendarBinding? = null
     private val sharedViewModel: HpvViewModel by activityViewModels()
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -29,7 +34,7 @@ class ReviewCalendarFragment : Fragment() {
         val fragmentBinding = FragmentReviewCalendarBinding.inflate(
             inflater, container, false
         )
-        val sharedViewModel: HpvViewModel by activityViewModels() {
+        val sharedViewModel: HpvViewModel by activityViewModels(){
             HpvViewModelFactory((activity?.application as BaseApplication).hpvrepository)
         }
 
@@ -55,6 +60,12 @@ class ReviewCalendarFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        var btnSend = view.findViewById<Button>(R.id.next_btn)
+        btnSend.setOnClickListener {
+            view.findNavController().navigate(R.id.doseCalendarFragment)
+        }
+
         binding?.apply {
             lifecycleOwner = viewLifecycleOwner
             hpvViewModel = sharedViewModel
@@ -82,7 +93,6 @@ class ReviewCalendarFragment : Fragment() {
         }
 
     }
-
     fun goToNextScreen() {
         findNavController().navigate(R.id.action_reviewCalendarFragment_to_doseCalendarFragment)
     }

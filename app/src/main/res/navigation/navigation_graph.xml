@@ -17,14 +17,14 @@
             android:id="@+id/action_homeFragment_to_articleActivity"
             app:destination="@id/articleActivity" />
         <action
-            android:id="@+id/action_homeFragment_to_cancerNewUserActivity"
-            app:destination="@id/cancerNewUserActivity" />
-        <action
             android:id="@+id/action_homeFragment_to_menstruationActivity"
             app:destination="@id/menstruationActivity" />
         <action
             android:id="@+id/action_homeFragment_to_settingActivity"
             app:destination="@id/settingActivity" />
+        <action
+            android:id="@+id/action_homeFragment_to_cancerCalendar"
+            app:destination="@id/cancerCalendar" />
     </fragment>
 
     <activity
@@ -43,14 +43,14 @@
         android:label="activity_article"
         tools:layout="@layout/activity_article" />
     <activity
-        android:id="@+id/cancerNewUserActivity"
-        android:name="com.example.pe_assignment.cancer.CancerNewUserActivity"
-        android:label="activity_cancer_new_user"
-        tools:layout="@layout/activity_cancer_new_user" />
-    <activity
         android:id="@+id/settingActivity"
         android:name="com.example.pe_assignment.setting.SettingActivity"
         android:label="activity_setting"
         tools:layout="@layout/activity_setting" />
+    <activity
+        android:id="@+id/cancerCalendar"
+        android:name="com.example.pe_assignment.cancer.CancerCalendar"
+        android:label="activity_cancer_calendar"
+        tools:layout="@layout/activity_cancer_calendar" />
 
 </navigation>

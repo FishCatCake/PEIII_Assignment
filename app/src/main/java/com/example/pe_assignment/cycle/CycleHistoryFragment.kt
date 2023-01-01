@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageButton
+import android.widget.RelativeLayout
 import androidx.cardview.widget.CardView
 import androidx.navigation.findNavController
 import com.example.pe_assignment.R
@@ -28,9 +29,13 @@ class CycleHistoryFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         var btnBack = view.findViewById<ImageButton>(R.id.btn_back_history)
+        var btnDetail = view.findViewById<RelativeLayout>(R.id.cycle_record1)
 
         btnBack.setOnClickListener{
             view.findNavController().navigate(R.id.cycleFragment)
+        }
+        btnDetail.setOnClickListener{
+            view.findNavController().navigate(R.id.cycleDetailFragment)
         }
     }
 }

@@ -1,9 +1,8 @@
 package com.example.pe_assignment.login
 
-import android.app.Application
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.example.pe_assignment.RegisterRepository
+import com.example.pe_assignment.database.repository.RegisterRepository
 import java.lang.IllegalArgumentException
 
 class LoginViewModelFactory(

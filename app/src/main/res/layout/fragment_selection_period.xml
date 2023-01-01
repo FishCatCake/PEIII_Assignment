@@ -1,4 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="periodViewModel"
+            type="com.example.pe_assignment.cycle.PeriodViewModel" />
+        <variable
+            name="periodSelectionFragment"
+            type="com.example.pe_assignment.cycle.SelectionPeriodFragment" />
+    </data>
+
+
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -43,10 +54,14 @@
 
                     <RadioButton
                         android:id="@+id/card_attr1"
+                        style="@style/Card_RadioButton"
+                        android:checked="@{periodViewModel.period.equals(@string/had_flow)}"
+                        android:onClick="@{() -> periodViewModel.setPeriod(@string/had_flow)}"
+
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
-                        style="@style/Card_RadioButton"
-                        android:text="@string/had_flow"/>
+                        android:text="@string/had_flow" />
+
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -55,6 +70,8 @@
                     <RadioButton
                         android:id="@+id/card_attr2"
                         android:layout_width="fill_parent"
+                        android:checked="@{periodViewModel.period.equals(@string/no_flow)}"
+                        android:onClick="@{() -> periodViewModel.setPeriod(@string/no_flow)}"
                         android:layout_height="wrap_content"
                         style="@style/Card_RadioButton"
                         android:text="@string/no_flow"/>
@@ -80,6 +97,8 @@
                         android:id="@+id/card_attr3"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
+                        android:checked="@{periodViewModel.level.equals(@string/light)}"
+                        android:onClick="@{() -> periodViewModel.setLevel(@string/light)}"
                         style="@style/Card_RadioButton"
                         android:text="@string/light"/>
                     <ImageView
@@ -91,6 +110,8 @@
                         android:id="@+id/card_attr4"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
+                        android:checked="@{periodViewModel.level.equals(@string/medium)}"
+                        android:onClick="@{() -> periodViewModel.setLevel(@string/medium)}"
                         style="@style/Card_RadioButton"
                         android:text="@string/medium"/>
                     <ImageView
@@ -103,6 +124,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         style="@style/Card_RadioButton"
+                        android:checked="@{periodViewModel.level.equals(@string/heavy)}"
+                        android:onClick="@{() -> periodViewModel.setLevel(@string/heavy)}"
                         android:text="@string/heavy"/>
                     <ImageView
                         android:layout_width="match_parent"
@@ -131,3 +154,4 @@
 
 
 </FrameLayout>
+</layout>

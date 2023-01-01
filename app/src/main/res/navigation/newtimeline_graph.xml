@@ -40,6 +40,9 @@
         <action
             android:id="@+id/action_cancerTimelineCalendar_to_timelineUploadFragment"
             app:destination="@id/timelineUploadFragment" />
+        <action
+            android:id="@+id/action_cancerTimelineCalendar_to_cancerTimelineFragment3"
+            app:destination="@id/cancerTimelineFragment3" />
     </fragment>
 
     <fragment

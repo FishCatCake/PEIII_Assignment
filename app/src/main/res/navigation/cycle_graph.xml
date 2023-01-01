@@ -20,11 +20,12 @@
             android:id="@+id/action_cycleFragment_to_cycleHistoryFragment"
             app:destination="@id/cycleHistoryFragment" />
         <action
-            android:id="@+id/action_cycleFragment_to_cycleDetailFragment"
-            app:destination="@id/cycleDetailFragment" />
-        <action
             android:id="@+id/action_cycleFragment_to_homeActivity"
             app:destination="@id/homeActivity" />
+        <action
+            android:id="@+id/action_cycleFragment_to_cycleTemperatureFragment"
+            app:destination="@id/cycleTemperatureFragment" />
+
 
     </fragment>
     <fragment
@@ -33,8 +34,8 @@
         android:label="fragment_cycle_detail"
         tools:layout="@layout/fragment_cycle_detail">
         <action
-            android:id="@+id/action_cycleDetailFragment_to_cycleFragment"
-            app:destination="@id/cycleFragment" />
+            android:id="@+id/action_cycleDetailFragment_to_cycleHistoryFragment"
+            app:destination="@id/cycleHistoryFragment" />
     </fragment>
     <fragment
         android:id="@+id/cycleHistoryFragment"
@@ -44,6 +45,9 @@
         <action
             android:id="@+id/action_cycleHistoryFragment_to_cycleFragment"
             app:destination="@id/cycleFragment" />
+        <action
+            android:id="@+id/action_cycleHistoryFragment_to_cycleDetailFragment"
+            app:destination="@id/cycleDetailFragment" />
     </fragment>
     <fragment
         android:id="@+id/selectionPeriodFragment"
@@ -65,10 +69,22 @@
             app:destination="@id/cycleFragment" />
     </fragment>
 
+    <fragment
+        android:id="@+id/cycleTemperatureFragment"
+        android:name="com.example.pe_assignment.cycle.CycleTemperatureFragment"
+        android:label="fragment_cycle_temperature"
+        tools:layout="@layout/fragment_cycle_temperature" >
+        <action
+            android:id="@+id/action_cycleTemperatureFragment_to_cycleFragment"
+            app:destination="@id/cycleFragment" />
+    </fragment>
+
     <activity
         android:id="@+id/homeActivity"
         android:name="com.example.pe_assignment.home.HomeActivity"
         android:label="activity_home"
         tools:layout="@layout/activity_home" />
+
+
 
 </navigation>
