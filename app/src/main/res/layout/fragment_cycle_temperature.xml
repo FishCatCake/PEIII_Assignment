@@ -48,7 +48,7 @@
                         android:layout_height="wrap_content"
                         style="@style/Card_Title"
                         android:background="@color/input_card_orange"
-                        android:text="@string/period"/>
+                        android:text="@string/body_temperature"/>
                 <EditText
                     android:id="@+id/cycle_temp"
                     android:layout_width="match_parent"

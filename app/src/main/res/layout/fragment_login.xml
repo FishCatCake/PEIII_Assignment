@@ -55,16 +55,16 @@
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="textPassword"
-                    android:background="@drawable/login_edit_bcg"
-                    android:padding="20dp"
-                    android:drawableStart="@drawable/ic_password"
-                    android:hint="********"
-                    android:text="@={myLoginViewModel.inputPassword}"
-                    android:drawablePadding="20dp"
                     android:layout_marginStart="30dp"
+                    android:layout_marginTop="20dp"
                     android:layout_marginEnd="30dp"
-                    android:layout_marginTop="20dp" />
+                    android:background="@drawable/login_edit_bcg"
+                    android:drawableStart="@drawable/ic_password"
+                    android:drawablePadding="20dp"
+                    android:hint="********"
+                    android:inputType="textPassword"
+                    android:padding="20dp"
+                    android:text="@={myLoginViewModel.inputPassword}" />
 
                 <TextView
                     android:layout_width="wrap_content"

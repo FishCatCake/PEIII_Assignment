@@ -71,7 +71,7 @@ class Register2Fragment : Fragment() {
     }
     fun goToNextScreen() {
         val name: String = binding?.userName?.text.toString()
-        val age: String = binding?.registerAgeNum?.text.toString()
+        val age: String = binding?.userAge?.text.toString()
         sharedViewModel.setName(name)
         sharedViewModel.setAge(age)
         sharedViewModel.register()
