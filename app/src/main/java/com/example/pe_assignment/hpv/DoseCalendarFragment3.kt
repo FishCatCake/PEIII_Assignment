@@ -47,7 +47,7 @@ class DoseCalendarFragment3 : Fragment() {
         sharedViewModel.navigateto.observe(viewLifecycleOwner, Observer {
                 hasFinished ->  // if it is true
             if(hasFinished == true) {
-                    goToNextScreen()
+                goToNextScreen()
                 sharedViewModel.doneNavigating()
             }
         })
@@ -96,12 +96,12 @@ class DoseCalendarFragment3 : Fragment() {
     }
 
     fun goToNextScreen() {
-        sharedViewModel.HPV()
+
         findNavController().navigate(R.id.action_doseCalendarFragment3_to_hpvReminderFragment)
     }
 
     fun goToFirstScreen() {
-        sharedViewModel.HPV()
+
         findNavController().navigate(R.id.action_doseCalendarFragment3_to_reviewCalendarFragment)
     }
 }
