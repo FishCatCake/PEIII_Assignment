@@ -73,7 +73,7 @@ class TestRecordFragment : Fragment() {
                     "9vHPV",
             "ABC No.1, \n" +
                     "9vHPV",
-            "ABC No.1 9, \n" +
+            "ABC No.1, \n" +
                     "9vHPV"
         )
 
