@@ -12,13 +12,6 @@ import androidx.navigation.ui.NavigationUI
 class MenstruationActivity : AppCompatActivity() {
     //private lateinit var navController: NavController
 
-//    private val periodViewModel: PeriodViewModel by lazy{
-//        this?.run{
-//            ViewModelProvider(this, PeriodViewModelFactory((this?.application as CycleApplication)
-//                .dataBase.CycleDAO())).get(CycleViewModel::class.java)
-//        }?:throw Exception("Invalid")
-//    }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menstruation)
