@@ -207,6 +207,7 @@
     <string name="start_tracking_your_period_here">Start tracking your period here!</string>
     <string name="help_log_your_hpv_appointment">Help log your HPV appointment!</string>
     <string name="body_temperature">BODY TEMPERATURE</string>
+    <string name="tell_us_your_age">tell us your age</string>
 
 
 </resources>
