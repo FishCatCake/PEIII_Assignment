@@ -29,6 +29,6 @@ class LoadingActivity : AppCompatActivity(), LoadingImplementation {
             val i = Intent(this@LoadingActivity, LoginActivity::class.java)
             startActivity(i)
             finish()
-        }, 4000) // delay for 3000 milliseconds or 3 seconds
+        }, 4000) // delay for 4000 milliseconds or 3 seconds
     }
 }

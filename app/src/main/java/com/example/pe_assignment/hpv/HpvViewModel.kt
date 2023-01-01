@@ -104,29 +104,32 @@ class HpvViewModel (private val repository: HpvRepository) : ViewModel(){
 
     fun HPV() {  // Empty field and validate username and password
         Log.i("MYTAG", "reg func")
+        _reviewyear.value?.let { Log.i("_reviewyear.value", it) }
         if(
-            (_reviewyear.value == null)||
-            (_reviewmonth.value == null)||
-            (_reviewdate.value == null)||
-            (_dose1year.value == null)||
-            (_dose1month.value == null)||
-            (_dose1date.value == null)||
-            (_dose2year.value == null)||
-            (_dose2month.value == null)||
-            (_dose2date.value == null)||
-            (_dose3year.value == null)||
-            (_dose3month.value == null)||
-            (_dose3date.value == null)
+            (_reviewyear.value == "")||
+            (_reviewmonth.value == "")||
+            (_reviewdate.value == "")||
+            (_dose1year.value == "")||
+            (_dose1month.value == "")||
+            (_dose1date.value == "")||
+            (_dose2year.value == "")||
+            (_dose2month.value == "")||
+            (_dose2date.value == "")||
+            (_dose3year.value == "")||
+            (_dose3month.value == "")||
+            (_dose3date.value == "")
         ) {
+            Log.i("status","null")
             _errorToast.value = true
         } else {  // register
             uiScope.launch {
 //                val userInfo = repository.getUserCredential(_account.value.toString())
 //                if(userInfo == null) {  // No existing record with the same username
+                Log.i("status","true")
                 val reviewyear: String = _reviewyear.value.toString()
                 val reviewmonth: String = _reviewmonth.value.toString()
                 val reviewdate: String = _reviewdate.value.toString()
-
+                Log.i("reviewyear",reviewyear)
                 val dose1year: String = _dose1year.value.toString()
                 val dose1month: String = _dose1month.value.toString()
                 val dose1date: String = _dose1date.value.toString()
@@ -149,6 +152,11 @@ class HpvViewModel (private val repository: HpvRepository) : ViewModel(){
 
     override fun onCleared() {
         super.onCleared()
+    }
+
+    fun donetoast() {
+        _errorToast.value = false
+        Log.i("MYTAG", "Done taoasting ")
     }
 
     fun doneNavigating() {

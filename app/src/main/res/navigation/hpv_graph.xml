@@ -118,5 +118,8 @@
         <action
             android:id="@+id/action_doseCalendarFragment3_to_doseCalendarFragment2"
             app:destination="@id/doseCalendarFragment2" />
+        <action
+            android:id="@+id/action_doseCalendarFragment3_to_reviewCalendarFragment"
+            app:destination="@id/reviewCalendarFragment" />
     </fragment>
 </navigation>

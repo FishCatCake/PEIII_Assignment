@@ -90,7 +90,7 @@
         android:layout_width="@dimen/btn_grey_width"
         android:layout_height="@dimen/btn_grey_height"
         android:layout_marginTop="600dp"
-        android:onClick="@{()->dose3CalendarFragment.goToNextScreen()}"
+        android:onClick="@{()->dose3CalendarFragment.ReadData()}"
         android:layout_gravity="center_horizontal"
         android:background="@drawable/btn_selector"
         android:textColor="@color/btn_text"

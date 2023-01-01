@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.CalendarView
 import android.widget.ImageButton
+import android.widget.Toast
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -34,6 +35,15 @@ class DoseCalendarFragment2 : Fragment() {
         val sharedViewModel: HpvViewModel by activityViewModels() {
             HpvViewModelFactory((activity?.application as BaseApplication).hpvrepository)
         }
+
+        sharedViewModel.errorToast.observe(viewLifecycleOwner, Observer {
+                hasError ->
+            if(hasError == true){
+                Toast.makeText(requireContext(), "Please choose the date", Toast.LENGTH_SHORT).show()
+                sharedViewModel.donetoast()
+            }
+        })
+
         sharedViewModel.navigateto.observe(viewLifecycleOwner, Observer {
                 hasFinished ->  // if it is true
             if(hasFinished == true) {
