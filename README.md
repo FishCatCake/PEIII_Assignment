@@ -7,6 +7,7 @@ SHELOG provides health tracking functions for female population. Female users ca
 * room_version = 2.4.3
 * lifecycle_version = 2.2.0
 ## Demo
+*Figma link: https://www.figma.com/file/BFKqcHhDCJtvO7CBeiVfHs/PE_Assignment1_TeamA?node-id=0%3A1&t=Dsg4ZXHHZluw2mqY-1*
 <p align="center">
   <img src='https://github.com/FishCatCake/PEIII_Assignment/blob/main/demo/shelogdemo.gif'>
 </p>
