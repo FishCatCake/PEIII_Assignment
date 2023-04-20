@@ -8,7 +8,7 @@ SHELOG provides health tracking functions for female population. Female users ca
 * lifecycle_version = 2.2.0
 ## Demo
 <p align="center>
-<img src="https://github.com/FishCatCake/PEIII_Assignment/blob/main/demo/shelogdemo.gif">
+<img src='https://github.com/FishCatCake/PEIII_Assignment/blob/main/demo/shelogdemo.gif'>
 <img src="https://user-images.githubusercontent.com/56536325/233392591-5d09198a-5ba6-474a-90cc-78430c0b41c3.png" width ="315" height="500" >
 <img src="https://user-images.githubusercontent.com/56536325/233393399-00fd5aa9-ba04-4184-a110-a338b3bd2044.png" width ="315" height="500" >
 <img src="https://user-images.githubusercontent.com/56536325/233392612-e2940f67-b269-4c01-b9bd-27d15c6ce186.png" width ="315" height="500" >
